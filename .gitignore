@@ -1,5 +1,5 @@
 .env
-monitoramento_voos.xlsx
+/monitoramento_voos.xlsx
 .venv/
 *.egg-info/
 __pycache__/
