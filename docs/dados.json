@@ -1,0 +1,77 @@
+{
+  "rota": {
+    "origem": "BEL",
+    "destino": "REC",
+    "data_ida": "2026-12-29",
+    "data_volta": "2027-01-06",
+    "adultos": 1,
+    "classe": "economy"
+  },
+  "resumo": {
+    "menor_preco_historico": 2156.0,
+    "ultimo_menor_preco": 2156.0,
+    "data_ultima_consulta": "2026-07-26T16:55:26-03:00",
+    "quantidade_ofertas_vistas": 3,
+    "status": "sem queda"
+  },
+  "ofertas": [
+    {
+      "identificador": "dfea699576d8a79f",
+      "companhia": "Azul / Gol",
+      "partida_ida": "2026-12-29T17:55:00",
+      "chegada_ida": "2026-12-29T20:25:00",
+      "conexoes_ida": 0,
+      "duracao_ida": "PT2H30M",
+      "partida_volta": "2027-01-06T15:40:00",
+      "chegada_volta": "2027-01-07T01:30:00",
+      "conexoes_volta": 1,
+      "duracao_volta": "PT9H50M",
+      "preco_total": 2156.0,
+      "moeda": "BRL",
+      "queda_detectada": false
+    },
+    {
+      "identificador": "ee43f45f11b6eb57",
+      "companhia": "Azul",
+      "partida_ida": "2026-12-29T17:55:00",
+      "chegada_ida": "2026-12-29T20:25:00",
+      "conexoes_ida": 0,
+      "duracao_ida": "PT2H30M",
+      "partida_volta": "2027-01-06T09:30:00",
+      "chegada_volta": "2027-01-06T12:10:00",
+      "conexoes_volta": 0,
+      "duracao_volta": "PT2H40M",
+      "preco_total": 2491.0,
+      "moeda": "BRL",
+      "queda_detectada": false
+    },
+    {
+      "identificador": "48d1dbdd15a73ba6",
+      "companhia": "Azul",
+      "partida_ida": "2026-12-29T17:55:00",
+      "chegada_ida": "2026-12-29T20:25:00",
+      "conexoes_ida": 0,
+      "duracao_ida": "PT2H30M",
+      "partida_volta": "2027-01-06T22:40:00",
+      "chegada_volta": "2027-01-07T01:20:00",
+      "conexoes_volta": 0,
+      "duracao_volta": "PT2H40M",
+      "preco_total": 2491.0,
+      "moeda": "BRL",
+      "queda_detectada": false
+    }
+  ],
+  "historico": [
+    {
+      "consulta_em": "2026-07-26T16:55:26-03:00",
+      "menor_preco": 2156.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 3
+    }
+  ],
+  "planilha": {
+    "arquivo": "monitoramento_voos.xlsx",
+    "disponivel": false
+  },
+  "gerado_em": "2026-07-26T20:01:27+00:00"
+}

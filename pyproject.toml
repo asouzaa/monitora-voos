@@ -1,0 +1,11 @@
+[project]
+name = "monitora-voo"
+version = "0.2.0"
+description = "Monitor de preços de voos BEL-REC com registro em planilha Excel."
+requires-python = ">=3.11"
+dependencies = [
+    "faster-flights==3.7.0",
+]
+
+[tool.unittest]
+start-dir = "tests"

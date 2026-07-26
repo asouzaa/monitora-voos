@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <meta
+      name="description"
+      content="Acompanhamento de preços de voos entre Belém e Recife."
+    >
+    <title>Radar BEL ↔ REC</title>
+    <link rel="stylesheet" href="./estilos.css">
+  </head>
+  <body>
+    <header class="cabecalho">
+      <div class="cabecalho-conteudo">
+        <a class="marca" href="./" aria-label="Radar BEL para REC">
+          <span class="marca-sinal" aria-hidden="true">BEL</span>
+          <span>
+            <strong>Radar de voos</strong>
+            <small>Belém ↔ Recife</small>
+          </span>
+        </a>
+
+        <div class="acoes">
+          <span id="estado-monitor" class="estado" aria-live="polite">
+            Carregando
+          </span>
+          <button
+            id="botao-atualizar"
+            class="botao-icone"
+            type="button"
+            title="Atualizar dados"
+            aria-label="Atualizar dados"
+          >
+            ↻
+          </button>
+          <a id="link-execucoes" class="botao-secundario" href="#" hidden>
+            Execuções
+          </a>
+          <a id="link-planilha" class="botao-primario" href="#" download hidden>
+            Baixar planilha
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="faixa-rota" aria-labelledby="titulo-rota">
+        <div class="conteudo">
+          <div>
+            <p class="rotulo">Monitoramento de ida e volta</p>
+            <h1 id="titulo-rota">
+              <span id="origem">BEL</span>
+              <span class="linha-rota" aria-hidden="true"></span>
+              <span id="destino">REC</span>
+            </h1>
+          </div>
+          <dl class="detalhes-rota">
+            <div>
+              <dt>Ida</dt>
+              <dd id="data-ida">29 dez 2026</dd>
+            </div>
+            <div>
+              <dt>Volta</dt>
+              <dd id="data-volta">06 jan 2027</dd>
+            </div>
+            <div>
+              <dt>Passageiros</dt>
+              <dd id="passageiros">1 adulto · Econômica</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <div class="conteudo principal">
+        <section class="metricas" aria-label="Resumo do monitoramento">
+          <article class="metrica metrica-destaque">
+            <span>Menor preço agora</span>
+            <strong id="preco-atual">—</strong>
+            <small id="ultima-consulta">Aguardando consulta</small>
+          </article>
+          <article class="metrica">
+            <span>Recorde monitorado</span>
+            <strong id="menor-historico">—</strong>
+            <small>Menor valor já registrado</small>
+          </article>
+          <article class="metrica">
+            <span>Ofertas acumuladas</span>
+            <strong id="total-ofertas">0</strong>
+            <small>Linhas salvas na planilha</small>
+          </article>
+          <article class="metrica">
+            <span>Situação</span>
+            <strong id="situacao">Iniciando</strong>
+            <small id="gerado-em">Dados ainda não carregados</small>
+          </article>
+        </section>
+
+        <section class="secao-grafico" aria-labelledby="titulo-historico">
+          <div class="titulo-secao">
+            <div>
+              <p class="rotulo">Evolução</p>
+              <h2 id="titulo-historico">Histórico do menor preço</h2>
+            </div>
+            <span id="quantidade-consultas" class="contador">0 consultas</span>
+          </div>
+          <div class="grafico">
+            <canvas
+              id="grafico-precos"
+              role="img"
+              aria-label="Gráfico do menor preço encontrado em cada consulta"
+            ></canvas>
+            <p id="grafico-vazio" class="mensagem-vazia" hidden>
+              O gráfico aparecerá após a primeira consulta.
+            </p>
+          </div>
+        </section>
+
+        <section class="secao-ofertas" aria-labelledby="titulo-ofertas">
+          <div class="titulo-secao">
+            <div>
+              <p class="rotulo">Última consulta bem-sucedida</p>
+              <h2 id="titulo-ofertas">Ofertas encontradas</h2>
+            </div>
+            <span id="quantidade-ofertas" class="contador">0 ofertas</span>
+          </div>
+
+          <div class="tabela-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Companhia</th>
+                  <th>Ida</th>
+                  <th>Volta</th>
+                  <th>Conexões</th>
+                  <th class="alinha-direita">Preço total</th>
+                </tr>
+              </thead>
+              <tbody id="lista-ofertas">
+                <tr>
+                  <td colspan="5" class="mensagem-tabela">Carregando ofertas…</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="conteudo rodape-conteudo">
+        <p>Valores informativos sujeitos a alteração no momento da compra.</p>
+        <p>Próxima consulta programada em até 6 horas.</p>
+      </div>
+    </footer>
+
+    <noscript>
+      <p class="aviso-script">
+        Ative o JavaScript para visualizar os dados do monitoramento.
+      </p>
+    </noscript>
+    <script src="./painel.js"></script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+{
+  "ida": {
+    "price": 2156,
+    "airlines": ["Azul"],
+    "flights": [
+      {
+        "from_airport": {"code": "BEL"},
+        "to_airport": {"code": "REC"},
+        "departure": {"date": [2026, 12, 29], "time": [3, 15]},
+        "arrival": {"date": [2026, 12, 29], "time": [6, 0]},
+        "airline_code": "AD",
+        "flight_number": "4432"
+      }
+    ]
+  },
+  "voltas": [
+    {
+      "price": 2156,
+      "airlines": ["Gol"],
+      "flights": [
+        {
+          "from_airport": {"code": "REC"},
+          "to_airport": {"code": "GRU"},
+          "departure": {"date": [2027, 1, 6], "time": [12, 0]},
+          "arrival": {"date": [2027, 1, 6], "time": [15, 0]},
+          "airline_code": "G3",
+          "flight_number": "1551"
+        },
+        {
+          "from_airport": {"code": "GRU"},
+          "to_airport": {"code": "BEL"},
+          "departure": {"date": [2027, 1, 6], "time": [16, 30]},
+          "arrival": {"date": [2027, 1, 6], "time": [20, 0]},
+          "airline_code": "G3",
+          "flight_number": "1540"
+        }
+      ]
+    },
+    {
+      "price": 2491,
+      "airlines": ["Azul"],
+      "flights": [
+        {
+          "from_airport": {"code": "REC"},
+          "to_airport": {"code": "BEL"},
+          "departure": {"date": [2027, 1, 6], "time": [9, 10]},
+          "arrival": {"date": [2027, 1, 6], "time": [12, 0]},
+          "airline_code": "AD",
+          "flight_number": "4541"
+        }
+      ]
+    }
+  ]
+}

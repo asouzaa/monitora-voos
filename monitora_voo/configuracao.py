@@ -1,0 +1,9 @@
+ORIGEM = "BEL"
+DESTINO = "REC"
+DATA_IDA = "2026-12-29"
+DATA_VOLTA = "2027-01-06"
+ADULTOS = 1
+CLASSE_VIAGEM = "economy"
+MOEDA = "BRL"
+MAX_OFERTAS = 20
+PLANILHA_PADRAO = "monitoramento_voos.xlsx"

@@ -1,0 +1,7 @@
+.env
+monitoramento_voos.xlsx
+.venv/
+*.egg-info/
+__pycache__/
+.pytest_cache/
+*.pyc
