@@ -15,6 +15,8 @@ from .configuracao import (
 )
 from .planilha import CABECALHO_CONSULTAS, carregar_planilha
 
+LIMITE_OFERTAS_PAINEL = 5
+
 
 def exportar_dados(caminho_planilha: Path, caminho_saida: Path) -> None:
     dados = carregar_planilha(caminho_planilha)
@@ -52,7 +54,7 @@ def exportar_dados(caminho_planilha: Path, caminho_saida: Path) -> None:
                 por_consulta.get(ultima_consulta, []),
                 key=lambda item: _decimal(item.get("preco_total", ""))
                 or Decimal("Infinity"),
-            )
+            )[:LIMITE_OFERTAS_PAINEL]
         ],
         "historico": [
             {

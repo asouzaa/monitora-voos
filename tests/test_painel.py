@@ -30,6 +30,33 @@ class PainelTeste(unittest.TestCase):
         self.assertEqual(dados["historico"][0]["quantidade_ofertas"], 1)
         self.assertTrue(dados["planilha"]["disponivel"])
 
+    def test_exporta_apenas_as_cinco_ofertas_mais_baratas(self) -> None:
+        with TemporaryDirectory() as pasta:
+            caminho_planilha = Path(pasta) / "monitoramento_voos.xlsx"
+            caminho_json = Path(pasta) / "dados.json"
+            ofertas = [
+                _oferta(str(indice), preco)
+                for indice, preco in enumerate(
+                    ["2800", "2156", "2500", "2091", "2300", "2200"],
+                    start=1,
+                )
+            ]
+            registrar_consulta(
+                caminho_planilha,
+                ofertas,
+                datetime(2026, 7, 26, 12, tzinfo=timezone.utc),
+            )
+
+            exportar_dados(caminho_planilha, caminho_json)
+            dados = loads(caminho_json.read_text(encoding="utf-8"))
+
+        self.assertEqual(
+            [oferta["preco_total"] for oferta in dados["ofertas"]],
+            [2091.0, 2156.0, 2200.0, 2300.0, 2500.0],
+        )
+        self.assertEqual(dados["resumo"]["quantidade_ofertas_vistas"], 6)
+        self.assertEqual(dados["historico"][0]["quantidade_ofertas"], 6)
+
 
 def _oferta(identificador: str, preco: str) -> OfertaVoo:
     return OfertaVoo(
