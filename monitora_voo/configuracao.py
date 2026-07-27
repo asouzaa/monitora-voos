@@ -6,4 +6,5 @@ ADULTOS = 1
 CLASSE_VIAGEM = "economy"
 MOEDA = "BRL"
 MAX_OFERTAS = 20
+MAX_IDAS_CANDIDATAS = 10
 PLANILHA_PADRAO = "monitoramento_voos.xlsx"

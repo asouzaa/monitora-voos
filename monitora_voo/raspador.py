@@ -21,6 +21,7 @@ from .configuracao import (
     DATA_IDA,
     DATA_VOLTA,
     DESTINO,
+    MAX_IDAS_CANDIDATAS,
     MAX_OFERTAS,
     MOEDA,
     ORIGEM,
@@ -54,10 +55,23 @@ class RaspadorGoogleVoos:
         if not opcoes_ida:
             return []
 
-        ida = min(opcoes_ida, key=lambda opcao: opcao.price)
-        consulta_volta = select_flight(consulta, ida)
-        opcoes_volta = get_return_flights(consulta_volta, shopping=ordenacao)
-        return converter_ofertas(ida, opcoes_volta[:MAX_OFERTAS])
+        ofertas: list[OfertaVoo] = []
+        erros: list[str] = []
+
+        for ida in _opcoes_mais_baratas(opcoes_ida, MAX_IDAS_CANDIDATAS):
+            try:
+                consulta_volta = select_flight(consulta, ida)
+                opcoes_volta = get_return_flights(consulta_volta, shopping=ordenacao)
+            except Exception as erro:
+                erros.append(str(erro))
+                continue
+
+            ofertas.extend(converter_ofertas(ida, opcoes_volta[:MAX_OFERTAS]))
+
+        if not ofertas and erros:
+            raise RuntimeError("; ".join(erros))
+
+        return _ordenar_e_limitar(ofertas, MAX_OFERTAS)
 
 
 def converter_ofertas(ida: Any, opcoes_volta: Iterable[Any]) -> list[OfertaVoo]:
@@ -95,6 +109,15 @@ def converter_ofertas(ida: Any, opcoes_volta: Iterable[Any]) -> list[OfertaVoo]:
         )
 
     return ofertas
+
+
+def _opcoes_mais_baratas(opcoes: Iterable[Any], limite: int) -> list[Any]:
+    return sorted(opcoes, key=lambda opcao: Decimal(str(opcao.price)))[:limite]
+
+
+def _ordenar_e_limitar(ofertas: Iterable[OfertaVoo], limite: int) -> list[OfertaVoo]:
+    unicas = {oferta.identificador: oferta for oferta in ofertas}
+    return sorted(unicas.values(), key=lambda oferta: oferta.preco_total)[:limite]
 
 
 def _resumir_itinerario(segmentos: list[Any]) -> tuple[str, str, str]:
