@@ -249,9 +249,11 @@ h1 {
 
 .detalhes-rota {
   display: grid;
-  grid-template-columns: repeat(3, auto);
-  gap: 40px;
+  grid-template-columns: 1fr;
+  gap: 16px;
   margin: 0;
+  width: min(540px, 45vw);
+  min-width: 0;
 }
 
 .detalhes-rota div {
@@ -271,6 +273,11 @@ h1 {
   font-size: 14px;
   font-weight: 700;
   white-space: nowrap;
+}
+
+.detalhes-rota .datas-monitoradas dd {
+  line-height: 1.6;
+  white-space: normal;
 }
 
 .principal {
@@ -500,7 +507,7 @@ footer {
   }
 }
 
-@media (max-width: 880px) {
+@media (max-width: 1040px) {
   .faixa-rota .conteudo {
     min-height: 200px;
     align-items: flex-start;
@@ -511,6 +518,7 @@ footer {
 
   .detalhes-rota {
     width: 100%;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 
@@ -566,7 +574,7 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .detalhes-rota div:last-child {
+  .detalhes-rota .datas-monitoradas {
     grid-column: 1 / -1;
   }
 

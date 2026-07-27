@@ -18,28 +18,47 @@ from fast_flights import (
 from .configuracao import (
     ADULTOS,
     CLASSE_VIAGEM,
-    DATA_IDA,
-    DATA_VOLTA,
     DESTINO,
     MAX_IDAS_CANDIDATAS,
     MAX_OFERTAS,
     MOEDA,
     ORIGEM,
+    PERIODOS_MONITORADOS,
 )
 from .ofertas import OfertaVoo
 
 
 class RaspadorGoogleVoos:
     def buscar_ofertas(self) -> list[OfertaVoo]:
+        ofertas: list[OfertaVoo] = []
+        erros: list[str] = []
+
+        for data_ida, data_volta in PERIODOS_MONITORADOS:
+            try:
+                ofertas.extend(self._buscar_ofertas_periodo(data_ida, data_volta))
+            except Exception as erro:
+                erros.append(f"{data_ida}/{data_volta}: {erro}")
+
+        if not ofertas and erros:
+            raise RuntimeError("; ".join(erros))
+
+        limite_total = MAX_OFERTAS * len(PERIODOS_MONITORADOS)
+        return _ordenar_e_limitar(ofertas, limite_total)
+
+    def _buscar_ofertas_periodo(
+        self,
+        data_ida: str,
+        data_volta: str,
+    ) -> list[OfertaVoo]:
         consulta = create_query(
             flights=[
                 FlightQuery(
-                    date=DATA_IDA,
+                    date=data_ida,
                     from_airport=ORIGEM,
                     to_airport=DESTINO,
                 ),
                 FlightQuery(
-                    date=DATA_VOLTA,
+                    date=data_volta,
                     from_airport=DESTINO,
                     to_airport=ORIGEM,
                 ),

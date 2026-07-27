@@ -3,12 +3,30 @@ from pathlib import Path
 from types import SimpleNamespace
 import json
 import unittest
-from unittest.mock import patch
+from unittest.mock import call, patch
 
+from monitora_voo.configuracao import PERIODOS_MONITORADOS
 from monitora_voo.raspador import RaspadorGoogleVoos, converter_ofertas
 
 
 class RaspadorGoogleVoosTeste(unittest.TestCase):
+    def test_busca_todos_os_periodos_monitorados(self) -> None:
+        with patch.object(
+            RaspadorGoogleVoos,
+            "_buscar_ofertas_periodo",
+            return_value=[],
+        ) as buscar_periodo:
+            ofertas = RaspadorGoogleVoos().buscar_ofertas()
+
+        self.assertEqual(ofertas, [])
+        self.assertEqual(
+            buscar_periodo.call_args_list,
+            [
+                call(data_ida, data_volta)
+                for data_ida, data_volta in PERIODOS_MONITORADOS
+            ],
+        )
+
     def test_converte_resultado_do_google_voos(self) -> None:
         caminho = Path(__file__).parent / "fixtures" / "google_voos_ofertas.json"
         resposta = json.loads(caminho.read_text(encoding="utf-8"))

@@ -8,10 +8,9 @@ from pathlib import Path
 from .configuracao import (
     ADULTOS,
     CLASSE_VIAGEM,
-    DATA_IDA,
-    DATA_VOLTA,
     DESTINO,
     ORIGEM,
+    PERIODOS_MONITORADOS,
 )
 from .planilha import CABECALHO_CONSULTAS, carregar_planilha
 
@@ -32,8 +31,10 @@ def exportar_dados(caminho_planilha: Path, caminho_saida: Path) -> None:
         "rota": {
             "origem": ORIGEM,
             "destino": DESTINO,
-            "data_ida": DATA_IDA,
-            "data_volta": DATA_VOLTA,
+            "periodos": [
+                {"data_ida": data_ida, "data_volta": data_volta}
+                for data_ida, data_volta in PERIODOS_MONITORADOS
+            ],
             "adultos": ADULTOS,
             "classe": CLASSE_VIAGEM,
         },

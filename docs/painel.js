@@ -53,8 +53,8 @@ function renderizar(dados) {
 
   document.querySelector("#origem").textContent = rota.origem;
   document.querySelector("#destino").textContent = rota.destino;
-  document.querySelector("#data-ida").textContent = formatarData(rota.data_ida);
-  document.querySelector("#data-volta").textContent = formatarData(rota.data_volta);
+  document.querySelector("#periodos-monitorados").textContent =
+    rota.periodos.map(formatarPeriodo).join(" · ");
   document.querySelector("#passageiros").textContent =
     `${rota.adultos} adulto${rota.adultos === 1 ? "" : "s"} · Econômica`;
 
@@ -77,6 +77,14 @@ function renderizar(dados) {
   atualizarPlanilha(planilha);
   renderizarOfertas(ofertas);
   desenharGrafico(historico);
+}
+
+function formatarPeriodo(periodo) {
+  return `${formatarDataNumerica(periodo.data_ida)} → ${formatarDataNumerica(periodo.data_volta)}`;
+}
+
+function formatarDataNumerica(valor) {
+  return valor.split("-").reverse().join("/");
 }
 
 function atualizarSituacao(status) {

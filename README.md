@@ -1,7 +1,14 @@
 # Monitor de Voos BEL ↔ REC
 
 Programa em Python para monitorar preços de ida e volta entre Belém (`BEL`) e
-Recife (`REC`), com ida em `29/12/2026` e volta em `06/01/2027`.
+Recife (`REC`) para estas combinações:
+
+- `29/12/2026` a `06/01/2027`;
+- `29/12/2026` a `07/01/2027`;
+- `30/12/2026` a `06/01/2027`;
+- `30/12/2026` a `07/01/2027`;
+- `29/12/2026` a `05/01/2027`;
+- `30/12/2026` a `08/01/2027`.
 
 O monitor coleta resultados públicos do Google Voos por web scraping e registra
 os preços em `monitoramento_voos.xlsx`. Não exige conta, chave de API ou serviço

@@ -25,6 +25,7 @@ class PainelTeste(unittest.TestCase):
             dados = loads(caminho_json.read_text(encoding="utf-8"))
 
         self.assertEqual(dados["rota"]["origem"], "BEL")
+        self.assertEqual(len(dados["rota"]["periodos"]), 6)
         self.assertEqual(dados["resumo"]["menor_preco_historico"], 2156.0)
         self.assertEqual(dados["ofertas"][0]["companhia"], "Azul")
         self.assertEqual(dados["historico"][0]["quantidade_ofertas"], 1)
