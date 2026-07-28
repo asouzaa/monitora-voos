@@ -33,14 +33,14 @@
   },
   "resumo": {
     "menor_preco_historico": 2156.0,
-    "ultimo_menor_preco": 2156.0,
-    "data_ultima_consulta": "2026-07-27T22:31:27+00:00",
-    "quantidade_ofertas_vistas": 105,
+    "ultimo_menor_preco": 2240.0,
+    "data_ultima_consulta": "2026-07-28T06:06:29+00:00",
+    "quantidade_ofertas_vistas": 136,
     "status": "sem queda"
   },
   "ofertas": [
     {
-      "identificador": "dfea699576d8a79f",
+      "identificador": "45bfb0d5a70af82b",
       "companhia": "Azul / Gol",
       "partida_ida": "2026-12-29T17:55:00",
       "chegada_ida": "2026-12-29T20:25:00",
@@ -50,12 +50,12 @@
       "chegada_volta": "2027-01-07T01:30:00",
       "conexoes_volta": 1,
       "duracao_volta": "PT9H50M",
-      "preco_total": 2156.0,
+      "preco_total": 2240.0,
       "moeda": "BRL",
       "queda_detectada": false
     },
     {
-      "identificador": "03c029c266452afe",
+      "identificador": "5aa673f6514b53ab",
       "companhia": "Azul / Gol",
       "partida_ida": "2026-12-30T17:55:00",
       "chegada_ida": "2026-12-30T20:25:00",
@@ -65,7 +65,7 @@
       "chegada_volta": "2027-01-07T01:30:00",
       "conexoes_volta": 1,
       "duracao_volta": "PT9H50M",
-      "preco_total": 2156.0,
+      "preco_total": 2240.0,
       "moeda": "BRL",
       "queda_detectada": false
     },
@@ -169,11 +169,17 @@
       "menor_preco": 2156.0,
       "queda_detectada": false,
       "quantidade_ofertas": 31
+    },
+    {
+      "consulta_em": "2026-07-28T06:06:29+00:00",
+      "menor_preco": 2240.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 31
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_voos.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-07-27T22:31:37+00:00"
+  "gerado_em": "2026-07-28T06:06:38+00:00"
 }
