@@ -34,16 +34,16 @@
   "resumo": {
     "menor_preco_historico": 2156.0,
     "ultimo_menor_preco": 2219.0,
-    "data_ultima_consulta": "2026-07-30T22:32:00+00:00",
-    "quantidade_ofertas_vistas": 783,
+    "data_ultima_consulta": "2026-07-31T06:27:16+00:00",
+    "quantidade_ofertas_vistas": 867,
     "status": "sem queda"
   },
   "ofertas": [
     {
-      "identificador": "a4acc717593291fc",
+      "identificador": "7f03f02128d1f3dc",
       "companhia": "Azul / Gol",
-      "partida_ida": "2026-12-29T17:55:00",
-      "chegada_ida": "2026-12-29T20:25:00",
+      "partida_ida": "2026-12-29T06:20:00",
+      "chegada_ida": "2026-12-29T08:50:00",
       "conexoes_ida": 0,
       "duracao_ida": "PT2H30M",
       "partida_volta": "2027-01-06T15:40:00",
@@ -70,10 +70,10 @@
       "queda_detectada": false
     },
     {
-      "identificador": "0896b25b8da6d005",
+      "identificador": "ad602d9ed76fa3ef",
       "companhia": "Azul / Gol",
-      "partida_ida": "2026-12-29T17:55:00",
-      "chegada_ida": "2026-12-29T20:25:00",
+      "partida_ida": "2026-12-29T06:20:00",
+      "chegada_ida": "2026-12-29T08:50:00",
       "conexoes_ida": 0,
       "duracao_ida": "PT2H30M",
       "partida_volta": "2027-01-07T14:35:00",
@@ -100,10 +100,10 @@
       "queda_detectada": false
     },
     {
-      "identificador": "ee43f45f11b6eb57",
+      "identificador": "dcebaeff5d3c7438",
       "companhia": "Azul",
-      "partida_ida": "2026-12-29T17:55:00",
-      "chegada_ida": "2026-12-29T20:25:00",
+      "partida_ida": "2026-12-29T06:20:00",
+      "chegada_ida": "2026-12-29T08:50:00",
       "conexoes_ida": 0,
       "duracao_ida": "PT2H30M",
       "partida_volta": "2027-01-06T09:30:00",
@@ -241,11 +241,17 @@
       "menor_preco": 2219.0,
       "queda_detectada": false,
       "quantidade_ofertas": 78
+    },
+    {
+      "consulta_em": "2026-07-31T06:27:16+00:00",
+      "menor_preco": 2219.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 84
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_voos.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-07-30T22:32:08+00:00"
+  "gerado_em": "2026-07-31T06:27:26+00:00"
 }
