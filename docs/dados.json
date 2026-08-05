@@ -34,9 +34,9 @@
   "resumo": {
     "menor_preco_historico": 2151.0,
     "ultimo_menor_preco": 2151.0,
-    "data_ultima_consulta": "2026-08-04T22:32:43+00:00",
-    "quantidade_ofertas_vistas": 2027,
-    "status": "queda detectada"
+    "data_ultima_consulta": "2026-08-05T06:04:25+00:00",
+    "quantidade_ofertas_vistas": 2067,
+    "status": "sem queda"
   },
   "ofertas": [
     {
@@ -52,7 +52,7 @@
       "duracao_volta": "PT9H50M",
       "preco_total": 2151.0,
       "moeda": "BRL",
-      "queda_detectada": true
+      "queda_detectada": false
     },
     {
       "identificador": "7e8439010f4655d6",
@@ -67,7 +67,7 @@
       "duracao_volta": "PT9H50M",
       "preco_total": 2151.0,
       "moeda": "BRL",
-      "queda_detectada": true
+      "queda_detectada": false
     },
     {
       "identificador": "148c4f732e1e1d3f",
@@ -82,7 +82,7 @@
       "duracao_volta": "PT9H50M",
       "preco_total": 2151.0,
       "moeda": "BRL",
-      "queda_detectada": true
+      "queda_detectada": false
     },
     {
       "identificador": "c5db09f5d64b379d",
@@ -97,7 +97,7 @@
       "duracao_volta": "PT9H50M",
       "preco_total": 2151.0,
       "moeda": "BRL",
-      "queda_detectada": true
+      "queda_detectada": false
     },
     {
       "identificador": "af20ecfd4f6238a0",
@@ -112,7 +112,7 @@
       "duracao_volta": "PT9H50M",
       "preco_total": 2151.0,
       "moeda": "BRL",
-      "queda_detectada": true
+      "queda_detectada": false
     }
   ],
   "historico": [
@@ -361,11 +361,17 @@
       "menor_preco": 2151.0,
       "queda_detectada": true,
       "quantidade_ofertas": 40
+    },
+    {
+      "consulta_em": "2026-08-05T06:04:25+00:00",
+      "menor_preco": 2151.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 40
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_voos.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-08-04T22:32:59+00:00"
+  "gerado_em": "2026-08-05T06:04:35+00:00"
 }
