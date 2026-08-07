@@ -34,8 +34,8 @@
   "resumo": {
     "menor_preco_historico": 1959.0,
     "ultimo_menor_preco": 2406.0,
-    "data_ultima_consulta": "2026-08-07T16:13:00+00:00",
-    "quantidade_ofertas_vistas": 2427,
+    "data_ultima_consulta": "2026-08-07T22:01:30+00:00",
+    "quantidade_ofertas_vistas": 2487,
     "status": "sem queda"
   },
   "ofertas": [
@@ -55,17 +55,47 @@
       "queda_detectada": false
     },
     {
-      "identificador": "cd6320700200c75f",
-      "companhia": "Azul / Gol",
-      "partida_ida": "2026-12-30T17:55:00",
-      "chegada_ida": "2026-12-30T20:25:00",
-      "conexoes_ida": 0,
-      "duracao_ida": "PT2H30M",
+      "identificador": "8d5cb37110a8b284",
+      "companhia": "LATAM / Gol",
+      "partida_ida": "2026-12-30T11:05:00",
+      "chegada_ida": "2026-12-30T18:45:00",
+      "conexoes_ida": 1,
+      "duracao_ida": "PT7H40M",
       "partida_volta": "2027-01-06T15:40:00",
       "chegada_volta": "2027-01-07T01:30:00",
       "conexoes_volta": 1,
       "duracao_volta": "PT9H50M",
-      "preco_total": 2406.0,
+      "preco_total": 2669.0,
+      "moeda": "BRL",
+      "queda_detectada": false
+    },
+    {
+      "identificador": "61fdbc4fc6368ce2",
+      "companhia": "Azul / Gol",
+      "partida_ida": "2026-12-30T13:20:00",
+      "chegada_ida": "2026-12-30T17:30:00",
+      "conexoes_ida": 1,
+      "duracao_ida": "PT4H10M",
+      "partida_volta": "2027-01-06T15:40:00",
+      "chegada_volta": "2027-01-07T01:30:00",
+      "conexoes_volta": 1,
+      "duracao_volta": "PT9H50M",
+      "preco_total": 2684.0,
+      "moeda": "BRL",
+      "queda_detectada": false
+    },
+    {
+      "identificador": "b393dc7eacaf029a",
+      "companhia": "Azul / Gol",
+      "partida_ida": "2026-12-30T16:55:00",
+      "chegada_ida": "2026-12-31T01:30:00",
+      "conexoes_ida": 1,
+      "duracao_ida": "PT8H35M",
+      "partida_volta": "2027-01-06T15:40:00",
+      "chegada_volta": "2027-01-07T01:30:00",
+      "conexoes_volta": 1,
+      "duracao_volta": "PT9H50M",
+      "preco_total": 2684.0,
       "moeda": "BRL",
       "queda_detectada": false
     },
@@ -74,36 +104,6 @@
       "companhia": "Azul",
       "partida_ida": "2026-12-29T06:20:00",
       "chegada_ida": "2026-12-29T08:50:00",
-      "conexoes_ida": 0,
-      "duracao_ida": "PT2H30M",
-      "partida_volta": "2027-01-06T09:30:00",
-      "chegada_volta": "2027-01-06T12:10:00",
-      "conexoes_volta": 0,
-      "duracao_volta": "PT2H40M",
-      "preco_total": 2727.0,
-      "moeda": "BRL",
-      "queda_detectada": false
-    },
-    {
-      "identificador": "252ce85151f76352",
-      "companhia": "Azul",
-      "partida_ida": "2026-12-29T06:20:00",
-      "chegada_ida": "2026-12-29T08:50:00",
-      "conexoes_ida": 0,
-      "duracao_ida": "PT2H30M",
-      "partida_volta": "2027-01-06T22:40:00",
-      "chegada_volta": "2027-01-07T01:20:00",
-      "conexoes_volta": 0,
-      "duracao_volta": "PT2H40M",
-      "preco_total": 2727.0,
-      "moeda": "BRL",
-      "queda_detectada": false
-    },
-    {
-      "identificador": "7cd3943c296e0c88",
-      "companhia": "Azul",
-      "partida_ida": "2026-12-30T17:55:00",
-      "chegada_ida": "2026-12-30T20:25:00",
       "conexoes_ida": 0,
       "duracao_ida": "PT2H30M",
       "partida_volta": "2027-01-06T09:30:00",
@@ -421,11 +421,17 @@
       "menor_preco": 2406.0,
       "queda_detectada": false,
       "quantidade_ofertas": 40
+    },
+    {
+      "consulta_em": "2026-08-07T22:01:30+00:00",
+      "menor_preco": 2406.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 60
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_voos.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-08-07T16:13:13+00:00"
+  "gerado_em": "2026-08-07T22:01:41+00:00"
 }
