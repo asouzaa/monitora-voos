@@ -34,8 +34,8 @@
   "resumo": {
     "menor_preco_historico": 1959.0,
     "ultimo_menor_preco": 2684.0,
-    "data_ultima_consulta": "2026-08-08T15:52:05+00:00",
-    "quantidade_ofertas_vistas": 2587,
+    "data_ultima_consulta": "2026-08-08T21:51:40+00:00",
+    "quantidade_ofertas_vistas": 2607,
     "status": "sem queda"
   },
   "ofertas": [
@@ -70,7 +70,22 @@
       "queda_detectada": false
     },
     {
-      "identificador": "ee4b5041d4952021",
+      "identificador": "8ccc497034c0ad4f",
+      "companhia": "Gol",
+      "partida_ida": "2026-12-30T17:05:00",
+      "chegada_ida": "2026-12-30T23:55:00",
+      "conexoes_ida": 1,
+      "duracao_ida": "PT6H50M",
+      "partida_volta": "2027-01-06T15:40:00",
+      "chegada_volta": "2027-01-07T01:30:00",
+      "conexoes_volta": 1,
+      "duracao_volta": "PT9H50M",
+      "preco_total": 2763.0,
+      "moeda": "BRL",
+      "queda_detectada": false
+    },
+    {
+      "identificador": "dbbcdde51ec4199a",
       "companhia": "LATAM",
       "partida_ida": "2026-12-30T11:05:00",
       "chegada_ida": "2026-12-30T18:45:00",
@@ -80,12 +95,12 @@
       "chegada_volta": "2027-01-06T16:15:00",
       "conexoes_volta": 1,
       "duracao_volta": "PT4H45M",
-      "preco_total": 3103.0,
+      "preco_total": 3098.0,
       "moeda": "BRL",
       "queda_detectada": false
     },
     {
-      "identificador": "0fbc836b2f56d455",
+      "identificador": "8a43adac7795ed77",
       "companhia": "LATAM",
       "partida_ida": "2026-12-30T11:05:00",
       "chegada_ida": "2026-12-30T18:45:00",
@@ -95,22 +110,7 @@
       "chegada_volta": "2027-01-06T10:40:00",
       "conexoes_volta": 1,
       "duracao_volta": "PT7H0M",
-      "preco_total": 3144.0,
-      "moeda": "BRL",
-      "queda_detectada": false
-    },
-    {
-      "identificador": "4cebf2d060cb3657",
-      "companhia": "LATAM",
-      "partida_ida": "2026-12-30T13:00:00",
-      "chegada_ida": "2026-12-30T20:40:00",
-      "conexoes_ida": 1,
-      "duracao_ida": "PT7H40M",
-      "partida_volta": "2027-01-06T11:30:00",
-      "chegada_volta": "2027-01-06T16:15:00",
-      "conexoes_volta": 1,
-      "duracao_volta": "PT4H45M",
-      "preco_total": 3184.0,
+      "preco_total": 3129.0,
       "moeda": "BRL",
       "queda_detectada": false
     }
@@ -445,11 +445,17 @@
       "menor_preco": 2684.0,
       "queda_detectada": false,
       "quantidade_ofertas": 20
+    },
+    {
+      "consulta_em": "2026-08-08T21:51:40+00:00",
+      "menor_preco": 2684.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 20
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_voos.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-08-08T15:52:14+00:00"
+  "gerado_em": "2026-08-08T21:51:49+00:00"
 }
