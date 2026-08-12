@@ -33,12 +33,27 @@
   },
   "resumo": {
     "menor_preco_historico": 1959.0,
-    "ultimo_menor_preco": 2425.0,
-    "data_ultima_consulta": "2026-08-11T22:09:20+00:00",
-    "quantidade_ofertas_vistas": 2927,
+    "ultimo_menor_preco": 2255.0,
+    "data_ultima_consulta": "2026-08-12T05:10:21+00:00",
+    "quantidade_ofertas_vistas": 2967,
     "status": "sem queda"
   },
   "ofertas": [
+    {
+      "identificador": "59b7368fed257e5a",
+      "companhia": "Azul / Gol",
+      "partida_ida": "2026-12-29T13:20:00",
+      "chegada_ida": "2026-12-29T17:30:00",
+      "conexoes_ida": 1,
+      "duracao_ida": "PT4H10M",
+      "partida_volta": "2027-01-06T15:40:00",
+      "chegada_volta": "2027-01-07T01:30:00",
+      "conexoes_volta": 1,
+      "duracao_volta": "PT9H50M",
+      "preco_total": 2255.0,
+      "moeda": "BRL",
+      "queda_detectada": false
+    },
     {
       "identificador": "399ea8cbee8ab40d",
       "companhia": "Azul",
@@ -65,21 +80,6 @@
       "chegada_volta": "2027-01-07T02:00:00",
       "conexoes_volta": 1,
       "duracao_volta": "PT7H40M",
-      "preco_total": 2425.0,
-      "moeda": "BRL",
-      "queda_detectada": false
-    },
-    {
-      "identificador": "fb820d54f9d68641",
-      "companhia": "Azul",
-      "partida_ida": "2026-12-29T13:20:00",
-      "chegada_ida": "2026-12-29T17:30:00",
-      "conexoes_ida": 1,
-      "duracao_ida": "PT4H10M",
-      "partida_volta": "2027-01-06T02:45:00",
-      "chegada_volta": "2027-01-06T12:05:00",
-      "conexoes_volta": 1,
-      "duracao_volta": "PT9H20M",
       "preco_total": 2425.0,
       "moeda": "BRL",
       "queda_detectada": false
@@ -523,11 +523,17 @@
       "menor_preco": 2425.0,
       "queda_detectada": false,
       "quantidade_ofertas": 40
+    },
+    {
+      "consulta_em": "2026-08-12T05:10:21+00:00",
+      "menor_preco": 2255.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 40
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_voos.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-08-11T22:09:29+00:00"
+  "gerado_em": "2026-08-12T05:10:33+00:00"
 }
