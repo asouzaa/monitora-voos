@@ -33,14 +33,14 @@
   },
   "resumo": {
     "menor_preco_historico": 1959.0,
-    "ultimo_menor_preco": 2222.0,
-    "data_ultima_consulta": "2026-08-17T10:02:15+00:00",
-    "quantidade_ofertas_vistas": 3387,
+    "ultimo_menor_preco": 2262.0,
+    "data_ultima_consulta": "2026-08-17T21:45:40+00:00",
+    "quantidade_ofertas_vistas": 3407,
     "status": "sem queda"
   },
   "ofertas": [
     {
-      "identificador": "e4b1af3c6b46169e",
+      "identificador": "575cd13920d9ce0a",
       "companhia": "Gol",
       "partida_ida": "2026-12-30T03:05:00",
       "chegada_ida": "2026-12-30T13:55:00",
@@ -50,12 +50,12 @@
       "chegada_volta": "2027-01-07T01:30:00",
       "conexoes_volta": 1,
       "duracao_volta": "PT9H50M",
-      "preco_total": 2222.0,
+      "preco_total": 2262.0,
       "moeda": "BRL",
       "queda_detectada": false
     },
     {
-      "identificador": "5b3a4f2141d16c0b",
+      "identificador": "f6b7b608230c3a7a",
       "companhia": "Gol",
       "partida_ida": "2026-12-30T17:05:00",
       "chegada_ida": "2026-12-30T23:55:00",
@@ -65,7 +65,7 @@
       "chegada_volta": "2027-01-07T01:30:00",
       "conexoes_volta": 1,
       "duracao_volta": "PT9H50M",
-      "preco_total": 2222.0,
+      "preco_total": 2262.0,
       "moeda": "BRL",
       "queda_detectada": false
     },
@@ -100,16 +100,16 @@
       "queda_detectada": false
     },
     {
-      "identificador": "92141d13599a9e1f",
+      "identificador": "840eb867c97cdb45",
       "companhia": "Gol",
-      "partida_ida": "2026-12-30T17:05:00",
-      "chegada_ida": "2026-12-30T23:55:00",
+      "partida_ida": "2026-12-30T03:05:00",
+      "chegada_ida": "2026-12-30T13:55:00",
       "conexoes_ida": 1,
-      "duracao_ida": "PT6H50M",
-      "partida_volta": "2027-01-06T04:00:00",
-      "chegada_volta": "2027-01-06T11:25:00",
+      "duracao_ida": "PT10H50M",
+      "partida_volta": "2027-01-06T16:45:00",
+      "chegada_volta": "2027-01-07T01:30:00",
       "conexoes_volta": 1,
-      "duracao_volta": "PT7H25M",
+      "duracao_volta": "PT8H45M",
       "preco_total": 2361.0,
       "moeda": "BRL",
       "queda_detectada": false
@@ -637,11 +637,17 @@
       "menor_preco": 2222.0,
       "queda_detectada": false,
       "quantidade_ofertas": 20
+    },
+    {
+      "consulta_em": "2026-08-17T21:45:40+00:00",
+      "menor_preco": 2262.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 20
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_voos.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-08-17T10:02:25+00:00"
+  "gerado_em": "2026-08-17T21:45:53+00:00"
 }
