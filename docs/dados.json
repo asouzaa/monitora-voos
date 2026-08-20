@@ -34,82 +34,82 @@
   "resumo": {
     "menor_preco_historico": 1959.0,
     "ultimo_menor_preco": 2178.0,
-    "data_ultima_consulta": "2026-08-20T04:03:51+00:00",
-    "quantidade_ofertas_vistas": 4167,
+    "data_ultima_consulta": "2026-08-20T09:55:45+00:00",
+    "quantidade_ofertas_vistas": 4287,
     "status": "sem queda"
   },
   "ofertas": [
     {
-      "identificador": "e4cdc89899704ec2",
+      "identificador": "05923cf2662241fb",
       "companhia": "Azul / Gol",
       "partida_ida": "2026-12-29T13:30:00",
       "chegada_ida": "2026-12-29T21:50:00",
       "conexoes_ida": 1,
       "duracao_ida": "PT8H20M",
-      "partida_volta": "2027-01-07T04:00:00",
-      "chegada_volta": "2027-01-07T12:05:00",
+      "partida_volta": "2027-01-07T14:35:00",
+      "chegada_volta": "2027-01-08T01:30:00",
       "conexoes_volta": 1,
-      "duracao_volta": "PT8H5M",
+      "duracao_volta": "PT10H55M",
       "preco_total": 2178.0,
       "moeda": "BRL",
       "queda_detectada": false
     },
     {
-      "identificador": "f370b087206d0ab4",
+      "identificador": "011b1617d086ed02",
       "companhia": "Azul / Gol",
       "partida_ida": "2026-12-29T17:50:00",
       "chegada_ida": "2026-12-30T01:30:00",
       "conexoes_ida": 1,
       "duracao_ida": "PT7H40M",
-      "partida_volta": "2027-01-07T04:00:00",
-      "chegada_volta": "2027-01-07T12:05:00",
+      "partida_volta": "2027-01-07T14:35:00",
+      "chegada_volta": "2027-01-08T01:30:00",
       "conexoes_volta": 1,
-      "duracao_volta": "PT8H5M",
+      "duracao_volta": "PT10H55M",
       "preco_total": 2178.0,
       "moeda": "BRL",
       "queda_detectada": false
     },
     {
-      "identificador": "44459a5616a74019",
+      "identificador": "87b352128fe7c8b8",
       "companhia": "Azul / Gol",
       "partida_ida": "2026-12-30T02:30:00",
       "chegada_ida": "2026-12-30T06:55:00",
       "conexoes_ida": 1,
       "duracao_ida": "PT4H25M",
-      "partida_volta": "2027-01-07T04:00:00",
-      "chegada_volta": "2027-01-07T12:05:00",
+      "partida_volta": "2027-01-07T14:35:00",
+      "chegada_volta": "2027-01-08T01:30:00",
       "conexoes_volta": 1,
-      "duracao_volta": "PT8H5M",
+      "duracao_volta": "PT10H55M",
       "preco_total": 2178.0,
       "moeda": "BRL",
       "queda_detectada": false
     },
     {
-      "identificador": "7d9a86556238b1f4",
+      "identificador": "eec2107155b53227",
       "companhia": "Azul / Gol",
       "partida_ida": "2026-12-30T13:20:00",
       "chegada_ida": "2026-12-30T17:30:00",
       "conexoes_ida": 1,
       "duracao_ida": "PT4H10M",
-      "partida_volta": "2027-01-07T04:00:00",
-      "chegada_volta": "2027-01-07T12:05:00",
+      "partida_volta": "2027-01-07T14:35:00",
+      "chegada_volta": "2027-01-08T01:30:00",
       "conexoes_volta": 1,
-      "duracao_volta": "PT8H5M",
+      "duracao_volta": "PT10H55M",
       "preco_total": 2178.0,
       "moeda": "BRL",
       "queda_detectada": false
     },
     {
-      "identificador": "2b6c9044e7bd9f3c",
+      "identificador": "9c62cda40aa732f2",
       "companhia": "Azul / Gol",
       "partida_ida": "2026-12-30T17:50:00",
       "chegada_ida": "2026-12-31T01:30:00",
       "conexoes_ida": 1,
       "duracao_ida": "PT7H40M",
-      "partida_volta": "2027-01-07T04:00:00",
-      "chegada_volta": "2027-01-07T12:05:00",
+      "partida_volta": "2027-01-07T14:35:00",
+      "chegada_volta": "2027-01-08T01:30:00",
       "conexoes_volta": 1,
-      "duracao_volta": "PT8H5M",
+      "duracao_volta": "PT10H55M",
       "preco_total": 2178.0,
       "moeda": "BRL",
       "queda_detectada": false
@@ -691,11 +691,17 @@
       "menor_preco": 2178.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-08-20T09:55:45+00:00",
+      "menor_preco": 2178.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_voos.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-08-20T04:04:10+00:00"
+  "gerado_em": "2026-08-20T09:56:08+00:00"
 }
