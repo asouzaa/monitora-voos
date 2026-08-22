@@ -34,15 +34,15 @@
   },
   "resumo": {
     "menor_preco_historico": 1499.0,
-    "ultimo_menor_preco": 1499.0,
-    "data_ultima_consulta": "2026-08-22T15:41:38+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-08-22T15:41:38+00:00",
-    "quantidade_ofertas_vistas": 571,
+    "ultimo_menor_preco": 1636.0,
+    "data_ultima_consulta": "2026-08-22T21:42:24+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-08-22T21:42:24+00:00",
+    "quantidade_ofertas_vistas": 681,
     "status": "sem queda"
   },
   "ofertas": [
     {
-      "identificador": "54f7d7022bea4953",
+      "identificador": "fd8a888f782ab526",
       "companhia": "LATAM",
       "partida_ida": "2026-12-29T21:55:00",
       "chegada_ida": "2026-12-29T23:50:00",
@@ -52,7 +52,7 @@
       "chegada_volta": "2027-01-08T01:55:00",
       "conexoes_volta": 0,
       "duracao_volta": "PT2H0M",
-      "preco_total": 1499.0,
+      "preco_total": 1636.0,
       "moeda": "BRL",
       "queda_detectada": false
     },
@@ -126,17 +126,17 @@
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-07",
-      "menor_preco": 1499.0
+      "menor_preco": 1636.0
     },
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-06",
-      "menor_preco": 2330.0
+      "menor_preco": 2440.0
     },
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-07",
-      "menor_preco": 1861.0
+      "menor_preco": 1999.0
     },
     {
       "data_ida": "2026-12-29",
@@ -153,7 +153,7 @@
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-07",
-      "menor_preco": 1499.0
+      "menor_preco": 1636.0
     }
   ],
   "historico": [
@@ -186,11 +186,17 @@
       "menor_preco": 1499.0,
       "queda_detectada": false,
       "quantidade_ofertas": 115
+    },
+    {
+      "consulta_em": "2026-08-22T21:42:24+00:00",
+      "menor_preco": 1636.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 110
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_fortaleza.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-08-22T15:43:29+00:00"
+  "gerado_em": "2026-08-22T21:44:06+00:00"
 }
