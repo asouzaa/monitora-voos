@@ -6,7 +6,12 @@ from pathlib import Path
 import sys
 import time
 
-from .configuracao import PLANILHA_PADRAO
+from .configuracao import (
+    DESTINO_PADRAO,
+    DESTINOS_MONITORADOS,
+    PLANILHAS_PADRAO,
+    SAIDAS_PAINEL_PADRAO,
+)
 from .painel import exportar_dados
 from .planilha import registrar_consulta, registrar_erro
 from .raspador import RaspadorGoogleVoos
@@ -17,37 +22,45 @@ def principal() -> None:
     subparsers = parser.add_subparsers(dest="comando", required=True)
 
     executar = subparsers.add_parser("executar", help="Executa uma consulta imediata.")
-    executar.add_argument("--planilha", default=PLANILHA_PADRAO)
+    _adicionar_destino(executar)
+    executar.add_argument("--planilha")
 
     monitorar = subparsers.add_parser("monitorar", help="Executa consultas recorrentes.")
+    _adicionar_destino(monitorar)
     monitorar.add_argument("--intervalo-horas", type=float, default=6.0)
-    monitorar.add_argument("--planilha", default=PLANILHA_PADRAO)
+    monitorar.add_argument("--planilha")
 
     exportar = subparsers.add_parser(
         "exportar",
         help="Exporta os dados da planilha para o painel web.",
     )
-    exportar.add_argument("--planilha", default=PLANILHA_PADRAO)
-    exportar.add_argument("--saida", default="docs/dados.json")
+    _adicionar_destino(exportar)
+    exportar.add_argument("--planilha")
+    exportar.add_argument("--saida")
 
     args = parser.parse_args()
+    caminho_planilha = Path(args.planilha or PLANILHAS_PADRAO[args.destino])
 
     if args.comando == "executar":
-        sucesso = executar_uma_vez(Path(args.planilha))
+        sucesso = executar_uma_vez(caminho_planilha, args.destino)
         raise SystemExit(0 if sucesso else 1)
 
     if args.comando == "monitorar":
-        monitorar_periodicamente(Path(args.planilha), args.intervalo_horas)
+        monitorar_periodicamente(caminho_planilha, args.intervalo_horas, args.destino)
 
     if args.comando == "exportar":
-        exportar_dados(Path(args.planilha), Path(args.saida))
-        print(f"Dados do painel exportados para {args.saida}.")
+        caminho_saida = Path(args.saida or SAIDAS_PAINEL_PADRAO[args.destino])
+        exportar_dados(caminho_planilha, caminho_saida, args.destino)
+        print(f"Dados do painel exportados para {caminho_saida}.")
 
 
-def executar_uma_vez(caminho_planilha: Path) -> bool:
+def executar_uma_vez(
+    caminho_planilha: Path,
+    destino: str = DESTINO_PADRAO,
+) -> bool:
     consultado_em = datetime.now().astimezone()
     try:
-        raspador = RaspadorGoogleVoos()
+        raspador = RaspadorGoogleVoos(destino)
         ofertas = raspador.buscar_ofertas()
         queda = registrar_consulta(caminho_planilha, ofertas, consultado_em)
     except Exception as erro:
@@ -62,7 +75,11 @@ def executar_uma_vez(caminho_planilha: Path) -> bool:
     return True
 
 
-def monitorar_periodicamente(caminho_planilha: Path, intervalo_horas: float) -> None:
+def monitorar_periodicamente(
+    caminho_planilha: Path,
+    intervalo_horas: float,
+    destino: str = DESTINO_PADRAO,
+) -> None:
     if intervalo_horas <= 0:
         raise ValueError("--intervalo-horas deve ser maior que zero.")
 
@@ -71,7 +88,16 @@ def monitorar_periodicamente(caminho_planilha: Path, intervalo_horas: float) -> 
 
     try:
         while True:
-            executar_uma_vez(caminho_planilha)
+            executar_uma_vez(caminho_planilha, destino)
             time.sleep(intervalo_segundos)
     except KeyboardInterrupt:
         print("Monitoramento interrompido.")
+
+
+def _adicionar_destino(parser: ArgumentParser) -> None:
+    parser.add_argument(
+        "--destino",
+        choices=DESTINOS_MONITORADOS,
+        default=DESTINO_PADRAO,
+        help="Aeroporto de destino monitorado (padrão: REC).",
+    )

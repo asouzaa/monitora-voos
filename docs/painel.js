@@ -12,6 +12,16 @@ const formatoConsulta = new Intl.DateTimeFormat("pt-BR", {
 
 let historicoAtual = [];
 
+const rotasDisponiveis = {
+  REC: { arquivoDados: "./dados.json", nome: "Recife" },
+  FOR: { arquivoDados: "./dados_fortaleza.json", nome: "Fortaleza" },
+};
+const parametroDestino = new URLSearchParams(window.location.search)
+  .get("destino")
+  ?.toUpperCase();
+const codigoDestino = parametroDestino in rotasDisponiveis ? parametroDestino : "REC";
+const rotaSelecionada = rotasDisponiveis[codigoDestino];
+
 document
   .querySelector("#botao-atualizar")
   .addEventListener("click", () => carregarDados());
@@ -27,7 +37,7 @@ async function carregarDados() {
   botao.disabled = true;
 
   try {
-    const resposta = await fetch(`./dados.json?v=${Date.now()}`, {
+    const resposta = await fetch(`${rotaSelecionada.arquivoDados}?v=${Date.now()}`, {
       cache: "no-store",
     });
     if (!resposta.ok) {
@@ -51,6 +61,10 @@ function renderizar(dados) {
   const { rota, resumo, ofertas = [], historico = [], planilha } = dados;
   historicoAtual = historico;
 
+  document.title = `Radar BEL ↔ ${rota.destino} · ${rota.nome_destino}`;
+  document.querySelector("#marca-destino").textContent =
+    `Belém ↔ ${rota.nome_destino}`;
+
   document.querySelector("#origem").textContent = rota.origem;
   document.querySelector("#destino").textContent = rota.destino;
   document.querySelector("#periodos-monitorados").textContent =
@@ -67,8 +81,8 @@ function renderizar(dados) {
   document.querySelector("#total-ofertas").textContent =
     resumo.quantidade_ofertas_vistas.toLocaleString("pt-BR");
   document.querySelector("#ultima-consulta").textContent =
-    resumo.data_ultima_consulta
-      ? `Consulta em ${formatarConsulta(resumo.data_ultima_consulta)}`
+    resumo.data_ultima_consulta_bem_sucedida
+      ? `Consulta em ${formatarConsulta(resumo.data_ultima_consulta_bem_sucedida)}`
       : "Aguardando primeira consulta";
   document.querySelector("#gerado-em").textContent =
     `Painel atualizado em ${formatarConsulta(dados.gerado_em)}`;

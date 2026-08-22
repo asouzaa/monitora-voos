@@ -18,7 +18,8 @@ from fast_flights import (
 from .configuracao import (
     ADULTOS,
     CLASSE_VIAGEM,
-    DESTINO,
+    DESTINO_PADRAO,
+    DESTINOS_MONITORADOS,
     MAX_IDAS_CANDIDATAS,
     MAX_OFERTAS,
     MOEDA,
@@ -29,6 +30,11 @@ from .ofertas import OfertaVoo
 
 
 class RaspadorGoogleVoos:
+    def __init__(self, destino: str = DESTINO_PADRAO) -> None:
+        if destino not in DESTINOS_MONITORADOS:
+            raise ValueError(f"Destino não monitorado: {destino}.")
+        self.destino = destino
+
     def buscar_ofertas(self) -> list[OfertaVoo]:
         ofertas: list[OfertaVoo] = []
         erros: list[str] = []
@@ -55,11 +61,11 @@ class RaspadorGoogleVoos:
                 FlightQuery(
                     date=data_ida,
                     from_airport=ORIGEM,
-                    to_airport=DESTINO,
+                    to_airport=self.destino,
                 ),
                 FlightQuery(
                     date=data_volta,
-                    from_airport=DESTINO,
+                    from_airport=self.destino,
                     to_airport=ORIGEM,
                 ),
             ],

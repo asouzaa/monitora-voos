@@ -38,18 +38,25 @@ jobs:
       - name: Instalar o monitor
         run: python -m pip install .
 
-      - name: Consultar preços
+      - name: Consultar preços de Recife
         continue-on-error: true
-        run: python -m monitora_voo executar --planilha docs/monitoramento_voos.xlsx
+        run: python -m monitora_voo executar --destino REC --planilha docs/monitoramento_voos.xlsx
 
-      - name: Atualizar dados do painel
-        run: python -m monitora_voo exportar --planilha docs/monitoramento_voos.xlsx --saida docs/dados.json
+      - name: Consultar preços de Fortaleza
+        continue-on-error: true
+        run: python -m monitora_voo executar --destino FOR --planilha docs/monitoramento_fortaleza.xlsx
+
+      - name: Atualizar dados de Recife
+        run: python -m monitora_voo exportar --destino REC --planilha docs/monitoramento_voos.xlsx --saida docs/dados.json
+
+      - name: Atualizar dados de Fortaleza
+        run: python -m monitora_voo exportar --destino FOR --planilha docs/monitoramento_fortaleza.xlsx --saida docs/dados_fortaleza.json
 
       - name: Salvar histórico no repositório
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/dados.json docs/monitoramento_voos.xlsx
+          git add docs/dados.json docs/dados_fortaleza.json docs/monitoramento_voos.xlsx docs/monitoramento_fortaleza.xlsx
           if ! git diff --cached --quiet; then
             git commit -m "Atualiza monitoramento de voos"
             git push

@@ -27,6 +27,36 @@ class RaspadorGoogleVoosTeste(unittest.TestCase):
             ],
         )
 
+    def test_monta_consulta_de_ida_e_volta_para_fortaleza(self) -> None:
+        with (
+            patch(
+                "monitora_voo.raspador.FlightQuery",
+                side_effect=lambda **argumentos: argumentos,
+            ) as consulta_voo,
+            patch(
+                "monitora_voo.raspador.create_query",
+                return_value="consulta",
+            ),
+            patch("monitora_voo.raspador.get_flights", return_value=[]),
+        ):
+            ofertas = RaspadorGoogleVoos("FOR")._buscar_ofertas_periodo(
+                "2026-12-29",
+                "2027-01-06",
+            )
+
+        self.assertEqual(ofertas, [])
+        self.assertEqual(
+            consulta_voo.call_args_list,
+            [
+                call(date="2026-12-29", from_airport="BEL", to_airport="FOR"),
+                call(date="2027-01-06", from_airport="FOR", to_airport="BEL"),
+            ],
+        )
+
+    def test_rejeita_destino_nao_monitorado(self) -> None:
+        with self.assertRaisesRegex(ValueError, "Destino não monitorado"):
+            RaspadorGoogleVoos("GRU")
+
     def test_converte_resultado_do_google_voos(self) -> None:
         caminho = Path(__file__).parent / "fixtures" / "google_voos_ofertas.json"
         resposta = json.loads(caminho.read_text(encoding="utf-8"))

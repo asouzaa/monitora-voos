@@ -8,7 +8,8 @@ from pathlib import Path
 from .configuracao import (
     ADULTOS,
     CLASSE_VIAGEM,
-    DESTINO,
+    DESTINO_PADRAO,
+    DESTINOS_MONITORADOS,
     ORIGEM,
     PERIODOS_MONITORADOS,
 )
@@ -17,7 +18,14 @@ from .planilha import CABECALHO_CONSULTAS, carregar_planilha
 LIMITE_OFERTAS_PAINEL = 5
 
 
-def exportar_dados(caminho_planilha: Path, caminho_saida: Path) -> None:
+def exportar_dados(
+    caminho_planilha: Path,
+    caminho_saida: Path,
+    destino: str = DESTINO_PADRAO,
+) -> None:
+    if destino not in DESTINOS_MONITORADOS:
+        raise ValueError(f"Destino não monitorado: {destino}.")
+
     dados = carregar_planilha(caminho_planilha)
     resumo = _resumo_para_dict(dados.resumo)
     consultas = [
@@ -26,11 +34,15 @@ def exportar_dados(caminho_planilha: Path, caminho_saida: Path) -> None:
     ]
     por_consulta = _agrupar_consultas(consultas)
     ultima_consulta = max(por_consulta, default="")
+    ofertas_ultima_consulta = por_consulta.get(ultima_consulta, [])
+    comparacao_periodos = _comparar_periodos(ofertas_ultima_consulta)
+    datas_vencedoras = _datas_vencedoras(comparacao_periodos)
 
     conteudo = {
         "rota": {
             "origem": ORIGEM,
-            "destino": DESTINO,
+            "destino": destino,
+            "nome_destino": DESTINOS_MONITORADOS[destino],
             "periodos": [
                 {"data_ida": data_ida, "data_volta": data_volta}
                 for data_ida, data_volta in PERIODOS_MONITORADOS
@@ -44,6 +56,7 @@ def exportar_dados(caminho_planilha: Path, caminho_saida: Path) -> None:
             ),
             "ultimo_menor_preco": _numero(resumo.get("ultimo_menor_preco", "")),
             "data_ultima_consulta": resumo.get("data_ultima_consulta", ""),
+            "data_ultima_consulta_bem_sucedida": ultima_consulta,
             "quantidade_ofertas_vistas": int(
                 resumo.get("quantidade_ofertas_vistas", "0") or 0
             ),
@@ -52,11 +65,13 @@ def exportar_dados(caminho_planilha: Path, caminho_saida: Path) -> None:
         "ofertas": [
             _normalizar_oferta(oferta)
             for oferta in sorted(
-                por_consulta.get(ultima_consulta, []),
+                ofertas_ultima_consulta,
                 key=lambda item: _decimal(item.get("preco_total", ""))
                 or Decimal("Infinity"),
             )[:LIMITE_OFERTAS_PAINEL]
         ],
+        "comparacao_periodos": comparacao_periodos,
+        "datas_vencedoras": datas_vencedoras,
         "historico": [
             {
                 "consulta_em": consulta_em,
@@ -87,6 +102,60 @@ def exportar_dados(caminho_planilha: Path, caminho_saida: Path) -> None:
         dumps(conteudo, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
+
+
+def _comparar_periodos(
+    ofertas: list[dict[str, str]],
+) -> list[dict[str, object]]:
+    menores: dict[tuple[str, str], Decimal] = {}
+    periodos_validos = set(PERIODOS_MONITORADOS)
+
+    for oferta in ofertas:
+        periodo = (
+            _data_voo(oferta.get("partida_ida", "")),
+            _data_voo(oferta.get("partida_volta", "")),
+        )
+        preco = _decimal(oferta.get("preco_total", ""))
+        if periodo not in periodos_validos or preco is None:
+            continue
+        menor_atual = menores.get(periodo)
+        if menor_atual is None or preco < menor_atual:
+            menores[periodo] = preco
+
+    return [
+        {
+            "data_ida": data_ida,
+            "data_volta": data_volta,
+            "menor_preco": (
+                float(menores[(data_ida, data_volta)])
+                if (data_ida, data_volta) in menores
+                else None
+            ),
+        }
+        for data_ida, data_volta in PERIODOS_MONITORADOS
+    ]
+
+
+def _datas_vencedoras(
+    comparacao_periodos: list[dict[str, object]],
+) -> list[dict[str, object]]:
+    precos = [
+        periodo["menor_preco"]
+        for periodo in comparacao_periodos
+        if periodo["menor_preco"] is not None
+    ]
+    menor_preco = min(precos, default=None)
+    if menor_preco is None:
+        return []
+    return [
+        periodo.copy()
+        for periodo in comparacao_periodos
+        if periodo["menor_preco"] == menor_preco
+    ]
+
+
+def _data_voo(valor: str) -> str:
+    return valor.split("T", maxsplit=1)[0] if valor else ""
 
 
 def _agrupar_consultas(

@@ -1,7 +1,8 @@
-# Monitor de Voos BEL ↔ REC
+# Monitor de Voos BEL ↔ REC/FOR
 
-Programa em Python para monitorar preços de ida e volta entre Belém (`BEL`) e
-Recife (`REC`) para estas combinações:
+Programa em Python para monitorar e comparar preços de ida e volta saindo de
+Belém (`BEL`) com destino a Recife (`REC`) e Fortaleza (`FOR`) para estas
+combinações:
 
 - `29/12/2026` a `06/01/2027`;
 - `29/12/2026` a `07/01/2027`;
@@ -11,8 +12,8 @@ Recife (`REC`) para estas combinações:
 - `30/12/2026` a `08/01/2027`.
 
 O monitor coleta resultados públicos do Google Voos por web scraping e registra
-os preços em `monitoramento_voos.xlsx`. Não exige conta, chave de API ou serviço
-pago.
+os preços de cada destino em uma planilha independente. Não exige conta, chave
+de API ou serviço pago.
 
 ## Instalação
 
@@ -26,16 +27,22 @@ python -m pip install -e .
 
 ## Uso
 
-Executar uma consulta imediata:
+Executar uma consulta imediata para Recife, que continua sendo o destino padrão:
 
 ```bash
 python -m monitora_voo executar
 ```
 
+Consultar Fortaleza:
+
+```bash
+python -m monitora_voo executar --destino FOR
+```
+
 Monitorar a cada 6 horas:
 
 ```bash
-python -m monitora_voo monitorar --intervalo-horas 6
+python -m monitora_voo monitorar --destino REC --intervalo-horas 6
 ```
 
 O comando `monitorar` precisa permanecer em execução. Pressione `Ctrl+C` para
@@ -43,7 +50,8 @@ interromper.
 
 ## Painel web
 
-O painel estático fica em `docs/` e lê os dados de `docs/dados.json`. Para
+O painel estático fica em `docs/`. A página inicial compara os dois destinos e
+as páginas de análise exibem histórico, métricas e ofertas de cada rota. Para
 visualizá-lo localmente:
 
 ```bash
@@ -52,12 +60,18 @@ python -m http.server 8000 --directory docs
 
 Depois, acesse `http://localhost:8000`.
 
-Para atualizar manualmente o JSON do painel:
+Para atualizar manualmente os arquivos do painel:
 
 ```bash
 python -m monitora_voo exportar \
+  --destino REC \
   --planilha monitoramento_voos.xlsx \
   --saida docs/dados.json
+
+python -m monitora_voo exportar \
+  --destino FOR \
+  --planilha monitoramento_fortaleza.xlsx \
+  --saida docs/dados_fortaleza.json
 ```
 
 ## GitHub
@@ -66,7 +80,8 @@ O workflow `.github/workflows/monitorar.yml`:
 
 - executa automaticamente a cada 6 horas, no horário de Belém;
 - também pode ser iniciado manualmente pela aba `Actions`;
-- salva `docs/dados.json` e `docs/monitoramento_voos.xlsx`;
+- consulta Recife e Fortaleza separadamente;
+- salva um JSON e uma planilha para cada destino;
 - publica o conteúdo de `docs/` no GitHub Pages.
 
 Depois de enviar o projeto para um repositório público, abra `Settings → Pages`
@@ -81,7 +96,7 @@ https://SEU-USUARIO.github.io/NOME-DO-REPOSITORIO/
 
 ## Planilha
 
-A planilha tem duas abas:
+Cada destino possui sua própria planilha, com duas abas:
 
 - `Consultas`: uma linha por oferta de ida e volta retornada.
 - `Resumo`: menor preço histórico, menor preço da última consulta, data da
@@ -89,6 +104,8 @@ A planilha tem duas abas:
 
 `queda_detectada` fica como `sim` quando o menor preço da consulta atual for
 menor que o menor preço histórico anterior, inclusive uma redução de R$ 0,01.
+O histórico original em `docs/monitoramento_voos.xlsx` continua pertencendo a
+Recife; Fortaleza usa `docs/monitoramento_fortaleza.xlsx`.
 
 ## Limitações
 

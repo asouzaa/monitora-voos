@@ -1,5 +1,10 @@
 ORIGEM = "BEL"
-DESTINO = "REC"
+DESTINO_PADRAO = "REC"
+DESTINO = DESTINO_PADRAO
+DESTINOS_MONITORADOS = {
+    "REC": "Recife",
+    "FOR": "Fortaleza",
+}
 PERIODOS_MONITORADOS = [
     ("2026-12-29", "2027-01-06"),
     ("2026-12-29", "2027-01-07"),
@@ -14,3 +19,11 @@ MOEDA = "BRL"
 MAX_OFERTAS = 20
 MAX_IDAS_CANDIDATAS = 10
 PLANILHA_PADRAO = "monitoramento_voos.xlsx"
+PLANILHAS_PADRAO = {
+    "REC": PLANILHA_PADRAO,
+    "FOR": "monitoramento_fortaleza.xlsx",
+}
+SAIDAS_PAINEL_PADRAO = {
+    "REC": "docs/dados.json",
+    "FOR": "docs/dados_fortaleza.json",
+}

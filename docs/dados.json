@@ -2,6 +2,7 @@
   "rota": {
     "origem": "BEL",
     "destino": "REC",
+    "nome_destino": "Recife",
     "periodos": [
       {
         "data_ida": "2026-12-29",
@@ -35,6 +36,7 @@
     "menor_preco_historico": 1959.0,
     "ultimo_menor_preco": 2163.0,
     "data_ultima_consulta": "2026-08-22T09:47:14+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-08-22T09:47:14+00:00",
     "quantidade_ofertas_vistas": 4947,
     "status": "sem queda"
   },
@@ -113,6 +115,55 @@
       "preco_total": 2163.0,
       "moeda": "BRL",
       "queda_detectada": false
+    }
+  ],
+  "comparacao_periodos": [
+    {
+      "data_ida": "2026-12-29",
+      "data_volta": "2027-01-06",
+      "menor_preco": 2213.0
+    },
+    {
+      "data_ida": "2026-12-29",
+      "data_volta": "2027-01-07",
+      "menor_preco": 2163.0
+    },
+    {
+      "data_ida": "2026-12-30",
+      "data_volta": "2027-01-06",
+      "menor_preco": 2213.0
+    },
+    {
+      "data_ida": "2026-12-30",
+      "data_volta": "2027-01-07",
+      "menor_preco": 2163.0
+    },
+    {
+      "data_ida": "2026-12-29",
+      "data_volta": "2027-01-05",
+      "menor_preco": null
+    },
+    {
+      "data_ida": "2026-12-30",
+      "data_volta": "2027-01-08",
+      "menor_preco": 2163.0
+    }
+  ],
+  "datas_vencedoras": [
+    {
+      "data_ida": "2026-12-29",
+      "data_volta": "2027-01-07",
+      "menor_preco": 2163.0
+    },
+    {
+      "data_ida": "2026-12-30",
+      "data_volta": "2027-01-07",
+      "menor_preco": 2163.0
+    },
+    {
+      "data_ida": "2026-12-30",
+      "data_volta": "2027-01-08",
+      "menor_preco": 2163.0
     }
   ],
   "historico": [
@@ -751,5 +802,5 @@
     "arquivo": "monitoramento_voos.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-08-22T09:47:31+00:00"
+  "gerado_em": "2026-08-22T15:04:21+00:00"
 }

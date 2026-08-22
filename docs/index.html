@@ -6,143 +6,126 @@
     <meta name="color-scheme" content="light">
     <meta
       name="description"
-      content="Acompanhamento de preços de voos entre Belém e Recife."
+      content="Compare os preços de voos de Belém para Recife e Fortaleza."
     >
-    <title>Radar BEL ↔ REC</title>
+    <title>Radar de voos · Recife ou Fortaleza</title>
     <link rel="stylesheet" href="./estilos.css">
   </head>
-  <body>
+  <body class="pagina-comparacao">
     <header class="cabecalho">
       <div class="cabecalho-conteudo">
-        <a class="marca" href="./" aria-label="Radar BEL para REC">
+        <a class="marca" href="./" aria-label="Radar de voos">
           <span class="marca-sinal" aria-hidden="true">BEL</span>
           <span>
             <strong>Radar de voos</strong>
-            <small>Belém ↔ Recife</small>
+            <small>Compare destinos</small>
           </span>
         </a>
 
         <div class="acoes">
-          <span id="estado-monitor" class="estado" aria-live="polite">
+          <span id="estado-comparacao" class="estado" aria-live="polite">
             Carregando
           </span>
           <button
             id="botao-atualizar"
             class="botao-icone"
             type="button"
-            title="Atualizar dados"
-            aria-label="Atualizar dados"
+            title="Atualizar comparação"
+            aria-label="Atualizar comparação"
           >
             ↻
           </button>
-          <a id="link-execucoes" class="botao-secundario" href="#" hidden>
-            Execuções
-          </a>
-          <a id="link-planilha" class="botao-primario" href="#" download hidden>
-            Baixar planilha
-          </a>
         </div>
       </div>
     </header>
 
     <main>
-      <section class="faixa-rota" aria-labelledby="titulo-rota">
-        <div class="conteudo">
+      <section class="hero-comparacao" aria-labelledby="titulo-comparacao">
+        <div class="conteudo hero-comparacao-conteudo">
           <div>
-            <p class="rotulo">Monitoramento de ida e volta</p>
-            <h1 id="titulo-rota">
-              <span id="origem">BEL</span>
-              <span class="linha-rota" aria-hidden="true"></span>
-              <span id="destino">REC</span>
-            </h1>
+            <p class="rotulo">Saindo de Belém</p>
+            <h1 id="titulo-comparacao">Recife ou Fortaleza?</h1>
+            <p class="hero-texto">
+              Compare os menores preços encontrados para as mesmas datas e
+              descubra qual destino está ganhando agora.
+            </p>
           </div>
-          <dl class="detalhes-rota">
-            <div class="datas-monitoradas">
-              <dt>Datas monitoradas</dt>
-              <dd id="periodos-monitorados">
-                29 dez → 06 jan · 29 dez → 07 jan · 30 dez → 06 jan ·
-                30 dez → 07 jan · 29 dez → 05 jan · 30 dez → 08 jan
-              </dd>
-            </div>
-            <div>
-              <dt>Passageiros</dt>
-              <dd id="passageiros">1 adulto · Econômica</dd>
-            </div>
-          </dl>
+          <div id="resultado-comparacao" class="resultado-comparacao" aria-live="polite">
+            <span>Melhor escolha agora</span>
+            <strong>Calculando…</strong>
+            <small>Aguardando os dois destinos</small>
+          </div>
         </div>
       </section>
 
-      <div class="conteudo principal">
-        <section class="metricas" aria-label="Resumo do monitoramento">
-          <article class="metrica metrica-destaque">
-            <span>Menor preço agora</span>
-            <strong id="preco-atual">—</strong>
-            <small id="ultima-consulta">Aguardando consulta</small>
+      <div class="conteudo principal principal-comparacao">
+        <section class="grade-destinos" aria-label="Comparação dos destinos">
+          <article id="cartao-recife" class="cartao-destino" data-destino="REC">
+            <div class="cartao-destino-cabecalho">
+              <div>
+                <span class="codigo-destino">REC</span>
+                <h2>Recife</h2>
+              </div>
+              <span class="selo-vencedor" hidden>Menor preço</span>
+            </div>
+            <div class="preco-destino">
+              <span>Menor preço agora</span>
+              <strong data-campo="preco-atual">—</strong>
+              <small data-campo="ultima-consulta">Aguardando dados</small>
+            </div>
+            <div class="datas-vencedoras">
+              <span>Datas que estão ganhando</span>
+              <div data-campo="datas-vencedoras" class="lista-datas">
+                <p>Carregando combinações…</p>
+              </div>
+            </div>
+            <div class="recorde-destino">
+              <span>Recorde monitorado</span>
+              <strong data-campo="recorde">—</strong>
+            </div>
+            <a class="botao-analise" href="./destino.html?destino=REC">
+              Ver análise de Recife
+              <span aria-hidden="true">→</span>
+            </a>
           </article>
-          <article class="metrica">
-            <span>Recorde monitorado</span>
-            <strong id="menor-historico">—</strong>
-            <small>Menor valor já registrado</small>
-          </article>
-          <article class="metrica">
-            <span>Ofertas acumuladas</span>
-            <strong id="total-ofertas">0</strong>
-            <small>Linhas salvas na planilha</small>
-          </article>
-          <article class="metrica">
-            <span>Situação</span>
-            <strong id="situacao">Iniciando</strong>
-            <small id="gerado-em">Dados ainda não carregados</small>
+
+          <article id="cartao-fortaleza" class="cartao-destino" data-destino="FOR">
+            <div class="cartao-destino-cabecalho">
+              <div>
+                <span class="codigo-destino">FOR</span>
+                <h2>Fortaleza</h2>
+              </div>
+              <span class="selo-vencedor" hidden>Menor preço</span>
+            </div>
+            <div class="preco-destino">
+              <span>Menor preço agora</span>
+              <strong data-campo="preco-atual">—</strong>
+              <small data-campo="ultima-consulta">Aguardando dados</small>
+            </div>
+            <div class="datas-vencedoras">
+              <span>Datas que estão ganhando</span>
+              <div data-campo="datas-vencedoras" class="lista-datas">
+                <p>Carregando combinações…</p>
+              </div>
+            </div>
+            <div class="recorde-destino">
+              <span>Recorde monitorado</span>
+              <strong data-campo="recorde">—</strong>
+            </div>
+            <a class="botao-analise" href="./destino.html?destino=FOR">
+              Ver análise de Fortaleza
+              <span aria-hidden="true">→</span>
+            </a>
           </article>
         </section>
 
-        <section class="secao-grafico" aria-labelledby="titulo-historico">
-          <div class="titulo-secao">
-            <div>
-              <p class="rotulo">Evolução</p>
-              <h2 id="titulo-historico">Histórico do menor preço</h2>
-            </div>
-            <span id="quantidade-consultas" class="contador">0 consultas</span>
-          </div>
-          <div class="grafico">
-            <canvas
-              id="grafico-precos"
-              role="img"
-              aria-label="Gráfico do menor preço encontrado em cada consulta"
-            ></canvas>
-            <p id="grafico-vazio" class="mensagem-vazia" hidden>
-              O gráfico aparecerá após a primeira consulta.
-            </p>
-          </div>
-        </section>
-
-        <section class="secao-ofertas" aria-labelledby="titulo-ofertas">
-          <div class="titulo-secao">
-            <div>
-              <p class="rotulo">Última consulta bem-sucedida</p>
-              <h2 id="titulo-ofertas">Top 5 menores preços</h2>
-            </div>
-            <span id="quantidade-ofertas" class="contador">0 ofertas</span>
-          </div>
-
-          <div class="tabela-container">
-            <table>
-              <thead>
-                <tr>
-                  <th>Companhia</th>
-                  <th>Ida</th>
-                  <th>Volta</th>
-                  <th>Conexões</th>
-                  <th class="alinha-direita">Preço total</th>
-                </tr>
-              </thead>
-              <tbody id="lista-ofertas">
-                <tr>
-                  <td colspan="5" class="mensagem-tabela">Carregando ofertas…</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+        <section class="nota-comparacao" aria-labelledby="titulo-como-funciona">
+          <p class="rotulo">Como funciona</p>
+          <h2 id="titulo-como-funciona">O menor valor define quem está ganhando</h2>
+          <p>
+            A comparação usa a consulta bem-sucedida mais recente de cada destino.
+            Em caso de empate, todas as combinações de datas vencedoras aparecem.
+          </p>
         </section>
       </div>
     </main>
@@ -156,9 +139,9 @@
 
     <noscript>
       <p class="aviso-script">
-        Ative o JavaScript para visualizar os dados do monitoramento.
+        Ative o JavaScript para visualizar a comparação de destinos.
       </p>
     </noscript>
-    <script src="./painel.js"></script>
+    <script src="./comparacao.js"></script>
   </body>
 </html>
