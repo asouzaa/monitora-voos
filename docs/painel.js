@@ -15,6 +15,10 @@ let historicoAtual = [];
 const rotasDisponiveis = {
   REC: { arquivoDados: "./dados.json", nome: "Recife" },
   FOR: { arquivoDados: "./dados_fortaleza.json", nome: "Fortaleza" },
+  MCZ: { arquivoDados: "./dados_maceio.json", nome: "Maceió" },
+  NAT: { arquivoDados: "./dados_natal.json", nome: "Natal" },
+  RIO: { arquivoDados: "./dados_rio.json", nome: "Rio de Janeiro" },
+  JPA: { arquivoDados: "./dados_joao_pessoa.json", nome: "João Pessoa" },
 };
 const parametroDestino = new URLSearchParams(window.location.search)
   .get("destino")

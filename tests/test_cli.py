@@ -5,6 +5,11 @@ import unittest
 from unittest.mock import patch
 
 from monitora_voo.cli import principal
+from monitora_voo.configuracao import (
+    DESTINOS_MONITORADOS,
+    PLANILHAS_PADRAO,
+    SAIDAS_PAINEL_PADRAO,
+)
 
 
 class CliTeste(unittest.TestCase):
@@ -44,6 +49,17 @@ class CliTeste(unittest.TestCase):
             Path("monitoramento_fortaleza.xlsx"),
             Path("docs/dados_fortaleza.json"),
             "FOR",
+        )
+
+    def test_todos_os_destinos_tem_arquivos_padrao_independentes(self) -> None:
+        self.assertEqual(set(PLANILHAS_PADRAO), set(DESTINOS_MONITORADOS))
+        self.assertEqual(set(SAIDAS_PAINEL_PADRAO), set(DESTINOS_MONITORADOS))
+        self.assertEqual(PLANILHAS_PADRAO["MCZ"], "monitoramento_maceio.xlsx")
+        self.assertEqual(PLANILHAS_PADRAO["NAT"], "monitoramento_natal.xlsx")
+        self.assertEqual(PLANILHAS_PADRAO["RIO"], "monitoramento_rio.xlsx")
+        self.assertEqual(
+            PLANILHAS_PADRAO["JPA"],
+            "monitoramento_joao_pessoa.xlsx",
         )
 
 

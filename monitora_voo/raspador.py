@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from datetime import datetime
-from decimal import Decimal
+from decimal import Decimal, InvalidOperation
 from hashlib import sha256
 from typing import Any, Iterable
 
@@ -17,6 +17,7 @@ from fast_flights import (
 
 from .configuracao import (
     ADULTOS,
+    AEROPORTOS_POR_DESTINO,
     CLASSE_VIAGEM,
     DESTINO_PADRAO,
     DESTINOS_MONITORADOS,
@@ -34,16 +35,28 @@ class RaspadorGoogleVoos:
         if destino not in DESTINOS_MONITORADOS:
             raise ValueError(f"Destino não monitorado: {destino}.")
         self.destino = destino
+        self.aeroportos_destino = AEROPORTOS_POR_DESTINO[destino]
 
     def buscar_ofertas(self) -> list[OfertaVoo]:
         ofertas: list[OfertaVoo] = []
         erros: list[str] = []
 
         for data_ida, data_volta in PERIODOS_MONITORADOS:
-            try:
-                ofertas.extend(self._buscar_ofertas_periodo(data_ida, data_volta))
-            except Exception as erro:
-                erros.append(f"{data_ida}/{data_volta}: {erro}")
+            ofertas_periodo: list[OfertaVoo] = []
+            for aeroporto_destino in self.aeroportos_destino:
+                try:
+                    ofertas_periodo.extend(
+                        self._buscar_ofertas_periodo(
+                            data_ida,
+                            data_volta,
+                            aeroporto_destino,
+                        )
+                    )
+                except Exception as erro:
+                    erros.append(
+                        f"{aeroporto_destino} {data_ida}/{data_volta}: {erro}"
+                    )
+            ofertas.extend(_ordenar_e_limitar(ofertas_periodo, MAX_OFERTAS))
 
         if not ofertas and erros:
             raise RuntimeError("; ".join(erros))
@@ -55,17 +68,19 @@ class RaspadorGoogleVoos:
         self,
         data_ida: str,
         data_volta: str,
+        aeroporto_destino: str | None = None,
     ) -> list[OfertaVoo]:
+        destino_consulta = aeroporto_destino or self.aeroportos_destino[0]
         consulta = create_query(
             flights=[
                 FlightQuery(
                     date=data_ida,
                     from_airport=ORIGEM,
-                    to_airport=self.destino,
+                    to_airport=destino_consulta,
                 ),
                 FlightQuery(
                     date=data_volta,
-                    from_airport=self.destino,
+                    from_airport=destino_consulta,
                     to_airport=ORIGEM,
                 ),
             ],
@@ -108,13 +123,16 @@ def converter_ofertas(ida: Any, opcoes_volta: Iterable[Any]) -> list[OfertaVoo]:
         if not volta.flights:
             continue
 
-        partida_ida, chegada_ida, duracao_ida = _resumir_itinerario(ida.flights)
-        partida_volta, chegada_volta, duracao_volta = _resumir_itinerario(
-            volta.flights
-        )
-        companhias = _companhias(ida.airlines, volta.airlines)
-        preco = Decimal(str(volta.price))
-        identificador = _identificador(ida.flights, volta.flights, preco)
+        try:
+            partida_ida, chegada_ida, duracao_ida = _resumir_itinerario(ida.flights)
+            partida_volta, chegada_volta, duracao_volta = _resumir_itinerario(
+                volta.flights
+            )
+            companhias = _companhias(ida.airlines, volta.airlines)
+            preco = Decimal(str(volta.price))
+            identificador = _identificador(ida.flights, volta.flights, preco)
+        except (AttributeError, IndexError, InvalidOperation, TypeError, ValueError):
+            continue
 
         ofertas.append(
             OfertaVoo(

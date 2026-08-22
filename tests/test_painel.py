@@ -114,6 +114,27 @@ class PainelTeste(unittest.TestCase):
             [None] * 6,
         )
 
+    def test_exporta_identificacao_dos_novos_destinos(self) -> None:
+        destinos = {
+            "MCZ": "Maceió",
+            "NAT": "Natal",
+            "RIO": "Rio de Janeiro",
+            "JPA": "João Pessoa",
+        }
+        with TemporaryDirectory() as pasta:
+            for codigo, nome in destinos.items():
+                with self.subTest(destino=codigo):
+                    caminho_json = Path(pasta) / f"dados_{codigo.lower()}.json"
+                    exportar_dados(
+                        Path(pasta) / f"monitoramento_{codigo.lower()}.xlsx",
+                        caminho_json,
+                        codigo,
+                    )
+                    dados = loads(caminho_json.read_text(encoding="utf-8"))
+
+                    self.assertEqual(dados["rota"]["destino"], codigo)
+                    self.assertEqual(dados["rota"]["nome_destino"], nome)
+
     def test_mantem_historicos_dos_destinos_isolados(self) -> None:
         with TemporaryDirectory() as pasta:
             pasta_temporaria = Path(pasta)

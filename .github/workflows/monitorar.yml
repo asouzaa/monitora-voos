@@ -46,17 +46,46 @@ jobs:
         continue-on-error: true
         run: python -m monitora_voo executar --destino FOR --planilha docs/monitoramento_fortaleza.xlsx
 
+      - name: Consultar preços de Maceió
+        continue-on-error: true
+        run: python -m monitora_voo executar --destino MCZ --planilha docs/monitoramento_maceio.xlsx
+
+      - name: Consultar preços de Natal
+        continue-on-error: true
+        run: python -m monitora_voo executar --destino NAT --planilha docs/monitoramento_natal.xlsx
+
+      - name: Consultar preços do Rio de Janeiro
+        continue-on-error: true
+        run: python -m monitora_voo executar --destino RIO --planilha docs/monitoramento_rio.xlsx
+
+      - name: Consultar preços de João Pessoa
+        continue-on-error: true
+        run: python -m monitora_voo executar --destino JPA --planilha docs/monitoramento_joao_pessoa.xlsx
+
       - name: Atualizar dados de Recife
         run: python -m monitora_voo exportar --destino REC --planilha docs/monitoramento_voos.xlsx --saida docs/dados.json
 
       - name: Atualizar dados de Fortaleza
         run: python -m monitora_voo exportar --destino FOR --planilha docs/monitoramento_fortaleza.xlsx --saida docs/dados_fortaleza.json
 
+      - name: Atualizar dados de Maceió
+        run: python -m monitora_voo exportar --destino MCZ --planilha docs/monitoramento_maceio.xlsx --saida docs/dados_maceio.json
+
+      - name: Atualizar dados de Natal
+        run: python -m monitora_voo exportar --destino NAT --planilha docs/monitoramento_natal.xlsx --saida docs/dados_natal.json
+
+      - name: Atualizar dados do Rio de Janeiro
+        run: python -m monitora_voo exportar --destino RIO --planilha docs/monitoramento_rio.xlsx --saida docs/dados_rio.json
+
+      - name: Atualizar dados de João Pessoa
+        run: python -m monitora_voo exportar --destino JPA --planilha docs/monitoramento_joao_pessoa.xlsx --saida docs/dados_joao_pessoa.json
+
       - name: Salvar histórico no repositório
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/dados.json docs/dados_fortaleza.json docs/monitoramento_voos.xlsx docs/monitoramento_fortaleza.xlsx
+          git add docs/dados.json docs/dados_fortaleza.json docs/dados_maceio.json docs/dados_natal.json docs/dados_rio.json docs/dados_joao_pessoa.json
+          git add docs/monitoramento_voos.xlsx docs/monitoramento_fortaleza.xlsx docs/monitoramento_maceio.xlsx docs/monitoramento_natal.xlsx docs/monitoramento_rio.xlsx docs/monitoramento_joao_pessoa.xlsx
           if ! git diff --cached --quiet; then
             git commit -m "Atualiza monitoramento de voos"
             git push

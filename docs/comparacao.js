@@ -13,6 +13,10 @@ const formatoConsulta = new Intl.DateTimeFormat("pt-BR", {
 const destinos = {
   REC: { arquivo: "./dados.json", nome: "Recife" },
   FOR: { arquivo: "./dados_fortaleza.json", nome: "Fortaleza" },
+  MCZ: { arquivo: "./dados_maceio.json", nome: "Maceió" },
+  NAT: { arquivo: "./dados_natal.json", nome: "Natal" },
+  RIO: { arquivo: "./dados_rio.json", nome: "Rio de Janeiro" },
+  JPA: { arquivo: "./dados_joao_pessoa.json", nome: "João Pessoa" },
 };
 
 document
@@ -104,30 +108,36 @@ function renderizarResultado(dadosPorDestino) {
   );
 
   limparVencedores();
-  if (precos.REC == null || precos.FOR == null) {
+  const codigos = Object.keys(destinos);
+  const codigosComPreco = codigos.filter((codigo) => precos[codigo] != null);
+  if (codigosComPreco.length !== codigos.length) {
+    const quantidadeAusentes = codigos.length - codigosComPreco.length;
     resultado.querySelector("strong").textContent = "Comparação indisponível";
     resultado.querySelector("small").textContent =
-      "Os dois destinos precisam ter preços válidos";
+      `${quantidadeAusentes} destino${quantidadeAusentes === 1 ? " precisa" : "s precisam"} ter preço válido`;
     definirEstado(estado, "Dados incompletos", "alerta");
     return;
   }
 
-  if (precos.REC === precos.FOR) {
+  const menorPreco = Math.min(...codigos.map((codigo) => precos[codigo]));
+  const vencedores = codigos.filter((codigo) => precos[codigo] === menorPreco);
+  if (vencedores.length > 1) {
     resultado.querySelector("strong").textContent = "Empate";
     resultado.querySelector("small").textContent =
-      `Os dois destinos estão em ${formatarPreco(precos.REC)}`;
-    marcarVencedor("REC", "Empate");
-    marcarVencedor("FOR", "Empate");
+      `${vencedores.length} destinos estão em ${formatarPreco(menorPreco)}`;
+    vencedores.forEach((codigo) => marcarVencedor(codigo, "Empate"));
     definirEstado(estado, "Preços empatados", "alerta");
     return;
   }
 
-  const vencedor = precos.REC < precos.FOR ? "REC" : "FOR";
-  const perdedor = vencedor === "REC" ? "FOR" : "REC";
-  const diferenca = precos[perdedor] - precos[vencedor];
+  const vencedor = vencedores[0];
+  const segundoColocado = codigos
+    .filter((codigo) => codigo !== vencedor)
+    .sort((codigoA, codigoB) => precos[codigoA] - precos[codigoB])[0];
+  const diferenca = precos[segundoColocado] - precos[vencedor];
   resultado.querySelector("strong").textContent = destinos[vencedor].nome;
   resultado.querySelector("small").textContent =
-    `${formatarPreco(diferenca)} mais barato que ${destinos[perdedor].nome}`;
+    `${formatarPreco(diferenca)} mais barato que ${destinos[segundoColocado].nome}`;
   marcarVencedor(vencedor, "Menor preço");
   definirEstado(estado, "Comparação atualizada", "normal");
 }

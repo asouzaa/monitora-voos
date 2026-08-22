@@ -22,34 +22,69 @@ class RaspadorGoogleVoosTeste(unittest.TestCase):
         self.assertEqual(
             buscar_periodo.call_args_list,
             [
-                call(data_ida, data_volta)
+                call(data_ida, data_volta, "REC")
                 for data_ida, data_volta in PERIODOS_MONITORADOS
             ],
         )
 
-    def test_monta_consulta_de_ida_e_volta_para_fortaleza(self) -> None:
-        with (
-            patch(
-                "monitora_voo.raspador.FlightQuery",
-                side_effect=lambda **argumentos: argumentos,
-            ) as consulta_voo,
-            patch(
-                "monitora_voo.raspador.create_query",
-                return_value="consulta",
-            ),
-            patch("monitora_voo.raspador.get_flights", return_value=[]),
-        ):
-            ofertas = RaspadorGoogleVoos("FOR")._buscar_ofertas_periodo(
-                "2026-12-29",
-                "2027-01-06",
-            )
+    def test_monta_consulta_de_ida_e_volta_para_cada_destino(self) -> None:
+        for destino in ["FOR", "MCZ", "NAT", "GIG", "SDU", "JPA"]:
+            with self.subTest(destino=destino):
+                with (
+                    patch(
+                        "monitora_voo.raspador.FlightQuery",
+                        side_effect=lambda **argumentos: argumentos,
+                    ) as consulta_voo,
+                    patch(
+                        "monitora_voo.raspador.create_query",
+                        return_value="consulta",
+                    ),
+                    patch("monitora_voo.raspador.get_flights", return_value=[]),
+                ):
+                    codigo_monitorado = (
+                        "RIO" if destino in {"GIG", "SDU"} else destino
+                    )
+                    raspador = RaspadorGoogleVoos(codigo_monitorado)
+                    ofertas = raspador._buscar_ofertas_periodo(
+                        "2026-12-29",
+                        "2027-01-06",
+                        destino,
+                    )
+
+                self.assertEqual(ofertas, [])
+                self.assertEqual(
+                    consulta_voo.call_args_list,
+                    [
+                        call(
+                            date="2026-12-29",
+                            from_airport="BEL",
+                            to_airport=destino,
+                        ),
+                        call(
+                            date="2027-01-06",
+                            from_airport=destino,
+                            to_airport="BEL",
+                        ),
+                    ],
+                )
+
+    def test_busca_galeao_e_santos_dumont_para_o_rio(self) -> None:
+        with patch.object(
+            RaspadorGoogleVoos,
+            "_buscar_ofertas_periodo",
+            return_value=[],
+        ) as buscar_periodo:
+            ofertas = RaspadorGoogleVoos("RIO").buscar_ofertas()
 
         self.assertEqual(ofertas, [])
+        self.assertEqual(len(buscar_periodo.call_args_list), 12)
         self.assertEqual(
-            consulta_voo.call_args_list,
+            buscar_periodo.call_args_list[:4],
             [
-                call(date="2026-12-29", from_airport="BEL", to_airport="FOR"),
-                call(date="2027-01-06", from_airport="FOR", to_airport="BEL"),
+                call("2026-12-29", "2027-01-06", "GIG"),
+                call("2026-12-29", "2027-01-06", "SDU"),
+                call("2026-12-29", "2027-01-07", "GIG"),
+                call("2026-12-29", "2027-01-07", "SDU"),
             ],
         )
 
@@ -77,6 +112,18 @@ class RaspadorGoogleVoosTeste(unittest.TestCase):
         self.assertEqual(ofertas[0].moeda, "BRL")
         self.assertEqual(len(ofertas[0].identificador), 16)
         self.assertEqual(ofertas[1].companhia, "Azul")
+
+    def test_ignora_oferta_com_horario_incompleto(self) -> None:
+        caminho = Path(__file__).parent / "fixtures" / "google_voos_ofertas.json"
+        resposta = json.loads(caminho.read_text(encoding="utf-8"))
+        ida = _para_objeto(resposta["ida"])
+        voltas = [_para_objeto(item) for item in resposta["voltas"]]
+        voltas[0].flights[-1].arrival.time = [None, None]
+
+        ofertas = converter_ofertas(ida, voltas)
+
+        self.assertEqual(len(ofertas), 1)
+        self.assertEqual(ofertas[0].preco_total, Decimal("2491"))
 
     def test_busca_varias_idas_para_encontrar_menor_preco_total(self) -> None:
         ida_mais_barata = _opcao(

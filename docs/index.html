@@ -6,10 +6,10 @@
     <meta name="color-scheme" content="light">
     <meta
       name="description"
-      content="Compare os preços de voos de Belém para Recife e Fortaleza."
+      content="Compare os preços de voos de Belém para seis destinos."
     >
-    <title>Radar de voos · Recife ou Fortaleza</title>
-    <link rel="stylesheet" href="./estilos.css?v=2">
+    <title>Radar de voos · Compare seis destinos</title>
+    <link rel="stylesheet" href="./estilos.css?v=3">
   </head>
   <body class="pagina-comparacao">
     <header class="cabecalho">
@@ -44,7 +44,7 @@
         <div class="conteudo hero-comparacao-conteudo">
           <div>
             <p class="rotulo">Saindo de Belém</p>
-            <h1 id="titulo-comparacao">Recife ou Fortaleza?</h1>
+            <h1 id="titulo-comparacao">Qual destino está ganhando?</h1>
             <p class="hero-texto">
               Compare os menores preços encontrados para as mesmas datas e
               descubra qual destino está ganhando agora.
@@ -53,7 +53,7 @@
           <div id="resultado-comparacao" class="resultado-comparacao" aria-live="polite">
             <span>Melhor escolha agora</span>
             <strong>Calculando…</strong>
-            <small>Aguardando os dois destinos</small>
+            <small>Aguardando os seis destinos</small>
           </div>
         </div>
       </section>
@@ -117,6 +117,122 @@
               <span aria-hidden="true">→</span>
             </a>
           </article>
+
+          <article id="cartao-maceio" class="cartao-destino" data-destino="MCZ">
+            <div class="cartao-destino-cabecalho">
+              <div>
+                <span class="codigo-destino">MCZ</span>
+                <h2>Maceió</h2>
+              </div>
+              <span class="selo-vencedor" hidden>Menor preço</span>
+            </div>
+            <div class="preco-destino">
+              <span>Menor preço agora</span>
+              <strong data-campo="preco-atual">—</strong>
+              <small data-campo="ultima-consulta">Aguardando dados</small>
+            </div>
+            <div class="datas-vencedoras">
+              <span>Datas que estão ganhando</span>
+              <div data-campo="datas-vencedoras" class="lista-datas">
+                <p>Carregando combinações…</p>
+              </div>
+            </div>
+            <div class="recorde-destino">
+              <span>Recorde monitorado</span>
+              <strong data-campo="recorde">—</strong>
+            </div>
+            <a class="botao-analise" href="./destino.html?destino=MCZ">
+              Ver análise de Maceió
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article id="cartao-natal" class="cartao-destino" data-destino="NAT">
+            <div class="cartao-destino-cabecalho">
+              <div>
+                <span class="codigo-destino">NAT</span>
+                <h2>Natal</h2>
+              </div>
+              <span class="selo-vencedor" hidden>Menor preço</span>
+            </div>
+            <div class="preco-destino">
+              <span>Menor preço agora</span>
+              <strong data-campo="preco-atual">—</strong>
+              <small data-campo="ultima-consulta">Aguardando dados</small>
+            </div>
+            <div class="datas-vencedoras">
+              <span>Datas que estão ganhando</span>
+              <div data-campo="datas-vencedoras" class="lista-datas">
+                <p>Carregando combinações…</p>
+              </div>
+            </div>
+            <div class="recorde-destino">
+              <span>Recorde monitorado</span>
+              <strong data-campo="recorde">—</strong>
+            </div>
+            <a class="botao-analise" href="./destino.html?destino=NAT">
+              Ver análise de Natal
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article id="cartao-rio" class="cartao-destino" data-destino="RIO">
+            <div class="cartao-destino-cabecalho">
+              <div>
+                <span class="codigo-destino">RIO</span>
+                <h2>Rio de Janeiro</h2>
+              </div>
+              <span class="selo-vencedor" hidden>Menor preço</span>
+            </div>
+            <div class="preco-destino">
+              <span>Menor preço agora</span>
+              <strong data-campo="preco-atual">—</strong>
+              <small data-campo="ultima-consulta">Aguardando dados</small>
+            </div>
+            <div class="datas-vencedoras">
+              <span>Datas que estão ganhando</span>
+              <div data-campo="datas-vencedoras" class="lista-datas">
+                <p>Carregando combinações…</p>
+              </div>
+            </div>
+            <div class="recorde-destino">
+              <span>Recorde monitorado</span>
+              <strong data-campo="recorde">—</strong>
+            </div>
+            <a class="botao-analise" href="./destino.html?destino=RIO">
+              Ver análise do Rio de Janeiro
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article id="cartao-joao-pessoa" class="cartao-destino" data-destino="JPA">
+            <div class="cartao-destino-cabecalho">
+              <div>
+                <span class="codigo-destino">JPA</span>
+                <h2>João Pessoa</h2>
+              </div>
+              <span class="selo-vencedor" hidden>Menor preço</span>
+            </div>
+            <div class="preco-destino">
+              <span>Menor preço agora</span>
+              <strong data-campo="preco-atual">—</strong>
+              <small data-campo="ultima-consulta">Aguardando dados</small>
+            </div>
+            <div class="datas-vencedoras">
+              <span>Datas que estão ganhando</span>
+              <div data-campo="datas-vencedoras" class="lista-datas">
+                <p>Carregando combinações…</p>
+              </div>
+            </div>
+            <div class="recorde-destino">
+              <span>Recorde monitorado</span>
+              <strong data-campo="recorde">—</strong>
+            </div>
+            <a class="botao-analise" href="./destino.html?destino=JPA">
+              Ver análise de João Pessoa
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
         </section>
 
         <section class="nota-comparacao" aria-labelledby="titulo-como-funciona">
@@ -142,6 +258,6 @@
         Ative o JavaScript para visualizar a comparação de destinos.
       </p>
     </noscript>
-    <script src="./comparacao.js?v=2"></script>
+    <script src="./comparacao.js?v=3"></script>
   </body>
 </html>

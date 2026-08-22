@@ -1,0 +1,31 @@
+{
+  "rota": {
+    "origem": "BEL",
+    "destino": "JPA",
+    "nome_destino": "João Pessoa",
+    "periodos": [
+      {"data_ida": "2026-12-29", "data_volta": "2027-01-06"},
+      {"data_ida": "2026-12-29", "data_volta": "2027-01-07"},
+      {"data_ida": "2026-12-30", "data_volta": "2027-01-06"},
+      {"data_ida": "2026-12-30", "data_volta": "2027-01-07"},
+      {"data_ida": "2026-12-29", "data_volta": "2027-01-05"},
+      {"data_ida": "2026-12-30", "data_volta": "2027-01-08"}
+    ],
+    "adultos": 1,
+    "classe": "economy"
+  },
+  "resumo": {
+    "menor_preco_historico": null,
+    "ultimo_menor_preco": null,
+    "data_ultima_consulta": "",
+    "data_ultima_consulta_bem_sucedida": "",
+    "quantidade_ofertas_vistas": 0,
+    "status": "sem consultas"
+  },
+  "ofertas": [],
+  "comparacao_periodos": [],
+  "datas_vencedoras": [],
+  "historico": [],
+  "planilha": {"arquivo": "monitoramento_joao_pessoa.xlsx", "disponivel": false},
+  "gerado_em": "2026-08-22T15:30:00+00:00"
+}

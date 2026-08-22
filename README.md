@@ -1,8 +1,16 @@
-# Monitor de Voos BEL ↔ REC/FOR
+# Monitor de Voos saindo de Belém
 
 Programa em Python para monitorar e comparar preços de ida e volta saindo de
-Belém (`BEL`) com destino a Recife (`REC`) e Fortaleza (`FOR`) para estas
-combinações:
+Belém (`BEL`) para seis destinos:
+
+- Recife (`REC`);
+- Fortaleza (`FOR`);
+- Maceió (`MCZ`);
+- Natal (`NAT`);
+- Rio de Janeiro (`RIO`);
+- João Pessoa (`JPA`).
+
+Todos os destinos usam estas combinações:
 
 - `29/12/2026` a `06/01/2027`;
 - `29/12/2026` a `07/01/2027`;
@@ -33,10 +41,14 @@ Executar uma consulta imediata para Recife, que continua sendo o destino padrão
 python -m monitora_voo executar
 ```
 
-Consultar Fortaleza:
+Consultar outro destino:
 
 ```bash
 python -m monitora_voo executar --destino FOR
+python -m monitora_voo executar --destino MCZ
+python -m monitora_voo executar --destino NAT
+python -m monitora_voo executar --destino RIO
+python -m monitora_voo executar --destino JPA
 ```
 
 Monitorar a cada 6 horas:
@@ -50,7 +62,7 @@ interromper.
 
 ## Painel web
 
-O painel estático fica em `docs/`. A página inicial compara os dois destinos e
+O painel estático fica em `docs/`. A página inicial compara os seis destinos e
 as páginas de análise exibem histórico, métricas e ofertas de cada rota. Para
 visualizá-lo localmente:
 
@@ -74,13 +86,16 @@ python -m monitora_voo exportar \
   --saida docs/dados_fortaleza.json
 ```
 
+Os demais destinos seguem o mesmo formato e possuem caminhos padrão próprios,
+portanto também podem ser exportados apenas com `--destino`.
+
 ## GitHub
 
 O workflow `.github/workflows/monitorar.yml`:
 
 - executa automaticamente a cada 6 horas, no horário de Belém;
 - também pode ser iniciado manualmente pela aba `Actions`;
-- consulta Recife e Fortaleza separadamente;
+- consulta os seis destinos separadamente;
 - salva um JSON e uma planilha para cada destino;
 - publica o conteúdo de `docs/` no GitHub Pages.
 
@@ -105,7 +120,9 @@ Cada destino possui sua própria planilha, com duas abas:
 `queda_detectada` fica como `sim` quando o menor preço da consulta atual for
 menor que o menor preço histórico anterior, inclusive uma redução de R$ 0,01.
 O histórico original em `docs/monitoramento_voos.xlsx` continua pertencendo a
-Recife; Fortaleza usa `docs/monitoramento_fortaleza.xlsx`.
+Recife. Os demais destinos usam arquivos identificados pelo nome da cidade.
+Para o Rio de Janeiro, a mesma análise combina ofertas do Galeão (`GIG`) e do
+Santos Dumont (`SDU`).
 
 ## Limitações
 
