@@ -20,6 +20,17 @@ class PaginasTeste(unittest.TestCase):
 
         self.assertEqual(pagina_inicial.count('class="cartao-destino"'), 6)
 
+    def test_grafico_agrupa_precos_e_oferece_tooltip(self) -> None:
+        pasta_docs = Path(__file__).parents[1] / "docs"
+        pagina_destino = (pasta_docs / "destino.html").read_text(encoding="utf-8")
+        painel = (pasta_docs / "painel.js").read_text(encoding="utf-8")
+
+        self.assertIn('id="grafico-tooltip"', pagina_destino)
+        self.assertIn("agruparPrecosConsecutivos", painel)
+        self.assertIn('addEventListener("pointermove"', painel)
+        self.assertIn('addEventListener("pointerdown"', painel)
+        self.assertIn("consultas agrupadas", painel)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -9,7 +9,7 @@
       content="Acompanhamento de preços de voos saindo de Belém."
     >
     <title>Radar de voos · Análise de destino</title>
-    <link rel="stylesheet" href="./estilos.css?v=3">
+    <link rel="stylesheet" href="./estilos.css?v=4">
   </head>
   <body>
     <header class="cabecalho">
@@ -106,8 +106,17 @@
             <canvas
               id="grafico-precos"
               role="img"
-              aria-label="Gráfico do menor preço encontrado em cada consulta"
+              aria-label="Gráfico do menor preço agrupado por valores consecutivos iguais"
+              aria-describedby="grafico-instrucao"
             ></canvas>
+            <div id="grafico-tooltip" class="grafico-tooltip" role="tooltip" hidden>
+              <strong id="grafico-tooltip-preco"></strong>
+              <span id="grafico-tooltip-periodo"></span>
+              <small id="grafico-tooltip-quantidade"></small>
+            </div>
+            <p id="grafico-instrucao" class="texto-apoio-grafico">
+              Passe o mouse ou toque em uma bolinha para consultar o valor e a data.
+            </p>
             <p id="grafico-vazio" class="mensagem-vazia" hidden>
               O gráfico aparecerá após a primeira consulta.
             </p>
@@ -157,6 +166,6 @@
         Ative o JavaScript para visualizar os dados do monitoramento.
       </p>
     </noscript>
-    <script src="./painel.js?v=3"></script>
+    <script src="./painel.js?v=4"></script>
   </body>
 </html>

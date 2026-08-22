@@ -616,15 +616,70 @@ h2 {
 }
 
 .grafico {
-  height: 290px;
+  height: 318px;
   position: relative;
-  padding: 20px 18px 12px;
+  padding: 20px 18px 40px;
 }
 
 #grafico-precos {
   width: 100%;
   height: 100%;
   display: block;
+}
+
+#grafico-precos:hover {
+  cursor: crosshair;
+}
+
+.grafico-tooltip {
+  min-width: 174px;
+  max-width: 230px;
+  position: absolute;
+  z-index: 2;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: var(--tinta);
+  box-shadow: 0 8px 24px rgba(23, 32, 28, 0.18);
+  color: #fff;
+  pointer-events: none;
+  transform: translate(-50%, calc(-100% - 12px));
+}
+
+.grafico-tooltip.tooltip-abaixo {
+  transform: translate(-50%, 12px);
+}
+
+.grafico-tooltip strong,
+.grafico-tooltip span,
+.grafico-tooltip small {
+  display: block;
+}
+
+.grafico-tooltip strong {
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.grafico-tooltip span,
+.grafico-tooltip small {
+  color: #dce2de;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.grafico-tooltip small {
+  margin-top: 3px;
+  color: #aeb9b3;
+}
+
+.texto-apoio-grafico {
+  position: absolute;
+  right: 18px;
+  bottom: 12px;
+  margin: 0;
+  color: var(--tinta-suave);
+  font-size: 11px;
 }
 
 .mensagem-vazia {
@@ -895,8 +950,17 @@ footer {
   }
 
   .grafico {
-    height: 250px;
+    height: 288px;
     padding-inline: 10px;
+  }
+
+  .texto-apoio-grafico {
+    right: 10px;
+    left: 10px;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   th,

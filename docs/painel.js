@@ -11,6 +11,7 @@ const formatoConsulta = new Intl.DateTimeFormat("pt-BR", {
 });
 
 let historicoAtual = [];
+let coordenadasGrafico = [];
 
 const rotasDisponiveis = {
   REC: { arquivoDados: "./dados.json", nome: "Recife" },
@@ -32,6 +33,7 @@ document
 window.addEventListener("resize", () => desenharGrafico(historicoAtual));
 
 configurarLinkGitHub();
+configurarInteracaoGrafico();
 carregarDados();
 setInterval(carregarDados, 5 * 60 * 1000);
 
@@ -192,12 +194,17 @@ function trecho(partida, chegada, duracao) {
 function desenharGrafico(historico) {
   const canvas = document.querySelector("#grafico-precos");
   const vazio = document.querySelector("#grafico-vazio");
-  const pontos = historico.filter((item) => item.menor_preco != null);
+  const consultas = historico.filter((item) => item.menor_preco != null);
+  const pontos = agruparPrecosConsecutivos(consultas);
   document.querySelector("#quantidade-consultas").textContent =
-    `${pontos.length} consulta${pontos.length === 1 ? "" : "s"}`;
+    `${consultas.length} consulta${consultas.length === 1 ? "" : "s"} · ` +
+    `${pontos.length} ponto${pontos.length === 1 ? "" : "s"}`;
 
   vazio.hidden = pontos.length > 0;
   canvas.hidden = pontos.length === 0;
+  document.querySelector("#grafico-instrucao").hidden = pontos.length === 0;
+  ocultarTooltipGrafico();
+  coordenadasGrafico = [];
   if (!pontos.length) {
     return;
   }
@@ -238,7 +245,7 @@ function desenharGrafico(historico) {
     contexto.fillText(formatarPrecoCurto(valor), margem.esquerda - 10, y);
   }
 
-  const coordenadas = pontos.map((ponto, indice) => {
+  coordenadasGrafico = pontos.map((ponto, indice) => {
     const x =
       pontos.length === 1
         ? margem.esquerda + larguraUtil / 2
@@ -254,7 +261,7 @@ function desenharGrafico(historico) {
   contexto.strokeStyle = "#087852";
   contexto.lineWidth = 2.5;
   contexto.beginPath();
-  coordenadas.forEach(({ x, y }, indice) => {
+  coordenadasGrafico.forEach(({ x, y }, indice) => {
     if (indice === 0) {
       contexto.moveTo(x, y);
     } else {
@@ -263,7 +270,7 @@ function desenharGrafico(historico) {
   });
   contexto.stroke();
 
-  coordenadas.forEach(({ x, y, ponto }, indice) => {
+  coordenadasGrafico.forEach(({ x, y, ponto }, indice) => {
     contexto.fillStyle = ponto.queda_detectada ? "#f4bd3b" : "#087852";
     contexto.beginPath();
     contexto.arc(x, y, ponto.queda_detectada ? 5 : 4, 0, Math.PI * 2);
@@ -285,6 +292,82 @@ function desenharGrafico(historico) {
       );
     }
   });
+}
+
+function agruparPrecosConsecutivos(consultas) {
+  return consultas.reduce((grupos, consulta) => {
+    const ultimoGrupo = grupos.at(-1);
+    const precoEmCentavos = Math.round(Number(consulta.menor_preco) * 100);
+    if (ultimoGrupo?.precoEmCentavos === precoEmCentavos) {
+      ultimoGrupo.consulta_fim = consulta.consulta_em;
+      ultimoGrupo.quantidade_consultas += 1;
+      ultimoGrupo.queda_detectada ||= consulta.queda_detectada;
+      return grupos;
+    }
+
+    grupos.push({
+      ...consulta,
+      consulta_inicio: consulta.consulta_em,
+      consulta_fim: consulta.consulta_em,
+      quantidade_consultas: 1,
+      precoEmCentavos,
+    });
+    return grupos;
+  }, []);
+}
+
+function configurarInteracaoGrafico() {
+  const canvas = document.querySelector("#grafico-precos");
+  const tratarInteracao = (evento) => {
+    const retangulo = canvas.getBoundingClientRect();
+    const x = evento.clientX - retangulo.left;
+    const y = evento.clientY - retangulo.top;
+    const pontoProximo = coordenadasGrafico
+      .map((coordenada) => ({
+        coordenada,
+        distancia: Math.hypot(coordenada.x - x, coordenada.y - y),
+      }))
+      .sort((a, b) => a.distancia - b.distancia)[0];
+
+    if (!pontoProximo || pontoProximo.distancia > 18) {
+      ocultarTooltipGrafico();
+      return;
+    }
+    exibirTooltipGrafico(pontoProximo.coordenada);
+  };
+  canvas.addEventListener("pointermove", tratarInteracao);
+  canvas.addEventListener("pointerdown", tratarInteracao);
+  canvas.addEventListener("pointerleave", ocultarTooltipGrafico);
+}
+
+function exibirTooltipGrafico({ x, y, ponto }) {
+  const canvas = document.querySelector("#grafico-precos");
+  const grafico = canvas.parentElement;
+  const tooltip = document.querySelector("#grafico-tooltip");
+  document.querySelector("#grafico-tooltip-preco").textContent =
+    formatarPreco(ponto.menor_preco);
+  document.querySelector("#grafico-tooltip-periodo").textContent =
+    ponto.quantidade_consultas === 1
+      ? `Consulta em ${formatarConsulta(ponto.consulta_inicio)}`
+      : `${formatarConsulta(ponto.consulta_inicio)} → ${formatarConsulta(ponto.consulta_fim)}`;
+  document.querySelector("#grafico-tooltip-quantidade").textContent =
+    ponto.quantidade_consultas === 1
+      ? "1 consulta"
+      : `${ponto.quantidade_consultas} consultas agrupadas`;
+
+  tooltip.hidden = false;
+  const metadeTooltip = tooltip.offsetWidth / 2;
+  const posicaoX = Math.min(
+    grafico.clientWidth - metadeTooltip - 8,
+    Math.max(metadeTooltip + 8, canvas.offsetLeft + x),
+  );
+  tooltip.style.left = `${posicaoX}px`;
+  tooltip.style.top = `${canvas.offsetTop + y}px`;
+  tooltip.classList.toggle("tooltip-abaixo", y < tooltip.offsetHeight + 18);
+}
+
+function ocultarTooltipGrafico() {
+  document.querySelector("#grafico-tooltip").hidden = true;
 }
 
 function configurarLinkGitHub() {
