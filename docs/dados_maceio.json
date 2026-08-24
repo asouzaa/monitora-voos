@@ -35,9 +35,9 @@
   "resumo": {
     "menor_preco_historico": 2985.0,
     "ultimo_menor_preco": 2985.0,
-    "data_ultima_consulta": "2026-08-24T16:01:23+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-08-24T16:01:23+00:00",
-    "quantidade_ofertas_vistas": 1291,
+    "data_ultima_consulta": "2026-08-24T21:50:46+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-08-24T21:50:46+00:00",
+    "quantidade_ofertas_vistas": 1411,
     "status": "sem queda"
   },
   "ofertas": [
@@ -102,17 +102,17 @@
       "queda_detectada": false
     },
     {
-      "identificador": "97c365084ca78487",
-      "companhia": "Gol",
-      "partida_ida": "2026-12-30T03:05:00",
-      "chegada_ida": "2026-12-30T16:35:00",
+      "identificador": "e302dd0e581a7cd1",
+      "companhia": "LATAM",
+      "partida_ida": "2026-12-30T17:00:00",
+      "chegada_ida": "2026-12-30T23:40:00",
       "conexoes_ida": 1,
-      "duracao_ida": "PT13H30M",
-      "partida_volta": "2027-01-06T04:05:00",
-      "chegada_volta": "2027-01-06T11:25:00",
+      "duracao_ida": "PT6H40M",
+      "partida_volta": "2027-01-08T05:00:00",
+      "chegada_volta": "2027-01-08T10:40:00",
       "conexoes_volta": 1,
-      "duracao_volta": "PT7H20M",
-      "preco_total": 3308.0,
+      "duracao_volta": "PT5H40M",
+      "preco_total": 3303.0,
       "moeda": "BRL",
       "queda_detectada": false
     }
@@ -222,11 +222,17 @@
       "menor_preco": 2985.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-08-24T21:50:46+00:00",
+      "menor_preco": 2985.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_maceio.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-08-24T16:03:10+00:00"
+  "gerado_em": "2026-08-24T21:53:00+00:00"
 }
