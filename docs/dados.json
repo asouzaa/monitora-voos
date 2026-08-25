@@ -35,9 +35,9 @@
   "resumo": {
     "menor_preco_historico": 1959.0,
     "ultimo_menor_preco": 2244.0,
-    "data_ultima_consulta": "2026-08-25T09:56:57+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-08-25T09:56:57+00:00",
-    "quantidade_ofertas_vistas": 6783,
+    "data_ultima_consulta": "2026-08-25T16:04:47+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-08-25T16:04:47+00:00",
+    "quantidade_ofertas_vistas": 6903,
     "status": "sem queda"
   },
   "ofertas": [
@@ -102,17 +102,17 @@
       "queda_detectada": false
     },
     {
-      "identificador": "4f2c55b78b372f23",
+      "identificador": "a9981412ba7bd675",
       "companhia": "Gol",
-      "partida_ida": "2026-12-30T03:05:00",
-      "chegada_ida": "2026-12-30T13:55:00",
+      "partida_ida": "2026-12-29T03:05:00",
+      "chegada_ida": "2026-12-29T11:50:00",
       "conexoes_ida": 1,
-      "duracao_ida": "PT10H50M",
-      "partida_volta": "2027-01-08T15:40:00",
-      "chegada_volta": "2027-01-09T01:30:00",
+      "duracao_ida": "PT8H45M",
+      "partida_volta": "2027-01-06T04:45:00",
+      "chegada_volta": "2027-01-06T12:05:00",
       "conexoes_volta": 1,
-      "duracao_volta": "PT9H50M",
-      "preco_total": 2244.0,
+      "duracao_volta": "PT7H20M",
+      "preco_total": 2363.0,
       "moeda": "BRL",
       "queda_detectada": false
     }
@@ -131,7 +131,7 @@
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-06",
-      "menor_preco": 2291.0
+      "menor_preco": 2363.0
     },
     {
       "data_ida": "2026-12-30",
@@ -146,7 +146,7 @@
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-08",
-      "menor_preco": 2244.0
+      "menor_preco": 2363.0
     }
   ],
   "datas_vencedoras": [
@@ -158,11 +158,6 @@
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-07",
-      "menor_preco": 2244.0
-    },
-    {
-      "data_ida": "2026-12-30",
-      "data_volta": "2027-01-08",
       "menor_preco": 2244.0
     }
   ],
@@ -892,11 +887,17 @@
       "menor_preco": 2244.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-08-25T16:04:47+00:00",
+      "menor_preco": 2244.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_voos.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-08-25T09:59:21+00:00"
+  "gerado_em": "2026-08-25T16:06:57+00:00"
 }
