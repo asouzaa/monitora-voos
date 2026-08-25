@@ -35,9 +35,9 @@
   "resumo": {
     "menor_preco_historico": 2449.0,
     "ultimo_menor_preco": 2767.0,
-    "data_ultima_consulta": "2026-08-24T21:51:06+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-08-24T21:51:06+00:00",
-    "quantidade_ofertas_vistas": 1400,
+    "data_ultima_consulta": "2026-08-25T04:06:31+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-08-25T04:06:31+00:00",
+    "quantidade_ofertas_vistas": 1520,
     "status": "sem queda"
   },
   "ofertas": [
@@ -72,12 +72,12 @@
       "queda_detectada": false
     },
     {
-      "identificador": "945f3ebbb07a80fd",
+      "identificador": "22a17302e3f950f2",
       "companhia": "Gol",
       "partida_ida": "2026-12-30T03:05:00",
-      "chegada_ida": "2026-12-30T10:45:00",
+      "chegada_ida": "2026-12-30T15:40:00",
       "conexoes_ida": 1,
-      "duracao_ida": "PT7H40M",
+      "duracao_ida": "PT12H35M",
       "partida_volta": "2027-01-06T04:30:00",
       "chegada_volta": "2027-01-06T12:05:00",
       "conexoes_volta": 1,
@@ -102,12 +102,12 @@
       "queda_detectada": false
     },
     {
-      "identificador": "43c000182d1e6407",
+      "identificador": "e1a20601f8d06faf",
       "companhia": "Gol",
       "partida_ida": "2026-12-30T03:05:00",
-      "chegada_ida": "2026-12-30T10:45:00",
+      "chegada_ida": "2026-12-30T15:40:00",
       "conexoes_ida": 1,
-      "duracao_ida": "PT7H40M",
+      "duracao_ida": "PT12H35M",
       "partida_volta": "2027-01-08T03:25:00",
       "chegada_volta": "2027-01-08T11:25:00",
       "conexoes_volta": 1,
@@ -141,7 +141,7 @@
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-05",
-      "menor_preco": 3028.0
+      "menor_preco": 3130.0
     },
     {
       "data_ida": "2026-12-30",
@@ -238,11 +238,17 @@
       "menor_preco": 2767.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-08-25T04:06:31+00:00",
+      "menor_preco": 2767.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_natal.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-08-24T21:53:00+00:00"
+  "gerado_em": "2026-08-25T04:08:00+00:00"
 }
