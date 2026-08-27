@@ -35,10 +35,10 @@
   "resumo": {
     "menor_preco_historico": 1892.0,
     "ultimo_menor_preco": 1892.0,
-    "data_ultima_consulta": "2026-08-27T00:55:01+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-08-27T00:55:01+00:00",
-    "quantidade_ofertas_vistas": 2400,
-    "status": "queda detectada"
+    "data_ultima_consulta": "2026-08-27T14:23:32+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-08-27T14:23:32+00:00",
+    "quantidade_ofertas_vistas": 2520,
+    "status": "sem queda"
   },
   "ofertas": [
     {
@@ -54,7 +54,7 @@
       "duracao_volta": "PT6H5M",
       "preco_total": 1892.0,
       "moeda": "BRL",
-      "queda_detectada": true
+      "queda_detectada": false
     },
     {
       "identificador": "a193b0dced0d6dbd",
@@ -69,7 +69,7 @@
       "duracao_volta": "PT6H5M",
       "preco_total": 1892.0,
       "moeda": "BRL",
-      "queda_detectada": true
+      "queda_detectada": false
     },
     {
       "identificador": "073b7d912d0f5d60",
@@ -84,7 +84,7 @@
       "duracao_volta": "PT6H5M",
       "preco_total": 1892.0,
       "moeda": "BRL",
-      "queda_detectada": true
+      "queda_detectada": false
     },
     {
       "identificador": "251f778889d470f2",
@@ -99,7 +99,7 @@
       "duracao_volta": "PT6H5M",
       "preco_total": 1892.0,
       "moeda": "BRL",
-      "queda_detectada": true
+      "queda_detectada": false
     },
     {
       "identificador": "a70ba97810dc0eca",
@@ -114,7 +114,7 @@
       "duracao_volta": "PT6H5M",
       "preco_total": 1892.0,
       "moeda": "BRL",
-      "queda_detectada": true
+      "queda_detectada": false
     }
   ],
   "comparacao_periodos": [
@@ -141,7 +141,7 @@
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-05",
-      "menor_preco": 1892.0
+      "menor_preco": 1959.0
     },
     {
       "data_ida": "2026-12-30",
@@ -168,11 +168,6 @@
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-07",
-      "menor_preco": 1892.0
-    },
-    {
-      "data_ida": "2026-12-29",
-      "data_volta": "2027-01-05",
       "menor_preco": 1892.0
     },
     {
@@ -301,11 +296,17 @@
       "menor_preco": 1892.0,
       "queda_detectada": true,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-08-27T14:23:32+00:00",
+      "menor_preco": 1892.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_rio.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-08-27T00:56:06+00:00"
+  "gerado_em": "2026-08-27T14:24:47+00:00"
 }
