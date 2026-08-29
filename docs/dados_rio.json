@@ -35,10 +35,10 @@
   "resumo": {
     "menor_preco_historico": 1749.0,
     "ultimo_menor_preco": 1749.0,
-    "data_ultima_consulta": "2026-08-29T03:13:46+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-08-29T03:13:46+00:00",
-    "quantidade_ofertas_vistas": 2880,
-    "status": "queda detectada"
+    "data_ultima_consulta": "2026-08-29T10:16:45+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-08-29T10:16:45+00:00",
+    "quantidade_ofertas_vistas": 3000,
+    "status": "sem queda"
   },
   "ofertas": [
     {
@@ -54,7 +54,7 @@
       "duracao_volta": "PT19H10M",
       "preco_total": 1749.0,
       "moeda": "BRL",
-      "queda_detectada": true
+      "queda_detectada": false
     },
     {
       "identificador": "7f93282e1d80933a",
@@ -69,7 +69,7 @@
       "duracao_volta": "PT6H10M",
       "preco_total": 1749.0,
       "moeda": "BRL",
-      "queda_detectada": true
+      "queda_detectada": false
     },
     {
       "identificador": "5797a5f80fbd21d6",
@@ -84,7 +84,7 @@
       "duracao_volta": "PT13H45M",
       "preco_total": 1749.0,
       "moeda": "BRL",
-      "queda_detectada": true
+      "queda_detectada": false
     },
     {
       "identificador": "10bdf99d38c5d15c",
@@ -99,7 +99,7 @@
       "duracao_volta": "PT11H30M",
       "preco_total": 1764.0,
       "moeda": "BRL",
-      "queda_detectada": true
+      "queda_detectada": false
     },
     {
       "identificador": "decbc69196f373f3",
@@ -114,7 +114,7 @@
       "duracao_volta": "PT11H30M",
       "preco_total": 1784.0,
       "moeda": "BRL",
-      "queda_detectada": true
+      "queda_detectada": false
     }
   ],
   "comparacao_periodos": [
@@ -305,11 +305,17 @@
       "menor_preco": 1749.0,
       "queda_detectada": true,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-08-29T10:16:45+00:00",
+      "menor_preco": 1749.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_rio.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-08-29T03:14:49+00:00"
+  "gerado_em": "2026-08-29T10:17:54+00:00"
 }
