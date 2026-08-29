@@ -33,86 +33,86 @@
     "classe": "economy"
   },
   "resumo": {
-    "menor_preco_historico": 1757.0,
-    "ultimo_menor_preco": 1757.0,
-    "data_ultima_consulta": "2026-08-28T15:31:56+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-08-28T15:31:56+00:00",
-    "quantidade_ofertas_vistas": 2760,
+    "menor_preco_historico": 1749.0,
+    "ultimo_menor_preco": 1749.0,
+    "data_ultima_consulta": "2026-08-29T03:13:46+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-08-29T03:13:46+00:00",
+    "quantidade_ofertas_vistas": 2880,
     "status": "queda detectada"
   },
   "ofertas": [
     {
-      "identificador": "64745940b61d2fc7",
-      "companhia": "Gol / LATAM",
-      "partida_ida": "2026-12-29T17:05:00",
-      "chegada_ida": "2026-12-29T22:20:00",
-      "conexoes_ida": 1,
-      "duracao_ida": "PT5H15M",
-      "partida_volta": "2027-01-07T06:15:00",
-      "chegada_volta": "2027-01-07T17:00:00",
-      "conexoes_volta": 1,
-      "duracao_volta": "PT10H45M",
-      "preco_total": 1757.0,
-      "moeda": "BRL",
-      "queda_detectada": true
-    },
-    {
-      "identificador": "4dc6275688709205",
-      "companhia": "Gol / LATAM",
-      "partida_ida": "2026-12-29T17:05:00",
-      "chegada_ida": "2026-12-29T22:20:00",
-      "conexoes_ida": 1,
-      "duracao_ida": "PT5H15M",
-      "partida_volta": "2027-01-07T20:10:00",
+      "identificador": "0fc254c91e87fffc",
+      "companhia": "LATAM",
+      "partida_ida": "2026-12-30T17:45:00",
+      "chegada_ida": "2026-12-31T14:45:00",
+      "conexoes_ida": 2,
+      "duracao_ida": "PT21H0M",
+      "partida_volta": "2027-01-07T17:00:00",
       "chegada_volta": "2027-01-08T12:10:00",
       "conexoes_volta": 2,
-      "duracao_volta": "PT16H0M",
-      "preco_total": 1757.0,
+      "duracao_volta": "PT19H10M",
+      "preco_total": 1749.0,
       "moeda": "BRL",
       "queda_detectada": true
     },
     {
-      "identificador": "9d9e10fc018a901d",
-      "companhia": "Gol / LATAM",
-      "partida_ida": "2026-12-30T05:50:00",
-      "chegada_ida": "2026-12-30T12:30:00",
-      "conexoes_ida": 1,
-      "duracao_ida": "PT6H40M",
-      "partida_volta": "2027-01-07T06:15:00",
-      "chegada_volta": "2027-01-07T17:00:00",
-      "conexoes_volta": 1,
-      "duracao_volta": "PT10H45M",
-      "preco_total": 1757.0,
-      "moeda": "BRL",
-      "queda_detectada": true
-    },
-    {
-      "identificador": "4393f2eebba07e0e",
-      "companhia": "Gol / LATAM",
-      "partida_ida": "2026-12-30T05:50:00",
-      "chegada_ida": "2026-12-30T12:30:00",
-      "conexoes_ida": 1,
-      "duracao_ida": "PT6H40M",
-      "partida_volta": "2027-01-07T20:10:00",
+      "identificador": "7f93282e1d80933a",
+      "companhia": "LATAM",
+      "partida_ida": "2026-12-30T17:45:00",
+      "chegada_ida": "2026-12-31T14:45:00",
+      "conexoes_ida": 2,
+      "duracao_ida": "PT21H0M",
+      "partida_volta": "2027-01-08T06:00:00",
       "chegada_volta": "2027-01-08T12:10:00",
-      "conexoes_volta": 2,
-      "duracao_volta": "PT16H0M",
-      "preco_total": 1757.0,
+      "conexoes_volta": 1,
+      "duracao_volta": "PT6H10M",
+      "preco_total": 1749.0,
       "moeda": "BRL",
       "queda_detectada": true
     },
     {
-      "identificador": "46371e6433b301be",
-      "companhia": "Gol / LATAM",
-      "partida_ida": "2026-12-30T17:05:00",
-      "chegada_ida": "2026-12-30T22:20:00",
+      "identificador": "5797a5f80fbd21d6",
+      "companhia": "LATAM",
+      "partida_ida": "2026-12-30T17:45:00",
+      "chegada_ida": "2026-12-31T14:45:00",
+      "conexoes_ida": 2,
+      "duracao_ida": "PT21H0M",
+      "partida_volta": "2027-01-08T20:35:00",
+      "chegada_volta": "2027-01-09T10:20:00",
+      "conexoes_volta": 2,
+      "duracao_volta": "PT13H45M",
+      "preco_total": 1749.0,
+      "moeda": "BRL",
+      "queda_detectada": true
+    },
+    {
+      "identificador": "10bdf99d38c5d15c",
+      "companhia": "LATAM",
+      "partida_ida": "2026-12-30T17:45:00",
+      "chegada_ida": "2026-12-31T21:25:00",
       "conexoes_ida": 1,
-      "duracao_ida": "PT5H15M",
-      "partida_volta": "2027-01-07T06:15:00",
+      "duracao_ida": "PT27H40M",
+      "partida_volta": "2027-01-07T05:30:00",
       "chegada_volta": "2027-01-07T17:00:00",
-      "conexoes_volta": 1,
-      "duracao_volta": "PT10H45M",
-      "preco_total": 1757.0,
+      "conexoes_volta": 2,
+      "duracao_volta": "PT11H30M",
+      "preco_total": 1764.0,
+      "moeda": "BRL",
+      "queda_detectada": true
+    },
+    {
+      "identificador": "decbc69196f373f3",
+      "companhia": "LATAM",
+      "partida_ida": "2026-12-30T17:45:00",
+      "chegada_ida": "2026-12-31T14:45:00",
+      "conexoes_ida": 2,
+      "duracao_ida": "PT21H0M",
+      "partida_volta": "2027-01-07T05:30:00",
+      "chegada_volta": "2027-01-07T17:00:00",
+      "conexoes_volta": 2,
+      "duracao_volta": "PT11H30M",
+      "preco_total": 1784.0,
       "moeda": "BRL",
       "queda_detectada": true
     }
@@ -121,49 +121,44 @@
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-06",
-      "menor_preco": 1959.0
+      "menor_preco": 2074.0
     },
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-07",
-      "menor_preco": 1757.0
+      "menor_preco": 1857.0
     },
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-06",
-      "menor_preco": 1959.0
+      "menor_preco": 2006.0
     },
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-07",
-      "menor_preco": 1757.0
+      "menor_preco": 1749.0
     },
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-05",
-      "menor_preco": 1959.0
+      "menor_preco": 1893.0
     },
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-08",
-      "menor_preco": 1757.0
+      "menor_preco": 1749.0
     }
   ],
   "datas_vencedoras": [
     {
-      "data_ida": "2026-12-29",
-      "data_volta": "2027-01-07",
-      "menor_preco": 1757.0
-    },
-    {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-07",
-      "menor_preco": 1757.0
+      "menor_preco": 1749.0
     },
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-08",
-      "menor_preco": 1757.0
+      "menor_preco": 1749.0
     }
   ],
   "historico": [
@@ -304,11 +299,17 @@
       "menor_preco": 1757.0,
       "queda_detectada": true,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-08-29T03:13:46+00:00",
+      "menor_preco": 1749.0,
+      "queda_detectada": true,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_rio.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-08-28T15:32:56+00:00"
+  "gerado_em": "2026-08-29T03:14:49+00:00"
 }
