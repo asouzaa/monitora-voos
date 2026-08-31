@@ -35,9 +35,9 @@
   "resumo": {
     "menor_preco_historico": 1499.0,
     "ultimo_menor_preco": 1876.0,
-    "data_ultima_consulta": "2026-08-30T23:38:00+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-08-30T23:38:00+00:00",
-    "quantidade_ofertas_vistas": 3858,
+    "data_ultima_consulta": "2026-08-31T09:56:16+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-08-31T09:56:16+00:00",
+    "quantidade_ofertas_vistas": 3978,
     "status": "sem queda"
   },
   "ofertas": [
@@ -53,6 +53,21 @@
       "conexoes_volta": 0,
       "duracao_volta": "PT2H0M",
       "preco_total": 1876.0,
+      "moeda": "BRL",
+      "queda_detectada": false
+    },
+    {
+      "identificador": "9f2e8d3f63f14f11",
+      "companhia": "Gol / Azul",
+      "partida_ida": "2026-12-30T03:20:00",
+      "chegada_ida": "2026-12-30T12:20:00",
+      "conexoes_ida": 1,
+      "duracao_ida": "PT9H0M",
+      "partida_volta": "2027-01-08T20:35:00",
+      "chegada_volta": "2027-01-08T22:35:00",
+      "conexoes_volta": 0,
+      "duracao_volta": "PT2H0M",
+      "preco_total": 1926.0,
       "moeda": "BRL",
       "queda_detectada": false
     },
@@ -98,21 +113,6 @@
       "conexoes_volta": 0,
       "duracao_volta": "PT2H0M",
       "preco_total": 2182.0,
-      "moeda": "BRL",
-      "queda_detectada": false
-    },
-    {
-      "identificador": "8b073ea5539c2a1c",
-      "companhia": "Gol",
-      "partida_ida": "2026-12-30T03:20:00",
-      "chegada_ida": "2026-12-30T12:20:00",
-      "conexoes_ida": 1,
-      "duracao_ida": "PT9H0M",
-      "partida_volta": "2027-01-07T04:55:00",
-      "chegada_volta": "2027-01-07T12:05:00",
-      "conexoes_volta": 1,
-      "duracao_volta": "PT7H10M",
-      "preco_total": 2269.0,
       "moeda": "BRL",
       "queda_detectada": false
     }
@@ -354,11 +354,17 @@
       "menor_preco": 1876.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-08-31T09:56:16+00:00",
+      "menor_preco": 1876.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_fortaleza.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-08-30T23:39:59+00:00"
+  "gerado_em": "2026-08-31T09:58:14+00:00"
 }
