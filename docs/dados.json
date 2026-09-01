@@ -35,9 +35,9 @@
   "resumo": {
     "menor_preco_historico": 1959.0,
     "ultimo_menor_preco": 2885.0,
-    "data_ultima_consulta": "2026-08-31T20:53:42+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-08-31T20:53:42+00:00",
-    "quantidade_ofertas_vistas": 9062,
+    "data_ultima_consulta": "2026-09-01T00:40:50+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-09-01T00:40:50+00:00",
+    "quantidade_ofertas_vistas": 9182,
     "status": "sem queda"
   },
   "ofertas": [
@@ -102,12 +102,12 @@
       "queda_detectada": false
     },
     {
-      "identificador": "e4f6493771239ddf",
+      "identificador": "d93fcf2d446d3a2d",
       "companhia": "LATAM / Gol",
-      "partida_ida": "2026-12-29T21:55:00",
-      "chegada_ida": "2026-12-30T10:15:00",
+      "partida_ida": "2026-12-29T13:00:00",
+      "chegada_ida": "2026-12-29T20:40:00",
       "conexoes_ida": 1,
-      "duracao_ida": "PT12H20M",
+      "duracao_ida": "PT7H40M",
       "partida_volta": "2027-01-06T04:45:00",
       "chegada_volta": "2027-01-06T12:05:00",
       "conexoes_volta": 1,
@@ -1006,11 +1006,17 @@
       "menor_preco": 2885.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-09-01T00:40:50+00:00",
+      "menor_preco": 2885.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_voos.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-08-31T20:56:47+00:00"
+  "gerado_em": "2026-09-01T00:42:46+00:00"
 }
