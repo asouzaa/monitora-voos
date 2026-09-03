@@ -35,9 +35,9 @@
   "resumo": {
     "menor_preco_historico": 1959.0,
     "ultimo_menor_preco": 2794.0,
-    "data_ultima_consulta": "2026-09-02T23:23:59+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-09-02T23:23:59+00:00",
-    "quantidade_ofertas_vistas": 10142,
+    "data_ultima_consulta": "2026-09-03T08:10:08+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-09-03T08:10:08+00:00",
+    "quantidade_ofertas_vistas": 10262,
     "status": "sem queda"
   },
   "ofertas": [
@@ -102,17 +102,17 @@
       "queda_detectada": false
     },
     {
-      "identificador": "77148dcbbedf723e",
-      "companhia": "Azul / Gol",
-      "partida_ida": "2026-12-29T13:30:00",
-      "chegada_ida": "2026-12-29T21:50:00",
+      "identificador": "b09a0169b50619af",
+      "companhia": "Azul",
+      "partida_ida": "2026-12-30T17:50:00",
+      "chegada_ida": "2026-12-31T01:30:00",
       "conexoes_ida": 1,
-      "duracao_ida": "PT8H20M",
-      "partida_volta": "2027-01-07T03:55:00",
-      "chegada_volta": "2027-01-07T11:50:00",
+      "duracao_ida": "PT7H40M",
+      "partida_volta": "2027-01-07T09:10:00",
+      "chegada_volta": "2027-01-07T20:50:00",
       "conexoes_volta": 1,
-      "duracao_volta": "PT7H55M",
-      "preco_total": 2985.0,
+      "duracao_volta": "PT11H40M",
+      "preco_total": 3063.0,
       "moeda": "BRL",
       "queda_detectada": false
     }
@@ -126,7 +126,7 @@
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-07",
-      "menor_preco": 2985.0
+      "menor_preco": 3255.0
     },
     {
       "data_ida": "2026-12-30",
@@ -1055,11 +1055,17 @@
       "menor_preco": 2794.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-09-03T08:10:08+00:00",
+      "menor_preco": 2794.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_voos.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-09-02T23:26:25+00:00"
+  "gerado_em": "2026-09-03T08:12:27+00:00"
 }
