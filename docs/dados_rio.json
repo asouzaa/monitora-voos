@@ -33,127 +33,127 @@
     "classe": "economy"
   },
   "resumo": {
-    "menor_preco_historico": 1651.0,
-    "ultimo_menor_preco": 1721.0,
-    "data_ultima_consulta": "2026-09-03T18:48:34+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-09-03T18:48:34+00:00",
-    "quantidade_ofertas_vistas": 5400,
-    "status": "sem queda"
+    "menor_preco_historico": 1632.0,
+    "ultimo_menor_preco": 1632.0,
+    "data_ultima_consulta": "2026-09-03T23:22:27+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-09-03T23:22:27+00:00",
+    "quantidade_ofertas_vistas": 5520,
+    "status": "queda detectada"
   },
   "ofertas": [
     {
-      "identificador": "ce32ea134f46a27a",
-      "companhia": "Azul / LATAM",
-      "partida_ida": "2026-12-30T16:55:00",
-      "chegada_ida": "2026-12-31T04:40:00",
+      "identificador": "61df63bcb3703f7c",
+      "companhia": "LATAM",
+      "partida_ida": "2026-12-30T05:00:00",
+      "chegada_ida": "2026-12-30T12:50:00",
       "conexoes_ida": 1,
-      "duracao_ida": "PT11H45M",
+      "duracao_ida": "PT7H50M",
       "partida_volta": "2027-01-08T20:35:00",
       "chegada_volta": "2027-01-09T10:20:00",
       "conexoes_volta": 2,
       "duracao_volta": "PT13H45M",
-      "preco_total": 1721.0,
+      "preco_total": 1632.0,
       "moeda": "BRL",
-      "queda_detectada": false
+      "queda_detectada": true
     },
     {
-      "identificador": "495ee07e33ae6da6",
-      "companhia": "Azul / LATAM",
-      "partida_ida": "2026-12-29T13:30:00",
-      "chegada_ida": "2026-12-29T20:15:00",
+      "identificador": "c0c60e67856f3f99",
+      "companhia": "LATAM",
+      "partida_ida": "2026-12-30T17:00:00",
+      "chegada_ida": "2026-12-30T23:15:00",
       "conexoes_ida": 1,
-      "duracao_ida": "PT6H45M",
+      "duracao_ida": "PT6H15M",
+      "partida_volta": "2027-01-08T20:35:00",
+      "chegada_volta": "2027-01-09T10:20:00",
+      "conexoes_volta": 2,
+      "duracao_volta": "PT13H45M",
+      "preco_total": 1632.0,
+      "moeda": "BRL",
+      "queda_detectada": true
+    },
+    {
+      "identificador": "abe9af2dfa9cafd7",
+      "companhia": "LATAM",
+      "partida_ida": "2026-12-29T05:00:00",
+      "chegada_ida": "2026-12-29T12:50:00",
+      "conexoes_ida": 1,
+      "duracao_ida": "PT7H50M",
       "partida_volta": "2027-01-07T08:05:00",
       "chegada_volta": "2027-01-08T01:40:00",
       "conexoes_volta": 2,
       "duracao_volta": "PT17H35M",
-      "preco_total": 1757.0,
+      "preco_total": 1668.0,
       "moeda": "BRL",
-      "queda_detectada": false
+      "queda_detectada": true
     },
     {
-      "identificador": "7469acf87768ab9b",
-      "companhia": "Azul / LATAM",
-      "partida_ida": "2026-12-29T13:30:00",
-      "chegada_ida": "2026-12-29T20:15:00",
+      "identificador": "627f0d2c1488b061",
+      "companhia": "LATAM",
+      "partida_ida": "2026-12-29T05:00:00",
+      "chegada_ida": "2026-12-29T12:50:00",
       "conexoes_ida": 1,
-      "duracao_ida": "PT6H45M",
+      "duracao_ida": "PT7H50M",
       "partida_volta": "2027-01-07T17:00:00",
       "chegada_volta": "2027-01-08T10:20:00",
       "conexoes_volta": 2,
       "duracao_volta": "PT17H20M",
-      "preco_total": 1757.0,
+      "preco_total": 1668.0,
       "moeda": "BRL",
-      "queda_detectada": false
+      "queda_detectada": true
     },
     {
-      "identificador": "82c89b1404ef9c3e",
-      "companhia": "Azul / LATAM",
-      "partida_ida": "2026-12-30T16:55:00",
-      "chegada_ida": "2026-12-31T04:40:00",
-      "conexoes_ida": 1,
-      "duracao_ida": "PT11H45M",
+      "identificador": "e72eae5ba60e0a72",
+      "companhia": "LATAM",
+      "partida_ida": "2026-12-29T11:05:00",
+      "chegada_ida": "2026-12-29T23:25:00",
+      "conexoes_ida": 2,
+      "duracao_ida": "PT12H20M",
       "partida_volta": "2027-01-07T08:05:00",
       "chegada_volta": "2027-01-08T01:40:00",
       "conexoes_volta": 2,
       "duracao_volta": "PT17H35M",
-      "preco_total": 1757.0,
+      "preco_total": 1668.0,
       "moeda": "BRL",
-      "queda_detectada": false
-    },
-    {
-      "identificador": "a6893dab50d94500",
-      "companhia": "Azul / LATAM",
-      "partida_ida": "2026-12-30T16:55:00",
-      "chegada_ida": "2026-12-31T04:40:00",
-      "conexoes_ida": 1,
-      "duracao_ida": "PT11H45M",
-      "partida_volta": "2027-01-07T17:00:00",
-      "chegada_volta": "2027-01-08T10:20:00",
-      "conexoes_volta": 2,
-      "duracao_volta": "PT17H20M",
-      "preco_total": 1757.0,
-      "moeda": "BRL",
-      "queda_detectada": false
+      "queda_detectada": true
     }
   ],
   "comparacao_periodos": [
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-06",
-      "menor_preco": 2040.0
+      "menor_preco": 1724.0
     },
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-07",
-      "menor_preco": 1757.0
+      "menor_preco": 1668.0
     },
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-06",
-      "menor_preco": 2040.0
+      "menor_preco": 1724.0
     },
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-07",
-      "menor_preco": 1757.0
+      "menor_preco": 1668.0
     },
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-05",
-      "menor_preco": 2040.0
+      "menor_preco": 1722.0
     },
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-08",
-      "menor_preco": 1721.0
+      "menor_preco": 1632.0
     }
   ],
   "datas_vencedoras": [
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-08",
-      "menor_preco": 1721.0
+      "menor_preco": 1632.0
     }
   ],
   "historico": [
@@ -426,11 +426,17 @@
       "menor_preco": 1721.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-09-03T23:22:27+00:00",
+      "menor_preco": 1632.0,
+      "queda_detectada": true,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_rio.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-09-03T18:49:29+00:00"
+  "gerado_em": "2026-09-03T23:23:27+00:00"
 }
