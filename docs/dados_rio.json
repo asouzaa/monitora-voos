@@ -34,73 +34,13 @@
   },
   "resumo": {
     "menor_preco_historico": 1632.0,
-    "ultimo_menor_preco": 1950.0,
-    "data_ultima_consulta": "2026-09-04T08:06:29+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-09-04T08:06:29+00:00",
-    "quantidade_ofertas_vistas": 5640,
+    "ultimo_menor_preco": 2015.0,
+    "data_ultima_consulta": "2026-09-04T13:38:06+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-09-04T13:38:06+00:00",
+    "quantidade_ofertas_vistas": 5760,
     "status": "sem queda"
   },
   "ofertas": [
-    {
-      "identificador": "a354a7b23db8395d",
-      "companhia": "Azul / LATAM",
-      "partida_ida": "2026-12-29T13:30:00",
-      "chegada_ida": "2026-12-29T20:15:00",
-      "conexoes_ida": 1,
-      "duracao_ida": "PT6H45M",
-      "partida_volta": "2027-01-07T13:00:00",
-      "chegada_volta": "2027-01-08T01:40:00",
-      "conexoes_volta": 2,
-      "duracao_volta": "PT12H40M",
-      "preco_total": 1950.0,
-      "moeda": "BRL",
-      "queda_detectada": false
-    },
-    {
-      "identificador": "207ca829b4069042",
-      "companhia": "Azul / LATAM",
-      "partida_ida": "2026-12-30T16:55:00",
-      "chegada_ida": "2026-12-31T04:40:00",
-      "conexoes_ida": 1,
-      "duracao_ida": "PT11H45M",
-      "partida_volta": "2027-01-07T13:00:00",
-      "chegada_volta": "2027-01-08T01:40:00",
-      "conexoes_volta": 2,
-      "duracao_volta": "PT12H40M",
-      "preco_total": 1950.0,
-      "moeda": "BRL",
-      "queda_detectada": false
-    },
-    {
-      "identificador": "f50fa2f1f4a52b9c",
-      "companhia": "Azul / LATAM",
-      "partida_ida": "2026-12-30T16:55:00",
-      "chegada_ida": "2026-12-31T04:40:00",
-      "conexoes_ida": 1,
-      "duracao_ida": "PT11H45M",
-      "partida_volta": "2027-01-08T06:00:00",
-      "chegada_volta": "2027-01-08T17:00:00",
-      "conexoes_volta": 1,
-      "duracao_volta": "PT11H0M",
-      "preco_total": 1950.0,
-      "moeda": "BRL",
-      "queda_detectada": false
-    },
-    {
-      "identificador": "b1c1c064e9d0c30d",
-      "companhia": "Azul / LATAM",
-      "partida_ida": "2026-12-30T16:55:00",
-      "chegada_ida": "2026-12-31T04:40:00",
-      "conexoes_ida": 1,
-      "duracao_ida": "PT11H45M",
-      "partida_volta": "2027-01-08T20:35:00",
-      "chegada_volta": "2027-01-09T10:20:00",
-      "conexoes_volta": 2,
-      "duracao_volta": "PT13H45M",
-      "preco_total": 1950.0,
-      "moeda": "BRL",
-      "queda_detectada": false
-    },
     {
       "identificador": "ce3b776a35e6361d",
       "companhia": "Gol",
@@ -115,6 +55,66 @@
       "preco_total": 2015.0,
       "moeda": "BRL",
       "queda_detectada": false
+    },
+    {
+      "identificador": "675253f811b075fd",
+      "companhia": "Azul",
+      "partida_ida": "2026-12-29T13:30:00",
+      "chegada_ida": "2026-12-29T20:15:00",
+      "conexoes_ida": 1,
+      "duracao_ida": "PT6H45M",
+      "partida_volta": "2027-01-06T20:40:00",
+      "chegada_volta": "2027-01-07T11:55:00",
+      "conexoes_volta": 1,
+      "duracao_volta": "PT15H15M",
+      "preco_total": 2040.0,
+      "moeda": "BRL",
+      "queda_detectada": false
+    },
+    {
+      "identificador": "c9a0776afe1a6f0d",
+      "companhia": "Azul",
+      "partida_ida": "2026-12-29T13:30:00",
+      "chegada_ida": "2026-12-29T20:15:00",
+      "conexoes_ida": 1,
+      "duracao_ida": "PT6H45M",
+      "partida_volta": "2027-01-07T06:10:00",
+      "chegada_volta": "2027-01-07T12:05:00",
+      "conexoes_volta": 1,
+      "duracao_volta": "PT5H55M",
+      "preco_total": 2040.0,
+      "moeda": "BRL",
+      "queda_detectada": false
+    },
+    {
+      "identificador": "d96e05dc0d2335a7",
+      "companhia": "Azul",
+      "partida_ida": "2026-12-29T13:30:00",
+      "chegada_ida": "2026-12-29T20:15:00",
+      "conexoes_ida": 1,
+      "duracao_ida": "PT6H45M",
+      "partida_volta": "2027-01-07T09:40:00",
+      "chegada_volta": "2027-01-07T16:25:00",
+      "conexoes_volta": 1,
+      "duracao_volta": "PT6H45M",
+      "preco_total": 2040.0,
+      "moeda": "BRL",
+      "queda_detectada": false
+    },
+    {
+      "identificador": "3fed99f0a56074be",
+      "companhia": "Azul",
+      "partida_ida": "2026-12-29T13:30:00",
+      "chegada_ida": "2026-12-29T20:15:00",
+      "conexoes_ida": 1,
+      "duracao_ida": "PT6H45M",
+      "partida_volta": "2027-01-07T14:45:00",
+      "chegada_volta": "2027-01-07T20:50:00",
+      "conexoes_volta": 1,
+      "duracao_volta": "PT6H5M",
+      "preco_total": 2040.0,
+      "moeda": "BRL",
+      "queda_detectada": false
     }
   ],
   "comparacao_periodos": [
@@ -126,7 +126,7 @@
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-07",
-      "menor_preco": 1950.0
+      "menor_preco": 2040.0
     },
     {
       "data_ida": "2026-12-30",
@@ -136,34 +136,24 @@
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-07",
-      "menor_preco": 1950.0
+      "menor_preco": 2040.0
     },
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-05",
-      "menor_preco": 2325.0
+      "menor_preco": 2040.0
     },
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-08",
-      "menor_preco": 1950.0
+      "menor_preco": 2015.0
     }
   ],
   "datas_vencedoras": [
     {
-      "data_ida": "2026-12-29",
-      "data_volta": "2027-01-07",
-      "menor_preco": 1950.0
-    },
-    {
-      "data_ida": "2026-12-30",
-      "data_volta": "2027-01-07",
-      "menor_preco": 1950.0
-    },
-    {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-08",
-      "menor_preco": 1950.0
+      "menor_preco": 2015.0
     }
   ],
   "historico": [
@@ -448,11 +438,17 @@
       "menor_preco": 1950.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-09-04T13:38:06+00:00",
+      "menor_preco": 2015.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_rio.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-09-04T08:07:30+00:00"
+  "gerado_em": "2026-09-04T13:39:18+00:00"
 }

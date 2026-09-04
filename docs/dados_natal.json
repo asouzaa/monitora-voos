@@ -35,9 +35,9 @@
   "resumo": {
     "menor_preco_historico": 2159.0,
     "ultimo_menor_preco": 2764.0,
-    "data_ultima_consulta": "2026-09-04T08:06:08+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-09-04T08:06:08+00:00",
-    "quantidade_ofertas_vistas": 5596,
+    "data_ultima_consulta": "2026-09-04T13:37:44+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-09-04T13:37:44+00:00",
+    "quantidade_ofertas_vistas": 5715,
     "status": "sem queda"
   },
   "ofertas": [
@@ -102,12 +102,12 @@
       "queda_detectada": false
     },
     {
-      "identificador": "549a0231032aac05",
+      "identificador": "4a7c14235b2a2c9c",
       "companhia": "Gol / LATAM",
-      "partida_ida": "2026-12-29T15:35:00",
-      "chegada_ida": "2026-12-30T02:45:00",
+      "partida_ida": "2026-12-29T15:45:00",
+      "chegada_ida": "2026-12-30T03:00:00",
       "conexoes_ida": 1,
-      "duracao_ida": "PT11H10M",
+      "duracao_ida": "PT11H15M",
       "partida_volta": "2027-01-07T12:25:00",
       "chegada_volta": "2027-01-08T10:20:00",
       "conexoes_volta": 2,
@@ -448,11 +448,17 @@
       "menor_preco": 2764.0,
       "queda_detectada": false,
       "quantidade_ofertas": 119
+    },
+    {
+      "consulta_em": "2026-09-04T13:37:44+00:00",
+      "menor_preco": 2764.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 119
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_natal.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-09-04T08:07:29+00:00"
+  "gerado_em": "2026-09-04T13:39:17+00:00"
 }
