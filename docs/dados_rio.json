@@ -35,9 +35,9 @@
   "resumo": {
     "menor_preco_historico": 1632.0,
     "ultimo_menor_preco": 2257.0,
-    "data_ultima_consulta": "2026-09-06T08:01:10+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-09-06T08:01:10+00:00",
-    "quantidade_ofertas_vistas": 6600,
+    "data_ultima_consulta": "2026-09-06T12:58:53+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-09-06T12:58:53+00:00",
+    "quantidade_ofertas_vistas": 6720,
     "status": "sem queda"
   },
   "ofertas": [
@@ -57,7 +57,7 @@
       "queda_detectada": false
     },
     {
-      "identificador": "56b6bb207c21f35f",
+      "identificador": "c80c9eaa2de25f85",
       "companhia": "LATAM",
       "partida_ida": "2026-12-30T17:45:00",
       "chegada_ida": "2026-12-31T14:45:00",
@@ -486,11 +486,17 @@
       "menor_preco": 2257.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-09-06T12:58:53+00:00",
+      "menor_preco": 2257.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_rio.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-09-06T08:02:17+00:00"
+  "gerado_em": "2026-09-06T12:59:59+00:00"
 }
