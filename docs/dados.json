@@ -35,14 +35,14 @@
   "resumo": {
     "menor_preco_historico": 1959.0,
     "ultimo_menor_preco": 3057.0,
-    "data_ultima_consulta": "2026-09-06T12:57:21+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-09-06T12:57:21+00:00",
-    "quantidade_ofertas_vistas": 11822,
+    "data_ultima_consulta": "2026-09-06T17:37:24+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-09-06T17:37:24+00:00",
+    "quantidade_ofertas_vistas": 11942,
     "status": "sem queda"
   },
   "ofertas": [
     {
-      "identificador": "8ff8b632883a483c",
+      "identificador": "21dc7b17cfb89cd1",
       "companhia": "LATAM / Azul",
       "partida_ida": "2026-12-30T04:15:00",
       "chegada_ida": "2026-12-30T15:45:00",
@@ -126,7 +126,7 @@
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-07",
-      "menor_preco": 3110.0
+      "menor_preco": 3206.0
     },
     {
       "data_ida": "2026-12-30",
@@ -1134,11 +1134,17 @@
       "menor_preco": 3057.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-09-06T17:37:24+00:00",
+      "menor_preco": 3057.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_voos.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-09-06T12:59:55+00:00"
+  "gerado_em": "2026-09-06T17:39:30+00:00"
 }
