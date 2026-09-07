@@ -35,9 +35,9 @@
   "resumo": {
     "menor_preco_historico": 2159.0,
     "ultimo_menor_preco": 2764.0,
-    "data_ultima_consulta": "2026-09-06T22:57:33+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-09-06T22:57:33+00:00",
-    "quantidade_ofertas_vistas": 6914,
+    "data_ultima_consulta": "2026-09-07T08:31:57+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-09-07T08:31:57+00:00",
+    "quantidade_ofertas_vistas": 7034,
     "status": "sem queda"
   },
   "ofertas": [
@@ -509,11 +509,17 @@
       "menor_preco": 2764.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-09-07T08:31:57+00:00",
+      "menor_preco": 2764.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_natal.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-09-06T22:59:31+00:00"
+  "gerado_em": "2026-09-07T08:35:17+00:00"
 }
