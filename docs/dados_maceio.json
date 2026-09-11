@@ -35,9 +35,9 @@
   "resumo": {
     "menor_preco_historico": 2371.0,
     "ultimo_menor_preco": 2870.0,
-    "data_ultima_consulta": "2026-09-11T18:40:37+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-09-11T18:40:37+00:00",
-    "quantidade_ofertas_vistas": 9053,
+    "data_ultima_consulta": "2026-09-11T23:23:48+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-09-11T23:23:48+00:00",
+    "quantidade_ofertas_vistas": 9171,
     "status": "sem queda"
   },
   "ofertas": [
@@ -628,11 +628,17 @@
       "menor_preco": 2870.0,
       "queda_detectada": false,
       "quantidade_ofertas": 118
+    },
+    {
+      "consulta_em": "2026-09-11T23:23:48+00:00",
+      "menor_preco": 2870.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 118
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_maceio.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-09-11T18:42:15+00:00"
+  "gerado_em": "2026-09-11T23:25:31+00:00"
 }
