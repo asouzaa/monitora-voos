@@ -35,9 +35,9 @@
   "resumo": {
     "menor_preco_historico": 1959.0,
     "ultimo_menor_preco": 2346.0,
-    "data_ultima_consulta": "2026-09-10T23:15:37+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-09-10T23:15:37+00:00",
-    "quantidade_ofertas_vistas": 13902,
+    "data_ultima_consulta": "2026-09-11T08:10:36+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-09-11T08:10:36+00:00",
+    "quantidade_ofertas_vistas": 14022,
     "status": "sem queda"
   },
   "ofertas": [
@@ -121,12 +121,12 @@
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-06",
-      "menor_preco": 2962.0
+      "menor_preco": 3157.0
     },
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-07",
-      "menor_preco": 2859.0
+      "menor_preco": 2962.0
     },
     {
       "data_ida": "2026-12-30",
@@ -1247,11 +1247,17 @@
       "menor_preco": 2346.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-09-11T08:10:36+00:00",
+      "menor_preco": 2346.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_voos.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-09-10T23:18:00+00:00"
+  "gerado_em": "2026-09-11T08:12:50+00:00"
 }
