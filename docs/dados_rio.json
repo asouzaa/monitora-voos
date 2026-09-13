@@ -35,9 +35,9 @@
   "resumo": {
     "menor_preco_historico": 1632.0,
     "ultimo_menor_preco": 2058.0,
-    "data_ultima_consulta": "2026-09-13T13:51:36+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-09-13T13:51:36+00:00",
-    "quantidade_ofertas_vistas": 10040,
+    "data_ultima_consulta": "2026-09-13T18:16:57+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-09-13T18:16:57+00:00",
+    "quantidade_ofertas_vistas": 10160,
     "status": "sem queda"
   },
   "ofertas": [
@@ -57,17 +57,32 @@
       "queda_detectada": false
     },
     {
-      "identificador": "21c75e01ba51abe4",
+      "identificador": "bb10b8415f8f3b01",
       "companhia": "Gol / LATAM",
       "partida_ida": "2026-12-30T05:50:00",
-      "chegada_ida": "2026-12-30T12:25:00",
+      "chegada_ida": "2026-12-30T14:10:00",
       "conexoes_ida": 1,
-      "duracao_ida": "PT6H35M",
+      "duracao_ida": "PT8H20M",
       "partida_volta": "2027-01-08T20:45:00",
       "chegada_volta": "2027-01-09T10:20:00",
       "conexoes_volta": 1,
       "duracao_volta": "PT13H35M",
       "preco_total": 2162.0,
+      "moeda": "BRL",
+      "queda_detectada": false
+    },
+    {
+      "identificador": "bada8d9eded1ba88",
+      "companhia": "Gol / LATAM",
+      "partida_ida": "2026-12-30T05:50:00",
+      "chegada_ida": "2026-12-30T12:25:00",
+      "conexoes_ida": 1,
+      "duracao_ida": "PT6H35M",
+      "partida_volta": "2027-01-08T20:15:00",
+      "chegada_volta": "2027-01-09T10:20:00",
+      "conexoes_volta": 1,
+      "duracao_volta": "PT14H5M",
+      "preco_total": 2232.0,
       "moeda": "BRL",
       "queda_detectada": false
     },
@@ -97,21 +112,6 @@
       "chegada_volta": "2027-01-07T12:05:00",
       "conexoes_volta": 1,
       "duracao_volta": "PT5H55M",
-      "preco_total": 2255.0,
-      "moeda": "BRL",
-      "queda_detectada": false
-    },
-    {
-      "identificador": "50e21798cccdfb8f",
-      "companhia": "Azul",
-      "partida_ida": "2026-12-30T17:50:00",
-      "chegada_ida": "2026-12-31T04:35:00",
-      "conexoes_ida": 1,
-      "duracao_ida": "PT10H45M",
-      "partida_volta": "2027-01-07T14:45:00",
-      "chegada_volta": "2027-01-07T20:50:00",
-      "conexoes_volta": 1,
-      "duracao_volta": "PT6H5M",
       "preco_total": 2255.0,
       "moeda": "BRL",
       "queda_detectada": false
@@ -660,11 +660,17 @@
       "menor_preco": 2058.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-09-13T18:16:57+00:00",
+      "menor_preco": 2058.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_rio.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-09-13T13:52:37+00:00"
+  "gerado_em": "2026-09-13T18:18:14+00:00"
 }
