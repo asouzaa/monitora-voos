@@ -35,9 +35,9 @@
   "resumo": {
     "menor_preco_historico": 1632.0,
     "ultimo_menor_preco": 1836.0,
-    "data_ultima_consulta": "2026-09-15T19:07:52+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-09-15T19:07:52+00:00",
-    "quantidade_ofertas_vistas": 11000,
+    "data_ultima_consulta": "2026-09-15T23:34:46+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-09-15T23:34:46+00:00",
+    "quantidade_ofertas_vistas": 11120,
     "status": "sem queda"
   },
   "ofertas": [
@@ -121,12 +121,12 @@
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-06",
-      "menor_preco": 2571.0
+      "menor_preco": 2655.0
     },
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-07",
-      "menor_preco": 2353.0
+      "menor_preco": 2461.0
     },
     {
       "data_ida": "2026-12-30",
@@ -141,7 +141,7 @@
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-05",
-      "menor_preco": 2571.0
+      "menor_preco": 2655.0
     },
     {
       "data_ida": "2026-12-30",
@@ -708,11 +708,17 @@
       "menor_preco": 1836.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-09-15T23:34:46+00:00",
+      "menor_preco": 1836.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_rio.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-09-15T19:09:06+00:00"
+  "gerado_em": "2026-09-15T23:35:49+00:00"
 }
