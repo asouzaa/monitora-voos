@@ -34,15 +34,15 @@
   },
   "resumo": {
     "menor_preco_historico": 1632.0,
-    "ultimo_menor_preco": 1880.0,
-    "data_ultima_consulta": "2026-09-15T08:50:08+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-09-15T08:50:08+00:00",
-    "quantidade_ofertas_vistas": 10760,
+    "ultimo_menor_preco": 1878.0,
+    "data_ultima_consulta": "2026-09-15T14:24:11+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-09-15T14:24:11+00:00",
+    "quantidade_ofertas_vistas": 10880,
     "status": "sem queda"
   },
   "ofertas": [
     {
-      "identificador": "bc149441df74d985",
+      "identificador": "f9210da175b98bc3",
       "companhia": "Azul / LATAM",
       "partida_ida": "2026-12-30T17:50:00",
       "chegada_ida": "2026-12-31T04:35:00",
@@ -52,12 +52,12 @@
       "chegada_volta": "2027-01-09T10:20:00",
       "conexoes_volta": 2,
       "duracao_volta": "PT21H20M",
-      "preco_total": 1880.0,
+      "preco_total": 1878.0,
       "moeda": "BRL",
       "queda_detectada": false
     },
     {
-      "identificador": "a3e79b7da844a7b8",
+      "identificador": "4508ec8e4668ee04",
       "companhia": "Azul / LATAM",
       "partida_ida": "2026-12-30T17:50:00",
       "chegada_ida": "2026-12-31T04:35:00",
@@ -67,7 +67,7 @@
       "chegada_volta": "2027-01-08T10:20:00",
       "conexoes_volta": 2,
       "duracao_volta": "PT21H20M",
-      "preco_total": 2228.0,
+      "preco_total": 2226.0,
       "moeda": "BRL",
       "queda_detectada": false
     },
@@ -102,7 +102,7 @@
       "queda_detectada": false
     },
     {
-      "identificador": "4eacb84442e229be",
+      "identificador": "c20505395f119498",
       "companhia": "Azul",
       "partida_ida": "2026-12-30T17:50:00",
       "chegada_ida": "2026-12-31T04:35:00",
@@ -112,7 +112,7 @@
       "chegada_volta": "2027-01-07T01:15:00",
       "conexoes_volta": 1,
       "duracao_volta": "PT7H0M",
-      "preco_total": 2332.0,
+      "preco_total": 2328.0,
       "moeda": "BRL",
       "queda_detectada": false
     }
@@ -131,12 +131,12 @@
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-06",
-      "menor_preco": 2332.0
+      "menor_preco": 2328.0
     },
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-07",
-      "menor_preco": 2228.0
+      "menor_preco": 2226.0
     },
     {
       "data_ida": "2026-12-29",
@@ -146,14 +146,14 @@
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-08",
-      "menor_preco": 1880.0
+      "menor_preco": 1878.0
     }
   ],
   "datas_vencedoras": [
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-08",
-      "menor_preco": 1880.0
+      "menor_preco": 1878.0
     }
   ],
   "historico": [
@@ -696,11 +696,17 @@
       "menor_preco": 1880.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-09-15T14:24:11+00:00",
+      "menor_preco": 1878.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_rio.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-09-15T08:51:18+00:00"
+  "gerado_em": "2026-09-15T14:25:26+00:00"
 }
