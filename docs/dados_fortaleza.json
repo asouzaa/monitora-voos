@@ -35,9 +35,9 @@
   "resumo": {
     "menor_preco_historico": 1405.0,
     "ultimo_menor_preco": 2567.0,
-    "data_ultima_consulta": "2026-09-15T23:33:48+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-09-15T23:33:48+00:00",
-    "quantidade_ofertas_vistas": 11176,
+    "data_ultima_consulta": "2026-09-16T08:43:19+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-09-16T08:43:19+00:00",
+    "quantidade_ofertas_vistas": 11296,
     "status": "sem queda"
   },
   "ofertas": [
@@ -87,32 +87,32 @@
       "queda_detectada": false
     },
     {
-      "identificador": "6617defb57251371",
-      "companhia": "Gol",
-      "partida_ida": "2026-12-30T03:20:00",
-      "chegada_ida": "2026-12-30T12:00:00",
+      "identificador": "a96126ed7bd29160",
+      "companhia": "Gol / LATAM",
+      "partida_ida": "2026-12-30T18:35:00",
+      "chegada_ida": "2026-12-31T02:55:00",
       "conexoes_ida": 1,
-      "duracao_ida": "PT8H40M",
-      "partida_volta": "2027-01-07T16:35:00",
-      "chegada_volta": "2027-01-08T01:50:00",
-      "conexoes_volta": 1,
-      "duracao_volta": "PT9H15M",
-      "preco_total": 2630.0,
+      "duracao_ida": "PT8H20M",
+      "partida_volta": "2027-01-06T23:55:00",
+      "chegada_volta": "2027-01-07T01:55:00",
+      "conexoes_volta": 0,
+      "duracao_volta": "PT2H0M",
+      "preco_total": 2592.0,
       "moeda": "BRL",
       "queda_detectada": false
     },
     {
-      "identificador": "39cfe8d579d3aa84",
+      "identificador": "1ba49ada53f34fcc",
       "companhia": "Gol",
-      "partida_ida": "2026-12-30T03:20:00",
-      "chegada_ida": "2026-12-30T12:00:00",
+      "partida_ida": "2026-12-30T18:35:00",
+      "chegada_ida": "2026-12-31T02:55:00",
       "conexoes_ida": 1,
-      "duracao_ida": "PT8H40M",
-      "partida_volta": "2027-01-07T03:25:00",
-      "chegada_volta": "2027-01-07T11:35:00",
+      "duracao_ida": "PT8H20M",
+      "partida_volta": "2027-01-06T04:55:00",
+      "chegada_volta": "2027-01-06T11:50:00",
       "conexoes_volta": 1,
-      "duracao_volta": "PT8H10M",
-      "preco_total": 2695.0,
+      "duracao_volta": "PT6H55M",
+      "preco_total": 2749.0,
       "moeda": "BRL",
       "queda_detectada": false
     }
@@ -731,11 +731,17 @@
       "menor_preco": 2567.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-09-16T08:43:19+00:00",
+      "menor_preco": 2567.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_fortaleza.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-09-15T23:35:46+00:00"
+  "gerado_em": "2026-09-16T08:45:23+00:00"
 }
