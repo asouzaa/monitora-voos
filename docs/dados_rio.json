@@ -34,15 +34,15 @@
   },
   "resumo": {
     "menor_preco_historico": 1632.0,
-    "ultimo_menor_preco": 1852.0,
-    "data_ultima_consulta": "2026-09-16T14:16:33+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-09-16T14:16:33+00:00",
-    "quantidade_ofertas_vistas": 11360,
+    "ultimo_menor_preco": 1724.0,
+    "data_ultima_consulta": "2026-09-16T18:58:02+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-09-16T18:58:02+00:00",
+    "quantidade_ofertas_vistas": 11480,
     "status": "sem queda"
   },
   "ofertas": [
     {
-      "identificador": "a57e03bb32b819d9",
+      "identificador": "31641ee0b7c51e26",
       "companhia": "Azul / LATAM",
       "partida_ida": "2026-12-30T17:50:00",
       "chegada_ida": "2026-12-31T04:35:00",
@@ -52,7 +52,7 @@
       "chegada_volta": "2027-01-09T10:20:00",
       "conexoes_volta": 2,
       "duracao_volta": "PT21H20M",
-      "preco_total": 1852.0,
+      "preco_total": 1724.0,
       "moeda": "BRL",
       "queda_detectada": false
     },
@@ -72,7 +72,7 @@
       "queda_detectada": false
     },
     {
-      "identificador": "f8c2e025730f79e4",
+      "identificador": "bb581bfe67ac9c2b",
       "companhia": "Azul",
       "partida_ida": "2026-12-30T17:50:00",
       "chegada_ida": "2026-12-31T04:35:00",
@@ -82,7 +82,7 @@
       "chegada_volta": "2027-01-08T12:05:00",
       "conexoes_volta": 1,
       "duracao_volta": "PT5H55M",
-      "preco_total": 2034.0,
+      "preco_total": 1950.0,
       "moeda": "BRL",
       "queda_detectada": false
     },
@@ -146,14 +146,14 @@
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-08",
-      "menor_preco": 1852.0
+      "menor_preco": 1724.0
     }
   ],
   "datas_vencedoras": [
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-08",
-      "menor_preco": 1852.0
+      "menor_preco": 1724.0
     }
   ],
   "historico": [
@@ -726,11 +726,17 @@
       "menor_preco": 1852.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-09-16T18:58:02+00:00",
+      "menor_preco": 1724.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_rio.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-09-16T14:17:47+00:00"
+  "gerado_em": "2026-09-16T18:59:11+00:00"
 }
