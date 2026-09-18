@@ -35,9 +35,9 @@
   "resumo": {
     "menor_preco_historico": 1632.0,
     "ultimo_menor_preco": 1993.0,
-    "data_ultima_consulta": "2026-09-18T08:23:55+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-09-18T08:23:55+00:00",
-    "quantidade_ofertas_vistas": 12200,
+    "data_ultima_consulta": "2026-09-18T13:42:59+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-09-18T13:42:59+00:00",
+    "quantidade_ofertas_vistas": 12320,
     "status": "sem queda"
   },
   "ofertas": [
@@ -768,11 +768,17 @@
       "menor_preco": 1993.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-09-18T13:42:59+00:00",
+      "menor_preco": 1993.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_rio.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-09-18T08:25:01+00:00"
+  "gerado_em": "2026-09-18T13:44:09+00:00"
 }
