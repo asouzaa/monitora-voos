@@ -35,9 +35,9 @@
   "resumo": {
     "menor_preco_historico": 1405.0,
     "ultimo_menor_preco": 2432.0,
-    "data_ultima_consulta": "2026-09-20T08:43:16+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-09-20T08:43:16+00:00",
-    "quantidade_ofertas_vistas": 13216,
+    "data_ultima_consulta": "2026-09-20T13:37:44+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-09-20T13:37:44+00:00",
+    "quantidade_ofertas_vistas": 13336,
     "status": "sem queda"
   },
   "ofertas": [
@@ -828,11 +828,17 @@
       "menor_preco": 2432.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-09-20T13:37:44+00:00",
+      "menor_preco": 2432.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_fortaleza.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-09-20T08:45:19+00:00"
+  "gerado_em": "2026-09-20T13:42:42+00:00"
 }
