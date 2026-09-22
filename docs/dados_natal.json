@@ -35,9 +35,9 @@
   "resumo": {
     "menor_preco_historico": 2159.0,
     "ultimo_menor_preco": 2798.0,
-    "data_ultima_consulta": "2026-09-22T00:12:45+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-09-22T00:12:45+00:00",
-    "quantidade_ofertas_vistas": 13728,
+    "data_ultima_consulta": "2026-09-22T08:41:35+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-09-22T08:41:35+00:00",
+    "quantidade_ofertas_vistas": 13848,
     "status": "sem queda"
   },
   "ofertas": [
@@ -141,12 +141,12 @@
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-05",
-      "menor_preco": 3340.0
+      "menor_preco": 3324.0
     },
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-08",
-      "menor_preco": 2919.0
+      "menor_preco": 2798.0
     }
   ],
   "datas_vencedoras": [
@@ -158,6 +158,11 @@
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-07",
+      "menor_preco": 2798.0
+    },
+    {
+      "data_ida": "2026-12-30",
+      "data_volta": "2027-01-08",
       "menor_preco": 2798.0
     }
   ],
@@ -857,11 +862,17 @@
       "menor_preco": 2798.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-09-22T08:41:35+00:00",
+      "menor_preco": 2798.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_natal.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-09-22T00:14:28+00:00"
+  "gerado_em": "2026-09-22T08:43:02+00:00"
 }
