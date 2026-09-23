@@ -34,15 +34,15 @@
   },
   "resumo": {
     "menor_preco_historico": 1405.0,
-    "ultimo_menor_preco": 2265.0,
-    "data_ultima_consulta": "2026-09-23T19:07:28+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-09-23T19:07:28+00:00",
-    "quantidade_ofertas_vistas": 14776,
+    "ultimo_menor_preco": 2363.0,
+    "data_ultima_consulta": "2026-09-23T23:48:29+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-09-23T23:48:29+00:00",
+    "quantidade_ofertas_vistas": 14896,
     "status": "sem queda"
   },
   "ofertas": [
     {
-      "identificador": "4d8661253e6e70b9",
+      "identificador": "7e4ae16a636d9d57",
       "companhia": "LATAM",
       "partida_ida": "2026-12-30T21:55:00",
       "chegada_ida": "2026-12-30T23:50:00",
@@ -52,12 +52,12 @@
       "chegada_volta": "2027-01-06T16:15:00",
       "conexoes_volta": 0,
       "duracao_volta": "PT2H0M",
-      "preco_total": 2265.0,
+      "preco_total": 2363.0,
       "moeda": "BRL",
       "queda_detectada": false
     },
     {
-      "identificador": "1b7ee653c8e0b018",
+      "identificador": "07d577d4a488f3d7",
       "companhia": "LATAM",
       "partida_ida": "2026-12-30T21:55:00",
       "chegada_ida": "2026-12-30T23:50:00",
@@ -67,12 +67,12 @@
       "chegada_volta": "2027-01-07T01:55:00",
       "conexoes_volta": 0,
       "duracao_volta": "PT2H0M",
-      "preco_total": 2265.0,
+      "preco_total": 2363.0,
       "moeda": "BRL",
       "queda_detectada": false
     },
     {
-      "identificador": "f75ba772446d2203",
+      "identificador": "6464e73c36e9877b",
       "companhia": "LATAM",
       "partida_ida": "2026-12-30T21:55:00",
       "chegada_ida": "2026-12-30T23:50:00",
@@ -82,12 +82,12 @@
       "chegada_volta": "2027-01-08T16:15:00",
       "conexoes_volta": 0,
       "duracao_volta": "PT2H0M",
-      "preco_total": 2265.0,
+      "preco_total": 2363.0,
       "moeda": "BRL",
       "queda_detectada": false
     },
     {
-      "identificador": "922f54f5b41b7024",
+      "identificador": "a62c90c4923b3e2c",
       "companhia": "Gol / LATAM",
       "partida_ida": "2026-12-29T03:05:00",
       "chegada_ida": "2026-12-29T15:50:00",
@@ -97,12 +97,12 @@
       "chegada_volta": "2027-01-06T16:15:00",
       "conexoes_volta": 0,
       "duracao_volta": "PT2H0M",
-      "preco_total": 2438.0,
+      "preco_total": 2481.0,
       "moeda": "BRL",
       "queda_detectada": false
     },
     {
-      "identificador": "7983d8794b175e9f",
+      "identificador": "e5ba6f22d41a8f0d",
       "companhia": "Gol / LATAM",
       "partida_ida": "2026-12-29T03:05:00",
       "chegada_ida": "2026-12-29T15:50:00",
@@ -112,7 +112,7 @@
       "chegada_volta": "2027-01-07T01:55:00",
       "conexoes_volta": 0,
       "duracao_volta": "PT2H0M",
-      "preco_total": 2438.0,
+      "preco_total": 2481.0,
       "moeda": "BRL",
       "queda_detectada": false
     }
@@ -121,7 +121,7 @@
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-06",
-      "menor_preco": 2438.0
+      "menor_preco": 2481.0
     },
     {
       "data_ida": "2026-12-29",
@@ -131,7 +131,7 @@
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-06",
-      "menor_preco": 2265.0
+      "menor_preco": 2363.0
     },
     {
       "data_ida": "2026-12-30",
@@ -141,24 +141,24 @@
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-05",
-      "menor_preco": 2675.0
+      "menor_preco": 2729.0
     },
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-08",
-      "menor_preco": 2265.0
+      "menor_preco": 2363.0
     }
   ],
   "datas_vencedoras": [
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-06",
-      "menor_preco": 2265.0
+      "menor_preco": 2363.0
     },
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-08",
-      "menor_preco": 2265.0
+      "menor_preco": 2363.0
     }
   ],
   "historico": [
@@ -911,11 +911,17 @@
       "menor_preco": 2265.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-09-23T23:48:29+00:00",
+      "menor_preco": 2363.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_fortaleza.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-09-23T19:09:41+00:00"
+  "gerado_em": "2026-09-23T23:50:33+00:00"
 }
