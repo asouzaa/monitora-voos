@@ -35,9 +35,9 @@
   "resumo": {
     "menor_preco_historico": 2796.0,
     "ultimo_menor_preco": 3594.0,
-    "data_ultima_consulta": "2026-09-25T14:41:40+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-09-25T14:41:40+00:00",
-    "quantidade_ofertas_vistas": 15520,
+    "data_ultima_consulta": "2026-09-25T19:23:50+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-09-25T19:23:50+00:00",
+    "quantidade_ofertas_vistas": 15640,
     "status": "sem queda"
   },
   "ofertas": [
@@ -956,11 +956,17 @@
       "menor_preco": 3594.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-09-25T19:23:50+00:00",
+      "menor_preco": 3594.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_joao_pessoa.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-09-25T14:42:18+00:00"
+  "gerado_em": "2026-09-25T19:24:25+00:00"
 }
