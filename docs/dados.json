@@ -35,9 +35,9 @@
   "resumo": {
     "menor_preco_historico": 1911.0,
     "ultimo_menor_preco": 2629.0,
-    "data_ultima_consulta": "2026-09-26T08:43:56+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-09-26T08:43:56+00:00",
-    "quantidade_ofertas_vistas": 20962,
+    "data_ultima_consulta": "2026-09-26T13:47:13+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-09-26T13:47:13+00:00",
+    "quantidade_ofertas_vistas": 21082,
     "status": "sem queda"
   },
   "ofertas": [
@@ -72,6 +72,21 @@
       "queda_detectada": false
     },
     {
+      "identificador": "94efcfe2d2af64e2",
+      "companhia": "Gol",
+      "partida_ida": "2026-12-30T03:20:00",
+      "chegada_ida": "2026-12-30T16:30:00",
+      "conexoes_ida": 1,
+      "duracao_ida": "PT13H10M",
+      "partida_volta": "2027-01-08T15:40:00",
+      "chegada_volta": "2027-01-09T01:50:00",
+      "conexoes_volta": 1,
+      "duracao_volta": "PT10H10M",
+      "preco_total": 2629.0,
+      "moeda": "BRL",
+      "queda_detectada": false
+    },
+    {
       "identificador": "274bf11228a54c77",
       "companhia": "Gol / Azul",
       "partida_ida": "2026-12-30T03:20:00",
@@ -98,21 +113,6 @@
       "conexoes_volta": 1,
       "duracao_volta": "PT9H10M",
       "preco_total": 2898.0,
-      "moeda": "BRL",
-      "queda_detectada": false
-    },
-    {
-      "identificador": "dc30bd9289294919",
-      "companhia": "Azul",
-      "partida_ida": "2026-12-30T13:20:00",
-      "chegada_ida": "2026-12-30T17:30:00",
-      "conexoes_ida": 1,
-      "duracao_ida": "PT4H10M",
-      "partida_volta": "2027-01-08T16:05:00",
-      "chegada_volta": "2027-01-09T01:15:00",
-      "conexoes_volta": 1,
-      "duracao_volta": "PT9H10M",
-      "preco_total": 3068.0,
       "moeda": "BRL",
       "queda_detectada": false
     }
@@ -1601,11 +1601,17 @@
       "menor_preco": 2629.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-09-26T13:47:13+00:00",
+      "menor_preco": 2629.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_voos.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-09-26T08:46:17+00:00"
+  "gerado_em": "2026-09-26T13:50:06+00:00"
 }
