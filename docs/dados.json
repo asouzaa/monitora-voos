@@ -35,23 +35,38 @@
   "resumo": {
     "menor_preco_historico": 1911.0,
     "ultimo_menor_preco": 2629.0,
-    "data_ultima_consulta": "2026-09-27T09:23:45+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-09-27T09:23:45+00:00",
-    "quantidade_ofertas_vistas": 21442,
+    "data_ultima_consulta": "2026-09-27T19:05:27+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-09-27T19:05:27+00:00",
+    "quantidade_ofertas_vistas": 21562,
     "status": "sem queda"
   },
   "ofertas": [
     {
-      "identificador": "d06f060d145cfa1e",
+      "identificador": "1ab2745718e1d656",
       "companhia": "Gol",
       "partida_ida": "2026-12-30T03:20:00",
       "chegada_ida": "2026-12-30T16:30:00",
       "conexoes_ida": 1,
       "duracao_ida": "PT13H10M",
-      "partida_volta": "2027-01-06T04:20:00",
-      "chegada_volta": "2027-01-06T17:50:00",
+      "partida_volta": "2027-01-06T04:00:00",
+      "chegada_volta": "2027-01-06T11:35:00",
       "conexoes_volta": 1,
-      "duracao_volta": "PT13H30M",
+      "duracao_volta": "PT7H35M",
+      "preco_total": 2629.0,
+      "moeda": "BRL",
+      "queda_detectada": false
+    },
+    {
+      "identificador": "d7cb64f9e0ceba2d",
+      "companhia": "Gol",
+      "partida_ida": "2026-12-30T03:20:00",
+      "chegada_ida": "2026-12-30T16:30:00",
+      "conexoes_ida": 1,
+      "duracao_ida": "PT13H10M",
+      "partida_volta": "2027-01-06T04:45:00",
+      "chegada_volta": "2027-01-06T11:50:00",
+      "conexoes_volta": 1,
+      "duracao_volta": "PT7H5M",
       "preco_total": 2629.0,
       "moeda": "BRL",
       "queda_detectada": false
@@ -98,21 +113,6 @@
       "conexoes_volta": 1,
       "duracao_volta": "PT9H10M",
       "preco_total": 2898.0,
-      "moeda": "BRL",
-      "queda_detectada": false
-    },
-    {
-      "identificador": "9be28d1b896c16ae",
-      "companhia": "LATAM / Gol",
-      "partida_ida": "2026-12-29T21:55:00",
-      "chegada_ida": "2026-12-30T10:15:00",
-      "conexoes_ida": 1,
-      "duracao_ida": "PT12H20M",
-      "partida_volta": "2027-01-06T04:00:00",
-      "chegada_volta": "2027-01-06T11:35:00",
-      "conexoes_volta": 1,
-      "duracao_volta": "PT7H35M",
-      "preco_total": 2979.0,
       "moeda": "BRL",
       "queda_detectada": false
     }
@@ -1625,11 +1625,17 @@
       "menor_preco": 2629.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-09-27T19:05:27+00:00",
+      "menor_preco": 2629.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_voos.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-09-27T09:26:59+00:00"
+  "gerado_em": "2026-09-27T19:08:11+00:00"
 }
