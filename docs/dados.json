@@ -35,27 +35,12 @@
   "resumo": {
     "menor_preco_historico": 1911.0,
     "ultimo_menor_preco": 1985.0,
-    "data_ultima_consulta": "2026-09-29T09:59:20+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-09-29T09:59:20+00:00",
-    "quantidade_ofertas_vistas": 22162,
+    "data_ultima_consulta": "2026-09-29T20:03:24+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-09-29T20:03:24+00:00",
+    "quantidade_ofertas_vistas": 22282,
     "status": "sem queda"
   },
   "ofertas": [
-    {
-      "identificador": "fbad204de0322970",
-      "companhia": "Gol",
-      "partida_ida": "2026-12-30T03:20:00",
-      "chegada_ida": "2026-12-30T16:30:00",
-      "conexoes_ida": 1,
-      "duracao_ida": "PT13H10M",
-      "partida_volta": "2027-01-06T04:00:00",
-      "chegada_volta": "2027-01-06T11:35:00",
-      "conexoes_volta": 1,
-      "duracao_volta": "PT7H35M",
-      "preco_total": 1985.0,
-      "moeda": "BRL",
-      "queda_detectada": false
-    },
     {
       "identificador": "80990030343436ba",
       "companhia": "Gol",
@@ -87,12 +72,27 @@
       "queda_detectada": false
     },
     {
-      "identificador": "0267a6a970085b2a",
+      "identificador": "8f2f2381c9b2cd45",
       "companhia": "Gol",
-      "partida_ida": "2026-12-29T03:05:00",
-      "chegada_ida": "2026-12-29T13:55:00",
+      "partida_ida": "2026-12-29T03:20:00",
+      "chegada_ida": "2026-12-29T16:30:00",
       "conexoes_ida": 1,
-      "duracao_ida": "PT10H50M",
+      "duracao_ida": "PT13H10M",
+      "partida_volta": "2027-01-06T04:45:00",
+      "chegada_volta": "2027-01-06T11:50:00",
+      "conexoes_volta": 1,
+      "duracao_volta": "PT7H5M",
+      "preco_total": 2081.0,
+      "moeda": "BRL",
+      "queda_detectada": false
+    },
+    {
+      "identificador": "8e9c3722b89d18d6",
+      "companhia": "Gol",
+      "partida_ida": "2026-12-30T03:20:00",
+      "chegada_ida": "2026-12-30T16:30:00",
+      "conexoes_ida": 1,
+      "duracao_ida": "PT13H10M",
       "partida_volta": "2027-01-06T04:00:00",
       "chegada_volta": "2027-01-06T11:35:00",
       "conexoes_volta": 1,
@@ -102,16 +102,16 @@
       "queda_detectada": false
     },
     {
-      "identificador": "b0d50f8fd4b6aee8",
+      "identificador": "4984e18206775f7e",
       "companhia": "Gol",
-      "partida_ida": "2026-12-29T03:05:00",
-      "chegada_ida": "2026-12-29T13:55:00",
+      "partida_ida": "2026-12-30T03:20:00",
+      "chegada_ida": "2026-12-30T16:30:00",
       "conexoes_ida": 1,
-      "duracao_ida": "PT10H50M",
-      "partida_volta": "2027-01-06T04:45:00",
-      "chegada_volta": "2027-01-06T11:50:00",
+      "duracao_ida": "PT13H10M",
+      "partida_volta": "2027-01-07T03:55:00",
+      "chegada_volta": "2027-01-07T11:50:00",
       "conexoes_volta": 1,
-      "duracao_volta": "PT7H5M",
+      "duracao_volta": "PT7H55M",
       "preco_total": 2081.0,
       "moeda": "BRL",
       "queda_detectada": false
@@ -1661,11 +1661,17 @@
       "menor_preco": 1985.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-09-29T20:03:24+00:00",
+      "menor_preco": 1985.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_voos.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-09-29T10:01:57+00:00"
+  "gerado_em": "2026-09-29T20:06:09+00:00"
 }
