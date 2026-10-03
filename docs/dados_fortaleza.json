@@ -35,19 +35,19 @@
   "resumo": {
     "menor_preco_historico": 1405.0,
     "ultimo_menor_preco": 2229.0,
-    "data_ultima_consulta": "2026-10-03T09:18:04+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-10-03T09:18:04+00:00",
-    "quantidade_ofertas_vistas": 18616,
+    "data_ultima_consulta": "2026-10-03T14:21:46+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-10-03T14:21:46+00:00",
+    "quantidade_ofertas_vistas": 18736,
     "status": "sem queda"
   },
   "ofertas": [
     {
-      "identificador": "36e9da20c2a571b6",
+      "identificador": "b6551b960f46ff89",
       "companhia": "Gol / LATAM",
       "partida_ida": "2026-12-30T18:35:00",
-      "chegada_ida": "2026-12-31T02:55:00",
-      "conexoes_ida": 1,
-      "duracao_ida": "PT8H20M",
+      "chegada_ida": "2026-12-31T05:15:00",
+      "conexoes_ida": 2,
+      "duracao_ida": "PT10H40M",
       "partida_volta": "2027-01-06T23:55:00",
       "chegada_volta": "2027-01-07T01:55:00",
       "conexoes_volta": 0,
@@ -57,12 +57,12 @@
       "queda_detectada": false
     },
     {
-      "identificador": "dc089d33521dc133",
+      "identificador": "e56baaa327f1eea8",
       "companhia": "Gol / LATAM",
       "partida_ida": "2026-12-30T18:35:00",
-      "chegada_ida": "2026-12-31T02:55:00",
-      "conexoes_ida": 1,
-      "duracao_ida": "PT8H20M",
+      "chegada_ida": "2026-12-31T05:15:00",
+      "conexoes_ida": 2,
+      "duracao_ida": "PT10H40M",
       "partida_volta": "2027-01-08T14:15:00",
       "chegada_volta": "2027-01-08T16:15:00",
       "conexoes_volta": 0,
@@ -87,12 +87,12 @@
       "queda_detectada": false
     },
     {
-      "identificador": "ade3fb6e99eebd95",
+      "identificador": "a9362f628652d8b3",
       "companhia": "Gol",
       "partida_ida": "2026-12-30T18:35:00",
-      "chegada_ida": "2026-12-31T02:55:00",
-      "conexoes_ida": 1,
-      "duracao_ida": "PT8H20M",
+      "chegada_ida": "2026-12-31T05:15:00",
+      "conexoes_ida": 2,
+      "duracao_ida": "PT10H40M",
       "partida_volta": "2027-01-06T04:55:00",
       "chegada_volta": "2027-01-06T11:50:00",
       "conexoes_volta": 1,
@@ -102,12 +102,12 @@
       "queda_detectada": false
     },
     {
-      "identificador": "3dabdec4a8a234ad",
+      "identificador": "b1d46d16054ef108",
       "companhia": "Gol",
       "partida_ida": "2026-12-30T18:35:00",
-      "chegada_ida": "2026-12-31T02:55:00",
-      "conexoes_ida": 1,
-      "duracao_ida": "PT8H20M",
+      "chegada_ida": "2026-12-31T05:15:00",
+      "conexoes_ida": 2,
+      "duracao_ida": "PT10H40M",
       "partida_volta": "2027-01-07T04:55:00",
       "chegada_volta": "2027-01-07T19:10:00",
       "conexoes_volta": 2,
@@ -1098,11 +1098,17 @@
       "menor_preco": 2229.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-10-03T14:21:46+00:00",
+      "menor_preco": 2229.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_fortaleza.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-10-03T09:20:29+00:00"
+  "gerado_em": "2026-10-03T14:24:14+00:00"
 }
