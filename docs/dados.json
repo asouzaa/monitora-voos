@@ -35,9 +35,9 @@
   "resumo": {
     "menor_preco_historico": 1886.0,
     "ultimo_menor_preco": 1886.0,
-    "data_ultima_consulta": "2026-10-04T18:41:12+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-10-04T18:41:12+00:00",
-    "quantidade_ofertas_vistas": 24202,
+    "data_ultima_consulta": "2026-10-05T00:01:12+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-10-05T00:01:12+00:00",
+    "quantidade_ofertas_vistas": 24322,
     "status": "sem queda"
   },
   "ofertas": [
@@ -87,12 +87,12 @@
       "queda_detectada": false
     },
     {
-      "identificador": "e4c71d0af4961ced",
+      "identificador": "78d5e9cf13183cad",
       "companhia": "Gol",
-      "partida_ida": "2026-12-29T03:05:00",
+      "partida_ida": "2026-12-29T03:20:00",
       "chegada_ida": "2026-12-29T16:05:00",
-      "conexoes_ida": 1,
-      "duracao_ida": "PT13H0M",
+      "conexoes_ida": 2,
+      "duracao_ida": "PT12H45M",
       "partida_volta": "2027-01-06T04:20:00",
       "chegada_volta": "2027-01-06T17:50:00",
       "conexoes_volta": 1,
@@ -102,7 +102,7 @@
       "queda_detectada": false
     },
     {
-      "identificador": "78d5e9cf13183cad",
+      "identificador": "1585ed21b858a995",
       "companhia": "Gol",
       "partida_ida": "2026-12-29T03:20:00",
       "chegada_ida": "2026-12-29T16:05:00",
@@ -1768,11 +1768,17 @@
       "menor_preco": 1886.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-10-05T00:01:12+00:00",
+      "menor_preco": 1886.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_voos.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-10-04T18:44:06+00:00"
+  "gerado_em": "2026-10-05T00:04:00+00:00"
 }
