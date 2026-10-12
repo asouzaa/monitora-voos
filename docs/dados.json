@@ -35,9 +35,9 @@
   "resumo": {
     "menor_preco_historico": 1761.0,
     "ultimo_menor_preco": 1881.0,
-    "data_ultima_consulta": "2026-10-11T19:36:41+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-10-11T19:36:41+00:00",
-    "quantidade_ofertas_vistas": 26582,
+    "data_ultima_consulta": "2026-10-12T00:38:53+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-10-12T00:38:53+00:00",
+    "quantidade_ofertas_vistas": 26702,
     "status": "sem queda"
   },
   "ofertas": [
@@ -87,12 +87,12 @@
       "queda_detectada": false
     },
     {
-      "identificador": "7bfdcc75720d438f",
+      "identificador": "2cf7dc71d3fb7895",
       "companhia": "Gol",
-      "partida_ida": "2026-12-29T03:20:00",
-      "chegada_ida": "2026-12-29T16:05:00",
+      "partida_ida": "2026-12-29T03:05:00",
+      "chegada_ida": "2026-12-30T01:05:00",
       "conexoes_ida": 2,
-      "duracao_ida": "PT12H45M",
+      "duracao_ida": "PT22H0M",
       "partida_volta": "2027-01-07T04:20:00",
       "chegada_volta": "2027-01-07T19:10:00",
       "conexoes_volta": 2,
@@ -102,12 +102,12 @@
       "queda_detectada": false
     },
     {
-      "identificador": "5373f6431a9f6c51",
+      "identificador": "1369258b32b3b86a",
       "companhia": "Gol",
-      "partida_ida": "2026-12-29T03:20:00",
-      "chegada_ida": "2026-12-29T16:05:00",
-      "conexoes_ida": 2,
-      "duracao_ida": "PT12H45M",
+      "partida_ida": "2026-12-30T17:25:00",
+      "chegada_ida": "2026-12-30T23:55:00",
+      "conexoes_ida": 1,
+      "duracao_ida": "PT6H30M",
       "partida_volta": "2027-01-07T04:20:00",
       "chegada_volta": "2027-01-07T19:10:00",
       "conexoes_volta": 2,
@@ -1883,11 +1883,17 @@
       "menor_preco": 1881.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-10-12T00:38:53+00:00",
+      "menor_preco": 1881.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_voos.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-10-11T19:40:00+00:00"
+  "gerado_em": "2026-10-12T00:41:28+00:00"
 }

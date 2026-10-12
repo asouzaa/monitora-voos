@@ -35,9 +35,9 @@
   "resumo": {
     "menor_preco_historico": 2371.0,
     "ultimo_menor_preco": 2649.0,
-    "data_ultima_consulta": "2026-10-11T19:37:27+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-10-11T19:37:27+00:00",
-    "quantidade_ofertas_vistas": 21214,
+    "data_ultima_consulta": "2026-10-12T00:39:34+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-10-12T00:39:34+00:00",
+    "quantidade_ofertas_vistas": 21326,
     "status": "sem queda"
   },
   "ofertas": [
@@ -72,7 +72,7 @@
       "queda_detectada": false
     },
     {
-      "identificador": "20dbe4e2016cb14f",
+      "identificador": "c487e91618c7ea11",
       "companhia": "Gol",
       "partida_ida": "2026-12-30T05:50:00",
       "chegada_ida": "2026-12-30T16:15:00",
@@ -87,7 +87,7 @@
       "queda_detectada": false
     },
     {
-      "identificador": "d39064ddc12201c8",
+      "identificador": "b5cc9d977a004c6b",
       "companhia": "Gol",
       "partida_ida": "2026-12-30T05:50:00",
       "chegada_ida": "2026-12-30T16:15:00",
@@ -102,7 +102,7 @@
       "queda_detectada": false
     },
     {
-      "identificador": "c487e91618c7ea11",
+      "identificador": "539f433ece428bf8",
       "companhia": "Gol",
       "partida_ida": "2026-12-30T05:50:00",
       "chegada_ida": "2026-12-30T16:15:00",
@@ -121,7 +121,7 @@
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-06",
-      "menor_preco": 3015.0
+      "menor_preco": 3114.0
     },
     {
       "data_ida": "2026-12-29",
@@ -141,7 +141,7 @@
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-05",
-      "menor_preco": 3015.0
+      "menor_preco": 3114.0
     },
     {
       "data_ida": "2026-12-30",
@@ -1241,11 +1241,17 @@
       "menor_preco": 2649.0,
       "queda_detectada": false,
       "quantidade_ofertas": 111
+    },
+    {
+      "consulta_em": "2026-10-12T00:39:34+00:00",
+      "menor_preco": 2649.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 112
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_maceio.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-10-11T19:40:04+00:00"
+  "gerado_em": "2026-10-12T00:41:35+00:00"
 }
