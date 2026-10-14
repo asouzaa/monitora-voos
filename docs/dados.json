@@ -35,9 +35,9 @@
   "resumo": {
     "menor_preco_historico": 1524.0,
     "ultimo_menor_preco": 1882.0,
-    "data_ultima_consulta": "2026-10-14T00:24:04+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-10-14T00:24:04+00:00",
-    "quantidade_ofertas_vistas": 27302,
+    "data_ultima_consulta": "2026-10-14T08:52:34+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-10-14T08:52:34+00:00",
+    "quantidade_ofertas_vistas": 27422,
     "status": "sem queda"
   },
   "ofertas": [
@@ -87,22 +87,22 @@
       "queda_detectada": false
     },
     {
-      "identificador": "c7e2558fdc2f5e2d",
+      "identificador": "08642118cb5a598c",
       "companhia": "Gol",
-      "partida_ida": "2026-12-30T03:20:00",
-      "chegada_ida": "2026-12-30T16:05:00",
+      "partida_ida": "2026-12-30T18:35:00",
+      "chegada_ida": "2026-12-31T08:40:00",
       "conexoes_ida": 2,
-      "duracao_ida": "PT12H45M",
-      "partida_volta": "2027-01-08T10:15:00",
-      "chegada_volta": "2027-01-08T23:40:00",
-      "conexoes_volta": 2,
-      "duracao_volta": "PT13H25M",
-      "preco_total": 1979.0,
+      "duracao_ida": "PT14H5M",
+      "partida_volta": "2027-01-08T12:55:00",
+      "chegada_volta": "2027-01-09T02:35:00",
+      "conexoes_volta": 1,
+      "duracao_volta": "PT13H40M",
+      "preco_total": 1882.0,
       "moeda": "BRL",
       "queda_detectada": false
     },
     {
-      "identificador": "4e6b33f4d438917c",
+      "identificador": "c7e2558fdc2f5e2d",
       "companhia": "Gol",
       "partida_ida": "2026-12-30T03:20:00",
       "chegada_ida": "2026-12-30T16:05:00",
@@ -1914,11 +1914,17 @@
       "menor_preco": 1882.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-10-14T08:52:34+00:00",
+      "menor_preco": 1882.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_voos.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-10-14T00:28:23+00:00"
+  "gerado_em": "2026-10-14T09:09:17+00:00"
 }
