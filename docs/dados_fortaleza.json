@@ -34,60 +34,15 @@
   },
   "resumo": {
     "menor_preco_historico": 1405.0,
-    "ultimo_menor_preco": 2447.0,
-    "data_ultima_consulta": "2026-10-15T14:15:25+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-10-15T14:15:25+00:00",
-    "quantidade_ofertas_vistas": 22846,
+    "ultimo_menor_preco": 2087.0,
+    "data_ultima_consulta": "2026-10-15T19:16:18+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-10-15T19:16:18+00:00",
+    "quantidade_ofertas_vistas": 22962,
     "status": "sem queda"
   },
   "ofertas": [
     {
-      "identificador": "7f3ab52a89557f9d",
-      "companhia": "Azul",
-      "partida_ida": "2026-12-30T18:00:00",
-      "chegada_ida": "2026-12-30T19:55:00",
-      "conexoes_ida": 0,
-      "duracao_ida": "PT1H55M",
-      "partida_volta": "2027-01-07T09:25:00",
-      "chegada_volta": "2027-01-07T11:25:00",
-      "conexoes_volta": 0,
-      "duracao_volta": "PT2H0M",
-      "preco_total": 2447.0,
-      "moeda": "BRL",
-      "queda_detectada": false
-    },
-    {
-      "identificador": "aaa661c91834994e",
-      "companhia": "Azul",
-      "partida_ida": "2026-12-30T18:00:00",
-      "chegada_ida": "2026-12-30T19:55:00",
-      "conexoes_ida": 0,
-      "duracao_ida": "PT1H55M",
-      "partida_volta": "2027-01-07T20:35:00",
-      "chegada_volta": "2027-01-07T22:35:00",
-      "conexoes_volta": 0,
-      "duracao_volta": "PT2H0M",
-      "preco_total": 2447.0,
-      "moeda": "BRL",
-      "queda_detectada": false
-    },
-    {
-      "identificador": "131858968a954af4",
-      "companhia": "Azul",
-      "partida_ida": "2026-12-30T18:00:00",
-      "chegada_ida": "2026-12-30T19:55:00",
-      "conexoes_ida": 0,
-      "duracao_ida": "PT1H55M",
-      "partida_volta": "2027-01-08T20:35:00",
-      "chegada_volta": "2027-01-08T22:35:00",
-      "conexoes_volta": 0,
-      "duracao_volta": "PT2H0M",
-      "preco_total": 2447.0,
-      "moeda": "BRL",
-      "queda_detectada": false
-    },
-    {
-      "identificador": "e6e52a07d59f57c0",
+      "identificador": "ae2d3f1976aee51a",
       "companhia": "Azul / LATAM",
       "partida_ida": "2026-12-30T18:00:00",
       "chegada_ida": "2026-12-30T19:55:00",
@@ -97,22 +52,67 @@
       "chegada_volta": "2027-01-06T16:15:00",
       "conexoes_volta": 0,
       "duracao_volta": "PT2H0M",
-      "preco_total": 2499.0,
+      "preco_total": 2087.0,
       "moeda": "BRL",
       "queda_detectada": false
     },
     {
-      "identificador": "5a16306a3ecfba1a",
+      "identificador": "acdd883f13b0854a",
+      "companhia": "Azul / LATAM",
+      "partida_ida": "2026-12-30T18:00:00",
+      "chegada_ida": "2026-12-30T19:55:00",
+      "conexoes_ida": 0,
+      "duracao_ida": "PT1H55M",
+      "partida_volta": "2027-01-07T23:55:00",
+      "chegada_volta": "2027-01-08T01:55:00",
+      "conexoes_volta": 0,
+      "duracao_volta": "PT2H0M",
+      "preco_total": 2087.0,
+      "moeda": "BRL",
+      "queda_detectada": false
+    },
+    {
+      "identificador": "0f8a572b91a3a0a2",
+      "companhia": "Azul / LATAM",
+      "partida_ida": "2026-12-30T18:00:00",
+      "chegada_ida": "2026-12-30T19:55:00",
+      "conexoes_ida": 0,
+      "duracao_ida": "PT1H55M",
+      "partida_volta": "2027-01-08T14:15:00",
+      "chegada_volta": "2027-01-08T16:15:00",
+      "conexoes_volta": 0,
+      "duracao_volta": "PT2H0M",
+      "preco_total": 2087.0,
+      "moeda": "BRL",
+      "queda_detectada": false
+    },
+    {
+      "identificador": "959de67fdf46997a",
       "companhia": "Azul",
       "partida_ida": "2026-12-30T18:00:00",
       "chegada_ida": "2026-12-30T19:55:00",
       "conexoes_ida": 0,
       "duracao_ida": "PT1H55M",
-      "partida_volta": "2027-01-06T09:25:00",
-      "chegada_volta": "2027-01-06T11:25:00",
+      "partida_volta": "2027-01-07T09:25:00",
+      "chegada_volta": "2027-01-07T11:25:00",
       "conexoes_volta": 0,
       "duracao_volta": "PT2H0M",
-      "preco_total": 2589.0,
+      "preco_total": 2254.0,
+      "moeda": "BRL",
+      "queda_detectada": false
+    },
+    {
+      "identificador": "26dbbc34f29568b1",
+      "companhia": "Azul",
+      "partida_ida": "2026-12-30T18:00:00",
+      "chegada_ida": "2026-12-30T19:55:00",
+      "conexoes_ida": 0,
+      "duracao_ida": "PT1H55M",
+      "partida_volta": "2027-01-07T20:35:00",
+      "chegada_volta": "2027-01-07T22:35:00",
+      "conexoes_volta": 0,
+      "duracao_volta": "PT2H0M",
+      "preco_total": 2254.0,
       "moeda": "BRL",
       "queda_detectada": false
     }
@@ -121,44 +121,49 @@
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-06",
-      "menor_preco": 3012.0
+      "menor_preco": 2376.0
     },
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-07",
-      "menor_preco": 2960.0
+      "menor_preco": 2376.0
     },
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-06",
-      "menor_preco": 2499.0
+      "menor_preco": 2087.0
     },
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-07",
-      "menor_preco": 2447.0
+      "menor_preco": 2087.0
     },
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-05",
-      "menor_preco": 3103.0
+      "menor_preco": 2523.0
     },
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-08",
-      "menor_preco": 2447.0
+      "menor_preco": 2087.0
     }
   ],
   "datas_vencedoras": [
     {
       "data_ida": "2026-12-30",
+      "data_volta": "2027-01-06",
+      "menor_preco": 2087.0
+    },
+    {
+      "data_ida": "2026-12-30",
       "data_volta": "2027-01-07",
-      "menor_preco": 2447.0
+      "menor_preco": 2087.0
     },
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-08",
-      "menor_preco": 2447.0
+      "menor_preco": 2087.0
     }
   ],
   "historico": [
@@ -1325,11 +1330,17 @@
       "menor_preco": 2447.0,
       "queda_detectada": false,
       "quantidade_ofertas": 116
+    },
+    {
+      "consulta_em": "2026-10-15T19:16:18+00:00",
+      "menor_preco": 2087.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 116
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_fortaleza.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-10-15T14:22:22+00:00"
+  "gerado_em": "2026-10-15T19:18:48+00:00"
 }
