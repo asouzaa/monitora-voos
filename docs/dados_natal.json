@@ -35,9 +35,9 @@
   "resumo": {
     "menor_preco_historico": 2080.0,
     "ultimo_menor_preco": 2648.0,
-    "data_ultima_consulta": "2026-10-20T19:25:25+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-10-20T19:25:25+00:00",
-    "quantidade_ofertas_vistas": 25072,
+    "data_ultima_consulta": "2026-10-20T23:59:46+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-10-20T23:59:46+00:00",
+    "quantidade_ofertas_vistas": 25186,
     "status": "sem queda"
   },
   "ofertas": [
@@ -121,12 +121,12 @@
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-06",
-      "menor_preco": 3456.0
+      "menor_preco": 3609.0
     },
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-07",
-      "menor_preco": 3602.0
+      "menor_preco": 3871.0
     },
     {
       "data_ida": "2026-12-30",
@@ -141,7 +141,7 @@
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-05",
-      "menor_preco": 3623.0
+      "menor_preco": 3871.0
     },
     {
       "data_ida": "2026-12-30",
@@ -1433,11 +1433,17 @@
       "menor_preco": 2648.0,
       "queda_detectada": false,
       "quantidade_ofertas": 118
+    },
+    {
+      "consulta_em": "2026-10-20T23:59:46+00:00",
+      "menor_preco": 2648.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 114
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_natal.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-10-20T19:27:26+00:00"
+  "gerado_em": "2026-10-21T00:01:48+00:00"
 }
