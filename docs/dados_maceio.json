@@ -35,9 +35,9 @@
   "resumo": {
     "menor_preco_historico": 2371.0,
     "ultimo_menor_preco": 3059.0,
-    "data_ultima_consulta": "2026-10-21T19:24:36+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-10-21T19:24:36+00:00",
-    "quantidade_ofertas_vistas": 25184,
+    "data_ultima_consulta": "2026-10-22T00:04:56+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-10-22T00:04:56+00:00",
+    "quantidade_ofertas_vistas": 25300,
     "status": "sem queda"
   },
   "ofertas": [
@@ -87,6 +87,21 @@
       "queda_detectada": false
     },
     {
+      "identificador": "8ea7a35f41bf9c6c",
+      "companhia": "Gol",
+      "partida_ida": "2026-12-30T05:50:00",
+      "chegada_ida": "2026-12-30T16:15:00",
+      "conexoes_ida": 3,
+      "duracao_ida": "PT10H25M",
+      "partida_volta": "2027-01-07T16:55:00",
+      "chegada_volta": "2027-01-07T23:40:00",
+      "conexoes_volta": 1,
+      "duracao_volta": "PT6H45M",
+      "preco_total": 3059.0,
+      "moeda": "BRL",
+      "queda_detectada": false
+    },
+    {
       "identificador": "dfa34d770d061a99",
       "companhia": "Gol",
       "partida_ida": "2026-12-30T05:50:00",
@@ -100,33 +115,18 @@
       "preco_total": 3059.0,
       "moeda": "BRL",
       "queda_detectada": false
-    },
-    {
-      "identificador": "66471d02842e5c45",
-      "companhia": "Gol",
-      "partida_ida": "2026-12-30T05:50:00",
-      "chegada_ida": "2026-12-30T16:15:00",
-      "conexoes_ida": 3,
-      "duracao_ida": "PT10H25M",
-      "partida_volta": "2027-01-07T16:55:00",
-      "chegada_volta": "2027-01-07T23:40:00",
-      "conexoes_volta": 1,
-      "duracao_volta": "PT6H45M",
-      "preco_total": 3059.0,
-      "moeda": "BRL",
-      "queda_detectada": false
     }
   ],
   "comparacao_periodos": [
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-06",
-      "menor_preco": 4087.0
+      "menor_preco": 3915.0
     },
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-07",
-      "menor_preco": 3838.0
+      "menor_preco": 3691.0
     },
     {
       "data_ida": "2026-12-30",
@@ -141,12 +141,12 @@
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-05",
-      "menor_preco": 4087.0
+      "menor_preco": 4666.0
     },
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-08",
-      "menor_preco": 3138.0
+      "menor_preco": 3238.0
     }
   ],
   "datas_vencedoras": [
@@ -1452,11 +1452,17 @@
       "menor_preco": 3059.0,
       "queda_detectada": false,
       "quantidade_ofertas": 115
+    },
+    {
+      "consulta_em": "2026-10-22T00:04:56+00:00",
+      "menor_preco": 3059.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 116
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_maceio.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-10-21T19:27:10+00:00"
+  "gerado_em": "2026-10-22T00:10:50+00:00"
 }
