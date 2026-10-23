@@ -34,13 +34,43 @@
   },
   "resumo": {
     "menor_preco_historico": 2371.0,
-    "ultimo_menor_preco": 3248.0,
-    "data_ultima_consulta": "2026-10-23T08:42:41+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-10-23T08:42:41+00:00",
-    "quantidade_ofertas_vistas": 25875,
+    "ultimo_menor_preco": 3162.0,
+    "data_ultima_consulta": "2026-10-23T14:19:24+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-10-23T14:19:24+00:00",
+    "quantidade_ofertas_vistas": 25990,
     "status": "sem queda"
   },
   "ofertas": [
+    {
+      "identificador": "29eea09acc94de3d",
+      "companhia": "LATAM",
+      "partida_ida": "2026-12-30T11:05:00",
+      "chegada_ida": "2026-12-30T22:35:00",
+      "conexoes_ida": 1,
+      "duracao_ida": "PT11H30M",
+      "partida_volta": "2027-01-07T05:00:00",
+      "chegada_volta": "2027-01-07T10:40:00",
+      "conexoes_volta": 1,
+      "duracao_volta": "PT5H40M",
+      "preco_total": 3162.0,
+      "moeda": "BRL",
+      "queda_detectada": false
+    },
+    {
+      "identificador": "20404c3ef2aaf9dd",
+      "companhia": "LATAM",
+      "partida_ida": "2026-12-30T11:05:00",
+      "chegada_ida": "2026-12-30T22:35:00",
+      "conexoes_ida": 1,
+      "duracao_ida": "PT11H30M",
+      "partida_volta": "2027-01-08T06:50:00",
+      "chegada_volta": "2027-01-08T17:00:00",
+      "conexoes_volta": 1,
+      "duracao_volta": "PT10H10M",
+      "preco_total": 3195.0,
+      "moeda": "BRL",
+      "queda_detectada": false
+    },
     {
       "identificador": "4baa5ee08c58ff3b",
       "companhia": "Gol",
@@ -85,48 +115,18 @@
       "preco_total": 3248.0,
       "moeda": "BRL",
       "queda_detectada": false
-    },
-    {
-      "identificador": "8ccae26f6c42b190",
-      "companhia": "Gol",
-      "partida_ida": "2026-12-30T18:35:00",
-      "chegada_ida": "2026-12-31T12:10:00",
-      "conexoes_ida": 2,
-      "duracao_ida": "PT17H35M",
-      "partida_volta": "2027-01-06T21:30:00",
-      "chegada_volta": "2027-01-07T17:50:00",
-      "conexoes_volta": 3,
-      "duracao_volta": "PT20H20M",
-      "preco_total": 3472.0,
-      "moeda": "BRL",
-      "queda_detectada": false
-    },
-    {
-      "identificador": "9daaa88bcfd300c6",
-      "companhia": "LATAM / Gol",
-      "partida_ida": "2026-12-29T17:45:00",
-      "chegada_ida": "2026-12-31T01:25:00",
-      "conexoes_ida": 1,
-      "duracao_ida": "PT31H40M",
-      "partida_volta": "2027-01-07T18:10:00",
-      "chegada_volta": "2027-01-08T02:35:00",
-      "conexoes_volta": 1,
-      "duracao_volta": "PT8H25M",
-      "preco_total": 3679.0,
-      "moeda": "BRL",
-      "queda_detectada": false
     }
   ],
   "comparacao_periodos": [
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-06",
-      "menor_preco": 3903.0
+      "menor_preco": 3765.0
     },
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-07",
-      "menor_preco": 3679.0
+      "menor_preco": 3541.0
     },
     {
       "data_ida": "2026-12-30",
@@ -136,29 +136,24 @@
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-07",
-      "menor_preco": 3248.0
+      "menor_preco": 3162.0
     },
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-05",
-      "menor_preco": 3903.0
+      "menor_preco": 3765.0
     },
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-08",
-      "menor_preco": 3248.0
+      "menor_preco": 3195.0
     }
   ],
   "datas_vencedoras": [
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-07",
-      "menor_preco": 3248.0
-    },
-    {
-      "data_ida": "2026-12-30",
-      "data_volta": "2027-01-08",
-      "menor_preco": 3248.0
+      "menor_preco": 3162.0
     }
   ],
   "historico": [
@@ -1493,11 +1488,17 @@
       "menor_preco": 3248.0,
       "queda_detectada": false,
       "quantidade_ofertas": 115
+    },
+    {
+      "consulta_em": "2026-10-23T14:19:24+00:00",
+      "menor_preco": 3162.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 115
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_maceio.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-10-23T08:45:04+00:00"
+  "gerado_em": "2026-10-23T14:21:33+00:00"
 }
