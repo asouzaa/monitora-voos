@@ -35,29 +35,14 @@
   "resumo": {
     "menor_preco_historico": 2034.0,
     "ultimo_menor_preco": 2485.0,
-    "data_ultima_consulta": "2026-10-23T00:06:24+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-10-23T00:06:24+00:00",
-    "quantidade_ofertas_vistas": 26339,
+    "data_ultima_consulta": "2026-10-23T08:44:24+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-10-23T08:44:24+00:00",
+    "quantidade_ofertas_vistas": 26459,
     "status": "sem queda"
   },
   "ofertas": [
     {
-      "identificador": "53465368ef4d2f4c",
-      "companhia": "Gol",
-      "partida_ida": "2026-12-30T05:50:00",
-      "chegada_ida": "2026-12-30T21:10:00",
-      "conexoes_ida": 3,
-      "duracao_ida": "PT15H20M",
-      "partida_volta": "2027-01-07T05:05:00",
-      "chegada_volta": "2027-01-08T02:35:00",
-      "conexoes_volta": 3,
-      "duracao_volta": "PT21H30M",
-      "preco_total": 2485.0,
-      "moeda": "BRL",
-      "queda_detectada": false
-    },
-    {
-      "identificador": "e8eefff32f3a8fba",
+      "identificador": "f242069f505a128f",
       "companhia": "Gol",
       "partida_ida": "2026-12-30T05:50:00",
       "chegada_ida": "2026-12-30T21:10:00",
@@ -103,6 +88,21 @@
     },
     {
       "identificador": "99819a7015bd0365",
+      "companhia": "Gol",
+      "partida_ida": "2026-12-30T05:50:00",
+      "chegada_ida": "2026-12-30T21:10:00",
+      "conexoes_ida": 3,
+      "duracao_ida": "PT15H20M",
+      "partida_volta": "2027-01-07T05:05:00",
+      "chegada_volta": "2027-01-08T02:35:00",
+      "conexoes_volta": 3,
+      "duracao_volta": "PT21H30M",
+      "preco_total": 2485.0,
+      "moeda": "BRL",
+      "queda_detectada": false
+    },
+    {
+      "identificador": "53465368ef4d2f4c",
       "companhia": "Gol",
       "partida_ida": "2026-12-30T05:50:00",
       "chegada_ida": "2026-12-30T21:10:00",
@@ -1487,11 +1487,17 @@
       "menor_preco": 2485.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-10-23T08:44:24+00:00",
+      "menor_preco": 2485.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_joao_pessoa.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-10-23T00:07:07+00:00"
+  "gerado_em": "2026-10-23T08:45:16+00:00"
 }
