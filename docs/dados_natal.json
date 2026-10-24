@@ -35,9 +35,9 @@
   "resumo": {
     "menor_preco_historico": 2080.0,
     "ultimo_menor_preco": 3032.0,
-    "data_ultima_consulta": "2026-10-24T08:18:05+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-10-24T08:18:05+00:00",
-    "quantidade_ofertas_vistas": 26687,
+    "data_ultima_consulta": "2026-10-24T13:26:08+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-10-24T13:26:08+00:00",
+    "quantidade_ofertas_vistas": 26798,
     "status": "sem queda"
   },
   "ofertas": [
@@ -102,16 +102,16 @@
       "queda_detectada": false
     },
     {
-      "identificador": "06aaac0eb0342c2e",
+      "identificador": "bde146bbbe0c7471",
       "companhia": "Gol",
       "partida_ida": "2026-12-30T18:35:00",
       "chegada_ida": "2026-12-31T16:15:00",
       "conexoes_ida": 3,
       "duracao_ida": "PT21H40M",
-      "partida_volta": "2027-01-07T18:15:00",
+      "partida_volta": "2027-01-07T12:40:00",
       "chegada_volta": "2027-01-08T02:35:00",
       "conexoes_volta": 1,
-      "duracao_volta": "PT8H20M",
+      "duracao_volta": "PT13H55M",
       "preco_total": 3198.0,
       "moeda": "BRL",
       "queda_detectada": false
@@ -121,12 +121,12 @@
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-06",
-      "menor_preco": 4421.0
+      "menor_preco": 3510.0
     },
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-07",
-      "menor_preco": 3978.0
+      "menor_preco": 4038.0
     },
     {
       "data_ida": "2026-12-30",
@@ -141,7 +141,7 @@
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-05",
-      "menor_preco": 4236.0
+      "menor_preco": 3534.0
     },
     {
       "data_ida": "2026-12-30",
@@ -1512,11 +1512,17 @@
       "menor_preco": 3032.0,
       "queda_detectada": false,
       "quantidade_ofertas": 109
+    },
+    {
+      "consulta_em": "2026-10-24T13:26:08+00:00",
+      "menor_preco": 3032.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 111
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_natal.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-10-24T08:20:01+00:00"
+  "gerado_em": "2026-10-24T13:28:05+00:00"
 }
