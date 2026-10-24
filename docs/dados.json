@@ -35,9 +35,9 @@
   "resumo": {
     "menor_preco_historico": 1524.0,
     "ultimo_menor_preco": 1762.0,
-    "data_ultima_consulta": "2026-10-24T13:24:54+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-10-24T13:24:54+00:00",
-    "quantidade_ofertas_vistas": 32222,
+    "data_ultima_consulta": "2026-10-24T18:15:15+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-10-24T18:15:15+00:00",
+    "quantidade_ofertas_vistas": 32342,
     "status": "sem queda"
   },
   "ofertas": [
@@ -72,21 +72,6 @@
       "queda_detectada": false
     },
     {
-      "identificador": "8f1905d5e9d00d18",
-      "companhia": "Gol",
-      "partida_ida": "2026-12-30T18:35:00",
-      "chegada_ida": "2026-12-31T02:15:00",
-      "conexoes_ida": 1,
-      "duracao_ida": "PT7H40M",
-      "partida_volta": "2027-01-08T07:05:00",
-      "chegada_volta": "2027-01-08T17:50:00",
-      "conexoes_volta": 2,
-      "duracao_volta": "PT10H45M",
-      "preco_total": 1883.0,
-      "moeda": "BRL",
-      "queda_detectada": false
-    },
-    {
       "identificador": "8d5df71363dac595",
       "companhia": "Gol",
       "partida_ida": "2026-12-30T18:35:00",
@@ -113,6 +98,21 @@
       "conexoes_volta": 2,
       "duracao_volta": "PT12H0M",
       "preco_total": 1883.0,
+      "moeda": "BRL",
+      "queda_detectada": false
+    },
+    {
+      "identificador": "cda3c2b1632badbd",
+      "companhia": "Gol",
+      "partida_ida": "2026-12-30T17:25:00",
+      "chegada_ida": "2026-12-31T01:15:00",
+      "conexoes_ida": 2,
+      "duracao_ida": "PT7H50M",
+      "partida_volta": "2027-01-08T04:20:00",
+      "chegada_volta": "2027-01-08T17:50:00",
+      "conexoes_volta": 1,
+      "duracao_volta": "PT13H30M",
+      "preco_total": 1978.0,
       "moeda": "BRL",
       "queda_detectada": false
     }
@@ -2160,11 +2160,17 @@
       "menor_preco": 1762.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-10-24T18:15:15+00:00",
+      "menor_preco": 1762.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_voos.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-10-24T13:27:53+00:00"
+  "gerado_em": "2026-10-24T18:18:27+00:00"
 }
