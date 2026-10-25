@@ -35,9 +35,9 @@
   "resumo": {
     "menor_preco_historico": 2371.0,
     "ultimo_menor_preco": 3012.0,
-    "data_ultima_consulta": "2026-10-25T18:28:43+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-10-25T18:28:43+00:00",
-    "quantidade_ofertas_vistas": 27063,
+    "data_ultima_consulta": "2026-10-25T23:22:45+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-10-25T23:22:45+00:00",
+    "quantidade_ofertas_vistas": 27183,
     "status": "sem queda"
   },
   "ofertas": [
@@ -87,32 +87,32 @@
       "queda_detectada": false
     },
     {
-      "identificador": "77483bfbc3a79670",
+      "identificador": "146e2d7ec88fe7d5",
       "companhia": "LATAM",
-      "partida_ida": "2026-12-30T02:30:00",
-      "chegada_ida": "2026-12-30T22:35:00",
+      "partida_ida": "2026-12-30T17:45:00",
+      "chegada_ida": "2027-01-01T01:25:00",
       "conexoes_ida": 1,
-      "duracao_ida": "PT20H5M",
-      "partida_volta": "2027-01-07T05:00:00",
-      "chegada_volta": "2027-01-07T10:40:00",
-      "conexoes_volta": 1,
-      "duracao_volta": "PT5H40M",
-      "preco_total": 3421.0,
+      "duracao_ida": "PT31H40M",
+      "partida_volta": "2027-01-06T03:40:00",
+      "chegada_volta": "2027-01-06T16:15:00",
+      "conexoes_volta": 2,
+      "duracao_volta": "PT12H35M",
+      "preco_total": 3454.0,
       "moeda": "BRL",
       "queda_detectada": false
     },
     {
-      "identificador": "c2e59c48bb18862c",
+      "identificador": "bd289124cd8e0978",
       "companhia": "LATAM",
       "partida_ida": "2026-12-30T17:45:00",
-      "chegada_ida": "2026-12-31T15:10:00",
+      "chegada_ida": "2027-01-01T01:25:00",
       "conexoes_ida": 1,
-      "duracao_ida": "PT21H25M",
-      "partida_volta": "2027-01-07T05:00:00",
-      "chegada_volta": "2027-01-07T10:40:00",
-      "conexoes_volta": 1,
-      "duracao_volta": "PT5H40M",
-      "preco_total": 3421.0,
+      "duracao_ida": "PT31H40M",
+      "partida_volta": "2027-01-06T13:20:00",
+      "chegada_volta": "2027-01-07T01:55:00",
+      "conexoes_volta": 2,
+      "duracao_volta": "PT12H35M",
+      "preco_total": 3454.0,
       "moeda": "BRL",
       "queda_detectada": false
     }
@@ -121,7 +121,7 @@
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-06",
-      "menor_preco": 3949.0
+      "menor_preco": 4205.0
     },
     {
       "data_ida": "2026-12-29",
@@ -131,17 +131,17 @@
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-06",
-      "menor_preco": 3451.0
+      "menor_preco": 3454.0
     },
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-07",
-      "menor_preco": 3421.0
+      "menor_preco": 3454.0
     },
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-05",
-      "menor_preco": 4453.0
+      "menor_preco": 4459.0
     },
     {
       "data_ida": "2026-12-30",
@@ -1548,11 +1548,17 @@
       "menor_preco": 3012.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-10-25T23:22:45+00:00",
+      "menor_preco": 3012.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_maceio.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-10-25T18:31:08+00:00"
+  "gerado_em": "2026-10-25T23:25:23+00:00"
 }
