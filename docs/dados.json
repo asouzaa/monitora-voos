@@ -34,11 +34,11 @@
   },
   "resumo": {
     "menor_preco_historico": 1524.0,
-    "ultimo_menor_preco": 1843.0,
-    "data_ultima_consulta": "2026-10-27T00:36:57+00:00",
+    "ultimo_menor_preco": null,
+    "data_ultima_consulta": "2026-10-27T09:11:13+00:00",
     "data_ultima_consulta_bem_sucedida": "2026-10-27T00:36:57+00:00",
     "quantidade_ofertas_vistas": 33302,
-    "status": "sem queda"
+    "status": "sem ofertas"
   },
   "ofertas": [
     {
@@ -2225,5 +2225,5 @@
     "arquivo": "monitoramento_voos.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-10-27T00:44:01+00:00"
+  "gerado_em": "2026-10-27T09:16:20+00:00"
 }
