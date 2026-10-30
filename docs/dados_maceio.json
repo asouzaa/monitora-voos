@@ -34,43 +34,13 @@
   },
   "resumo": {
     "menor_preco_historico": 2371.0,
-    "ultimo_menor_preco": 3185.0,
-    "data_ultima_consulta": "2026-10-29T20:22:55+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-10-29T20:22:55+00:00",
-    "quantidade_ofertas_vistas": 28479,
+    "ultimo_menor_preco": 3244.0,
+    "data_ultima_consulta": "2026-10-30T01:11:06+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-10-30T01:11:06+00:00",
+    "quantidade_ofertas_vistas": 28599,
     "status": "sem queda"
   },
   "ofertas": [
-    {
-      "identificador": "a4d2778fa25d3569",
-      "companhia": "LATAM",
-      "partida_ida": "2026-12-30T02:30:00",
-      "chegada_ida": "2026-12-30T22:55:00",
-      "conexoes_ida": 1,
-      "duracao_ida": "PT20H25M",
-      "partida_volta": "2027-01-08T05:00:00",
-      "chegada_volta": "2027-01-08T10:40:00",
-      "conexoes_volta": 1,
-      "duracao_volta": "PT5H40M",
-      "preco_total": 3185.0,
-      "moeda": "BRL",
-      "queda_detectada": false
-    },
-    {
-      "identificador": "6ac2290d67d28f74",
-      "companhia": "LATAM",
-      "partida_ida": "2026-12-30T04:45:00",
-      "chegada_ida": "2026-12-30T23:40:00",
-      "conexoes_ida": 1,
-      "duracao_ida": "PT18H55M",
-      "partida_volta": "2027-01-08T05:00:00",
-      "chegada_volta": "2027-01-08T10:40:00",
-      "conexoes_volta": 1,
-      "duracao_volta": "PT5H40M",
-      "preco_total": 3185.0,
-      "moeda": "BRL",
-      "queda_detectada": false
-    },
     {
       "identificador": "d4b71ef9c85b7ab5",
       "companhia": "LATAM",
@@ -82,6 +52,21 @@
       "chegada_volta": "2027-01-08T10:40:00",
       "conexoes_volta": 1,
       "duracao_volta": "PT5H40M",
+      "preco_total": 3244.0,
+      "moeda": "BRL",
+      "queda_detectada": false
+    },
+    {
+      "identificador": "a3b2888aa0e514d2",
+      "companhia": "LATAM",
+      "partida_ida": "2026-12-30T04:45:00",
+      "chegada_ida": "2026-12-30T23:40:00",
+      "conexoes_ida": 1,
+      "duracao_ida": "PT18H55M",
+      "partida_volta": "2027-01-08T03:40:00",
+      "chegada_volta": "2027-01-08T16:15:00",
+      "conexoes_volta": 2,
+      "duracao_volta": "PT12H35M",
       "preco_total": 3244.0,
       "moeda": "BRL",
       "queda_detectada": false
@@ -115,28 +100,43 @@
       "preco_total": 3429.0,
       "moeda": "BRL",
       "queda_detectada": false
+    },
+    {
+      "identificador": "f922155a6420412f",
+      "companhia": "LATAM",
+      "partida_ida": "2026-12-30T21:55:00",
+      "chegada_ida": "2026-12-31T10:35:00",
+      "conexoes_ida": 2,
+      "duracao_ida": "PT12H40M",
+      "partida_volta": "2027-01-08T05:00:00",
+      "chegada_volta": "2027-01-08T10:40:00",
+      "conexoes_volta": 1,
+      "duracao_volta": "PT5H40M",
+      "preco_total": 3485.0,
+      "moeda": "BRL",
+      "queda_detectada": false
     }
   ],
   "comparacao_periodos": [
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-06",
-      "menor_preco": 4204.0
+      "menor_preco": 4245.0
     },
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-07",
-      "menor_preco": 4079.0
+      "menor_preco": 4120.0
     },
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-06",
-      "menor_preco": 3638.0
+      "menor_preco": 3695.0
     },
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-07",
-      "menor_preco": 3488.0
+      "menor_preco": 3499.0
     },
     {
       "data_ida": "2026-12-29",
@@ -146,14 +146,14 @@
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-08",
-      "menor_preco": 3185.0
+      "menor_preco": 3244.0
     }
   ],
   "datas_vencedoras": [
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-08",
-      "menor_preco": 3185.0
+      "menor_preco": 3244.0
     }
   ],
   "historico": [
@@ -1620,11 +1620,17 @@
       "menor_preco": 3185.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-10-30T01:11:06+00:00",
+      "menor_preco": 3244.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_maceio.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-10-29T20:24:59+00:00"
+  "gerado_em": "2026-10-30T01:13:40+00:00"
 }
