@@ -34,15 +34,15 @@
   },
   "resumo": {
     "menor_preco_historico": 2080.0,
-    "ultimo_menor_preco": 3130.0,
-    "data_ultima_consulta": "2026-11-04T21:24:08+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-11-04T21:24:08+00:00",
-    "quantidade_ofertas_vistas": 30399,
+    "ultimo_menor_preco": 3141.0,
+    "data_ultima_consulta": "2026-11-05T01:37:26+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-11-05T01:37:26+00:00",
+    "quantidade_ofertas_vistas": 30515,
     "status": "sem queda"
   },
   "ofertas": [
     {
-      "identificador": "e9d17e36ff7ce803",
+      "identificador": "8e39588f38708678",
       "companhia": "LATAM",
       "partida_ida": "2026-12-30T16:50:00",
       "chegada_ida": "2026-12-30T23:55:00",
@@ -52,7 +52,7 @@
       "chegada_volta": "2027-01-07T16:15:00",
       "conexoes_volta": 1,
       "duracao_volta": "PT3H50M",
-      "preco_total": 3130.0,
+      "preco_total": 3141.0,
       "moeda": "BRL",
       "queda_detectada": false
     },
@@ -126,17 +126,17 @@
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-07",
-      "menor_preco": 3543.0
+      "menor_preco": 3578.0
     },
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-06",
-      "menor_preco": 3643.0
+      "menor_preco": 3795.0
     },
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-07",
-      "menor_preco": 3130.0
+      "menor_preco": 3141.0
     },
     {
       "data_ida": "2026-12-29",
@@ -153,7 +153,7 @@
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-07",
-      "menor_preco": 3130.0
+      "menor_preco": 3141.0
     }
   ],
   "historico": [
@@ -1722,11 +1722,17 @@
       "menor_preco": 3130.0,
       "queda_detectada": false,
       "quantidade_ofertas": 111
+    },
+    {
+      "consulta_em": "2026-11-05T01:37:26+00:00",
+      "menor_preco": 3141.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 116
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_natal.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-11-04T21:26:40+00:00"
+  "gerado_em": "2026-11-05T01:39:19+00:00"
 }
