@@ -35,27 +35,12 @@
   "resumo": {
     "menor_preco_historico": 2034.0,
     "ultimo_menor_preco": 3265.0,
-    "data_ultima_consulta": "2026-11-06T20:59:46+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-11-06T20:59:46+00:00",
-    "quantidade_ofertas_vistas": 31699,
+    "data_ultima_consulta": "2026-11-07T01:01:55+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-11-07T01:01:55+00:00",
+    "quantidade_ofertas_vistas": 31819,
     "status": "sem queda"
   },
   "ofertas": [
-    {
-      "identificador": "44840f26321d6945",
-      "companhia": "Gol",
-      "partida_ida": "2026-12-30T03:20:00",
-      "chegada_ida": "2026-12-30T11:55:00",
-      "conexoes_ida": 1,
-      "duracao_ida": "PT8H35M",
-      "partida_volta": "2027-01-06T12:05:00",
-      "chegada_volta": "2027-01-07T02:35:00",
-      "conexoes_volta": 2,
-      "duracao_volta": "PT14H30M",
-      "preco_total": 3265.0,
-      "moeda": "BRL",
-      "queda_detectada": false
-    },
     {
       "identificador": "9057766ba46c142a",
       "companhia": "Gol",
@@ -103,6 +88,21 @@
     },
     {
       "identificador": "0cf812159e4b5698",
+      "companhia": "Gol",
+      "partida_ida": "2026-12-30T03:20:00",
+      "chegada_ida": "2026-12-30T11:55:00",
+      "conexoes_ida": 1,
+      "duracao_ida": "PT8H35M",
+      "partida_volta": "2027-01-08T03:45:00",
+      "chegada_volta": "2027-01-08T17:50:00",
+      "conexoes_volta": 3,
+      "duracao_volta": "PT14H5M",
+      "preco_total": 3265.0,
+      "moeda": "BRL",
+      "queda_detectada": false
+    },
+    {
+      "identificador": "5b3e03113f65350e",
       "companhia": "Gol",
       "partida_ida": "2026-12-30T03:20:00",
       "chegada_ida": "2026-12-30T11:55:00",
@@ -1757,11 +1757,17 @@
       "menor_preco": 3265.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-11-07T01:01:55+00:00",
+      "menor_preco": 3265.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_joao_pessoa.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-11-06T21:00:37+00:00"
+  "gerado_em": "2026-11-07T01:02:51+00:00"
 }
