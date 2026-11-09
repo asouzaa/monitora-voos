@@ -34,11 +34,11 @@
   },
   "resumo": {
     "menor_preco_historico": 1174.0,
-    "ultimo_menor_preco": 1592.0,
-    "data_ultima_consulta": "2026-11-08T19:48:16+00:00",
+    "ultimo_menor_preco": null,
+    "data_ultima_consulta": "2026-11-09T01:02:49+00:00",
     "data_ultima_consulta_bem_sucedida": "2026-11-08T19:48:16+00:00",
     "quantidade_ofertas_vistas": 31788,
-    "status": "sem queda"
+    "status": "sem ofertas"
   },
   "ofertas": [
     {
@@ -1806,5 +1806,5 @@
     "arquivo": "monitoramento_fortaleza.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-11-08T19:50:46+00:00"
+  "gerado_em": "2026-11-09T01:09:17+00:00"
 }

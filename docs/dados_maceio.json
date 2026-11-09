@@ -34,11 +34,11 @@
   },
   "resumo": {
     "menor_preco_historico": 2371.0,
-    "ultimo_menor_preco": 2813.0,
-    "data_ultima_consulta": "2026-11-08T19:48:38+00:00",
+    "ultimo_menor_preco": null,
+    "data_ultima_consulta": "2026-11-09T01:03:53+00:00",
     "data_ultima_consulta_bem_sucedida": "2026-11-08T19:48:38+00:00",
     "quantidade_ofertas_vistas": 31644,
-    "status": "sem queda"
+    "status": "sem ofertas"
   },
   "ofertas": [
     {
@@ -1794,5 +1794,5 @@
     "arquivo": "monitoramento_maceio.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-11-08T19:50:50+00:00"
+  "gerado_em": "2026-11-09T01:09:21+00:00"
 }
