@@ -35,9 +35,9 @@
   "resumo": {
     "menor_preco_historico": 2371.0,
     "ultimo_menor_preco": 2813.0,
-    "data_ultima_consulta": "2026-11-10T21:21:54+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-11-10T21:21:54+00:00",
-    "quantidade_ofertas_vistas": 32118,
+    "data_ultima_consulta": "2026-11-11T01:22:14+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-11-11T01:22:14+00:00",
+    "quantidade_ofertas_vistas": 32238,
     "status": "sem queda"
   },
   "ofertas": [
@@ -87,7 +87,7 @@
       "queda_detectada": false
     },
     {
-      "identificador": "fba5b53d04c70ca2",
+      "identificador": "55d3f3f36ebbf2e0",
       "companhia": "Gol",
       "partida_ida": "2026-12-30T18:35:00",
       "chegada_ida": "2026-12-31T16:15:00",
@@ -136,23 +136,33 @@
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-07",
-      "menor_preco": 3686.0
+      "menor_preco": 2813.0
     },
     {
       "data_ida": "2026-12-29",
       "data_volta": "2027-01-05",
-      "menor_preco": 4164.0
+      "menor_preco": 3897.0
     },
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-08",
-      "menor_preco": 3686.0
+      "menor_preco": 2813.0
     }
   ],
   "datas_vencedoras": [
     {
       "data_ida": "2026-12-30",
       "data_volta": "2027-01-06",
+      "menor_preco": 2813.0
+    },
+    {
+      "data_ida": "2026-12-30",
+      "data_volta": "2027-01-07",
+      "menor_preco": 2813.0
+    },
+    {
+      "data_ida": "2026-12-30",
+      "data_volta": "2027-01-08",
       "menor_preco": 2813.0
     }
   ],
@@ -1812,11 +1822,17 @@
       "menor_preco": 2813.0,
       "queda_detectada": false,
       "quantidade_ofertas": 120
+    },
+    {
+      "consulta_em": "2026-11-11T01:22:14+00:00",
+      "menor_preco": 2813.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_maceio.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-11-10T21:24:01+00:00"
+  "gerado_em": "2026-11-11T01:25:39+00:00"
 }
