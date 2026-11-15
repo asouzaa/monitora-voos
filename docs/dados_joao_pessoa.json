@@ -35,9 +35,9 @@
   "resumo": {
     "menor_preco_historico": 2034.0,
     "ultimo_menor_preco": 2409.0,
-    "data_ultima_consulta": "2026-11-14T20:00:51+00:00",
-    "data_ultima_consulta_bem_sucedida": "2026-11-14T20:00:51+00:00",
-    "quantidade_ofertas_vistas": 33805,
+    "data_ultima_consulta": "2026-11-15T01:14:30+00:00",
+    "data_ultima_consulta_bem_sucedida": "2026-11-15T01:14:30+00:00",
+    "quantidade_ofertas_vistas": 33925,
     "status": "sem queda"
   },
   "ofertas": [
@@ -102,12 +102,12 @@
       "queda_detectada": false
     },
     {
-      "identificador": "57bf84ecd832b87a",
+      "identificador": "aec65d573389c216",
       "companhia": "Gol",
-      "partida_ida": "2026-12-29T03:05:00",
-      "chegada_ida": "2026-12-29T21:10:00",
+      "partida_ida": "2026-12-29T03:20:00",
+      "chegada_ida": "2026-12-29T16:25:00",
       "conexoes_ida": 2,
-      "duracao_ida": "PT18H5M",
+      "duracao_ida": "PT13H5M",
       "partida_volta": "2027-01-07T22:00:00",
       "chegada_volta": "2027-01-08T16:35:00",
       "conexoes_volta": 4,
@@ -1865,11 +1865,17 @@
       "menor_preco": 2409.0,
       "queda_detectada": false,
       "quantidade_ofertas": 113
+    },
+    {
+      "consulta_em": "2026-11-15T01:14:30+00:00",
+      "menor_preco": 2409.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 120
     }
   ],
   "planilha": {
     "arquivo": "monitoramento_joao_pessoa.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-11-14T20:01:41+00:00"
+  "gerado_em": "2026-11-15T01:15:38+00:00"
 }
