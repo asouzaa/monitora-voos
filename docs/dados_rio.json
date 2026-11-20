@@ -34,11 +34,11 @@
   },
   "resumo": {
     "menor_preco_historico": 1009.0,
-    "ultimo_menor_preco": 2415.0,
-    "data_ultima_consulta": "2026-11-19T22:46:02+00:00",
+    "ultimo_menor_preco": null,
+    "data_ultima_consulta": "2026-11-20T12:06:51+00:00",
     "data_ultima_consulta_bem_sucedida": "2026-11-19T22:46:02+00:00",
     "quantidade_ofertas_vistas": 35360,
-    "status": "sem queda"
+    "status": "sem ofertas"
   },
   "ofertas": [
     {
@@ -1948,5 +1948,5 @@
     "arquivo": "monitoramento_rio.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-11-19T22:48:11+00:00"
+  "gerado_em": "2026-11-20T12:11:45+00:00"
 }
