@@ -34,11 +34,11 @@
   },
   "resumo": {
     "menor_preco_historico": 2080.0,
-    "ultimo_menor_preco": 3461.0,
-    "data_ultima_consulta": "2026-11-21T11:35:29+00:00",
+    "ultimo_menor_preco": null,
+    "data_ultima_consulta": "2026-11-21T20:58:04+00:00",
     "data_ultima_consulta_bem_sucedida": "2026-11-21T11:35:29+00:00",
     "quantidade_ofertas_vistas": 34661,
-    "status": "sem queda"
+    "status": "sem ofertas"
   },
   "ofertas": [
     {
@@ -1950,5 +1950,5 @@
     "arquivo": "monitoramento_natal.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-11-21T11:37:47+00:00"
+  "gerado_em": "2026-11-21T21:03:17+00:00"
 }
