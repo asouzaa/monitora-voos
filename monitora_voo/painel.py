@@ -11,7 +11,7 @@ from .configuracao import (
     DESTINO_PADRAO,
     DESTINOS_MONITORADOS,
     ORIGEM,
-    PERIODOS_MONITORADOS,
+    PERIODOS_POR_DESTINO,
 )
 from .planilha import CABECALHO_CONSULTAS, carregar_planilha
 
@@ -26,6 +26,7 @@ def exportar_dados(
     if destino not in DESTINOS_MONITORADOS:
         raise ValueError(f"Destino não monitorado: {destino}.")
 
+    periodos = PERIODOS_POR_DESTINO[destino]
     dados = carregar_planilha(caminho_planilha)
     resumo = _resumo_para_dict(dados.resumo)
     consultas = [
@@ -35,7 +36,7 @@ def exportar_dados(
     por_consulta = _agrupar_consultas(consultas)
     ultima_consulta = max(por_consulta, default="")
     ofertas_ultima_consulta = por_consulta.get(ultima_consulta, [])
-    comparacao_periodos = _comparar_periodos(ofertas_ultima_consulta)
+    comparacao_periodos = _comparar_periodos(ofertas_ultima_consulta, periodos)
     datas_vencedoras = _datas_vencedoras(comparacao_periodos)
 
     conteudo = {
@@ -45,7 +46,7 @@ def exportar_dados(
             "nome_destino": DESTINOS_MONITORADOS[destino],
             "periodos": [
                 {"data_ida": data_ida, "data_volta": data_volta}
-                for data_ida, data_volta in PERIODOS_MONITORADOS
+                for data_ida, data_volta in periodos
             ],
             "adultos": ADULTOS,
             "classe": CLASSE_VIAGEM,
@@ -54,7 +55,14 @@ def exportar_dados(
             "menor_preco_historico": _numero(
                 resumo.get("menor_preco_historico", "")
             ),
-            "ultimo_menor_preco": _numero(resumo.get("ultimo_menor_preco", "")),
+            "ultimo_menor_preco": min(
+                (
+                    _numero(oferta.get("preco_total", ""))
+                    for oferta in ofertas_ultima_consulta
+                    if _numero(oferta.get("preco_total", "")) is not None
+                ),
+                default=None,
+            ),
             "data_ultima_consulta": resumo.get("data_ultima_consulta", ""),
             "data_ultima_consulta_bem_sucedida": ultima_consulta,
             "quantidade_ofertas_vistas": int(
@@ -106,9 +114,10 @@ def exportar_dados(
 
 def _comparar_periodos(
     ofertas: list[dict[str, str]],
+    periodos: list[tuple[str, str]],
 ) -> list[dict[str, object]]:
     menores: dict[tuple[str, str], Decimal] = {}
-    periodos_validos = set(PERIODOS_MONITORADOS)
+    periodos_validos = set(periodos)
 
     for oferta in ofertas:
         periodo = (
@@ -132,7 +141,7 @@ def _comparar_periodos(
                 else None
             ),
         }
-        for data_ida, data_volta in PERIODOS_MONITORADOS
+        for data_ida, data_volta in periodos
     ]
 
 

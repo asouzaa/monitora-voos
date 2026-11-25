@@ -17,6 +17,7 @@ const destinos = {
   NAT: { arquivo: "./dados_natal.json", nome: "Natal" },
   RIO: { arquivo: "./dados_rio.json", nome: "Rio de Janeiro" },
   JPA: { arquivo: "./dados_joao_pessoa.json", nome: "João Pessoa" },
+  SAO: { arquivo: "./dados_sao_paulo.json", nome: "São Paulo" },
 };
 
 document
@@ -79,6 +80,11 @@ function renderizarDestino(codigo, dados) {
   consulta.textContent = dados.resumo.data_ultima_consulta_bem_sucedida
     ? `Consulta em ${formatarConsulta(dados.resumo.data_ultima_consulta_bem_sucedida)}`
     : "Aguardando primeira consulta válida";
+  if (dados.resumo.status === "sem ofertas") {
+    consulta.textContent += " · Última consulta sem novas ofertas";
+  } else if (dados.resumo.status.startsWith("erro:")) {
+    consulta.textContent += " · Falha na atualização";
+  }
 
   const datasVencedoras = dados.datas_vencedoras || [];
   if (!datasVencedoras.length) {
@@ -110,36 +116,51 @@ function renderizarResultado(dadosPorDestino) {
   limparVencedores();
   const codigos = Object.keys(destinos);
   const codigosComPreco = codigos.filter((codigo) => precos[codigo] != null);
-  if (codigosComPreco.length !== codigos.length) {
-    const quantidadeAusentes = codigos.length - codigosComPreco.length;
-    resultado.querySelector("strong").textContent = "Comparação indisponível";
+  if (!codigosComPreco.length) {
+    resultado.querySelector("strong").textContent = "Aguardando preços";
     resultado.querySelector("small").textContent =
-      `${quantidadeAusentes} destino${quantidadeAusentes === 1 ? " precisa" : "s precisam"} ter preço válido`;
+      "Nenhum destino tem preço disponível ainda";
     definirEstado(estado, "Dados incompletos", "alerta");
     return;
   }
 
-  const menorPreco = Math.min(...codigos.map((codigo) => precos[codigo]));
-  const vencedores = codigos.filter((codigo) => precos[codigo] === menorPreco);
+  const parcial = codigosComPreco.length !== codigos.length;
+  const cobertura = parcial
+    ? ` · ${codigosComPreco.length} de ${codigos.length} destinos com preço`
+    : "";
+  definirEstado(
+    estado,
+    parcial ? "Comparação parcial" : "Comparação atualizada",
+    parcial ? "alerta" : "normal",
+  );
+  const menorPreco = Math.min(...codigosComPreco.map((codigo) => precos[codigo]));
+  const vencedores = codigosComPreco.filter((codigo) => precos[codigo] === menorPreco);
   if (vencedores.length > 1) {
     resultado.querySelector("strong").textContent = "Empate";
     resultado.querySelector("small").textContent =
-      `${vencedores.length} destinos estão em ${formatarPreco(menorPreco)}`;
+      `${vencedores.length} destinos estão em ${formatarPreco(menorPreco)}${cobertura}`;
     vencedores.forEach((codigo) => marcarVencedor(codigo, "Empate"));
-    definirEstado(estado, "Preços empatados", "alerta");
+    if (!parcial) {
+      definirEstado(estado, "Preços empatados", "alerta");
+    }
     return;
   }
 
   const vencedor = vencedores[0];
-  const segundoColocado = codigos
+  if (codigosComPreco.length === 1) {
+    resultado.querySelector("strong").textContent = destinos[vencedor].nome;
+    resultado.querySelector("small").textContent = `${formatarPreco(menorPreco)}${cobertura}`;
+    marcarVencedor(vencedor, "Preço disponível");
+    return;
+  }
+  const segundoColocado = codigosComPreco
     .filter((codigo) => codigo !== vencedor)
     .sort((codigoA, codigoB) => precos[codigoA] - precos[codigoB])[0];
   const diferenca = precos[segundoColocado] - precos[vencedor];
   resultado.querySelector("strong").textContent = destinos[vencedor].nome;
   resultado.querySelector("small").textContent =
-    `${formatarPreco(diferenca)} mais barato que ${destinos[segundoColocado].nome}`;
+    `${formatarPreco(diferenca)} mais barato que ${destinos[segundoColocado].nome}${cobertura}`;
   marcarVencedor(vencedor, "Menor preço");
-  definirEstado(estado, "Comparação atualizada", "normal");
 }
 
 function marcarVencedor(codigo, texto) {

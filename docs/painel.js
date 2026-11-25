@@ -20,6 +20,7 @@ const rotasDisponiveis = {
   NAT: { arquivoDados: "./dados_natal.json", nome: "Natal" },
   RIO: { arquivoDados: "./dados_rio.json", nome: "Rio de Janeiro" },
   JPA: { arquivoDados: "./dados_joao_pessoa.json", nome: "João Pessoa" },
+  SAO: { arquivoDados: "./dados_sao_paulo.json", nome: "São Paulo" },
 };
 const parametroDestino = new URLSearchParams(window.location.search)
   .get("destino")
@@ -120,7 +121,7 @@ function atualizarSituacao(status) {
     return;
   }
   if (status === "sem ofertas") {
-    situacao.textContent = "Sem ofertas";
+    situacao.textContent = "Sem novas ofertas";
     definirEstado("Consulta concluída", "alerta");
     return;
   }

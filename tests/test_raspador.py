@@ -10,6 +10,25 @@ from monitora_voo.raspador import RaspadorGoogleVoos, converter_ofertas
 
 
 class RaspadorGoogleVoosTeste(unittest.TestCase):
+    def test_consulta_pagina_quando_busca_ordenada_nao_retorna_ofertas(self) -> None:
+        caminho = Path(__file__).parent / "fixtures" / "google_voos_ofertas.json"
+        resposta = json.loads(caminho.read_text(encoding="utf-8"))
+        ida = _para_objeto(resposta["ida"])
+        voltas = [_para_objeto(item) for item in resposta["voltas"]]
+        with (
+            patch("monitora_voo.raspador.get_flights", side_effect=[[], [ida]]),
+            patch("monitora_voo.raspador.select_flight"),
+            patch("monitora_voo.raspador.get_return_flights", return_value=voltas),
+        ):
+            ofertas = RaspadorGoogleVoos()._buscar_ofertas_periodo(
+                "2026-12-29", "2027-01-06"
+            )
+
+        self.assertEqual(
+            [oferta.preco_total for oferta in ofertas],
+            [Decimal("2156"), Decimal("2491")],
+        )
+
     def test_busca_todos_os_periodos_monitorados(self) -> None:
         with patch.object(
             RaspadorGoogleVoos,
@@ -85,6 +104,28 @@ class RaspadorGoogleVoosTeste(unittest.TestCase):
                 call("2026-12-29", "2027-01-06", "SDU"),
                 call("2026-12-29", "2027-01-07", "GIG"),
                 call("2026-12-29", "2027-01-07", "SDU"),
+            ],
+        )
+
+    def test_busca_sao_paulo_apenas_de_19_a_23_de_marco(self) -> None:
+        with (
+            patch(
+                "monitora_voo.raspador.FlightQuery",
+                side_effect=lambda **argumentos: argumentos,
+            ) as consulta_voo,
+            patch("monitora_voo.raspador.create_query", return_value="consulta"),
+            patch("monitora_voo.raspador.get_flights", return_value=[]),
+        ):
+            ofertas = RaspadorGoogleVoos("SAO").buscar_ofertas()
+
+        self.assertEqual(ofertas, [])
+        self.assertEqual(
+            consulta_voo.call_args_list,
+            [
+                call(date="2027-03-19", from_airport="BEL", to_airport="GRU"),
+                call(date="2027-03-23", from_airport="GRU", to_airport="BEL"),
+                call(date="2027-03-19", from_airport="BEL", to_airport="CGH"),
+                call(date="2027-03-23", from_airport="CGH", to_airport="BEL"),
             ],
         )
 

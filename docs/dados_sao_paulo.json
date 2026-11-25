@@ -1,0 +1,127 @@
+{
+  "rota": {
+    "origem": "BEL",
+    "destino": "SAO",
+    "nome_destino": "São Paulo",
+    "periodos": [
+      {
+        "data_ida": "2027-03-19",
+        "data_volta": "2027-03-23"
+      }
+    ],
+    "adultos": 1,
+    "classe": "economy"
+  },
+  "resumo": {
+    "menor_preco_historico": 1268.0,
+    "ultimo_menor_preco": 1268.0,
+    "data_ultima_consulta": "2026-11-25T13:55:14-03:00",
+    "data_ultima_consulta_bem_sucedida": "2026-11-25T13:55:14-03:00",
+    "quantidade_ofertas_vistas": 20,
+    "status": "sem queda"
+  },
+  "ofertas": [
+    {
+      "identificador": "10105f5779bed361",
+      "companhia": "Gol",
+      "partida_ida": "2027-03-19T03:55:00",
+      "chegada_ida": "2027-03-19T13:30:00",
+      "conexoes_ida": 1,
+      "duracao_ida": "PT9H35M",
+      "partida_volta": "2027-03-23T19:15:00",
+      "chegada_volta": "2027-03-24T01:35:00",
+      "conexoes_volta": 1,
+      "duracao_volta": "PT6H20M",
+      "preco_total": 1268.0,
+      "moeda": "BRL",
+      "queda_detectada": false
+    },
+    {
+      "identificador": "0714697d491ce39d",
+      "companhia": "Gol",
+      "partida_ida": "2027-03-19T17:25:00",
+      "chegada_ida": "2027-03-19T22:40:00",
+      "conexoes_ida": 1,
+      "duracao_ida": "PT5H15M",
+      "partida_volta": "2027-03-23T05:05:00",
+      "chegada_volta": "2027-03-23T12:00:00",
+      "conexoes_volta": 1,
+      "duracao_volta": "PT6H55M",
+      "preco_total": 1268.0,
+      "moeda": "BRL",
+      "queda_detectada": false
+    },
+    {
+      "identificador": "787e64c33c8cc737",
+      "companhia": "Gol",
+      "partida_ida": "2027-03-19T17:25:00",
+      "chegada_ida": "2027-03-19T22:40:00",
+      "conexoes_ida": 1,
+      "duracao_ida": "PT5H15M",
+      "partida_volta": "2027-03-23T13:55:00",
+      "chegada_volta": "2027-03-23T22:45:00",
+      "conexoes_volta": 1,
+      "duracao_volta": "PT8H50M",
+      "preco_total": 1268.0,
+      "moeda": "BRL",
+      "queda_detectada": false
+    },
+    {
+      "identificador": "56af732968e662c3",
+      "companhia": "Gol",
+      "partida_ida": "2027-03-19T17:25:00",
+      "chegada_ida": "2027-03-19T22:40:00",
+      "conexoes_ida": 1,
+      "duracao_ida": "PT5H15M",
+      "partida_volta": "2027-03-23T19:15:00",
+      "chegada_volta": "2027-03-24T01:35:00",
+      "conexoes_volta": 1,
+      "duracao_volta": "PT6H20M",
+      "preco_total": 1268.0,
+      "moeda": "BRL",
+      "queda_detectada": false
+    },
+    {
+      "identificador": "378b3b86ea16bf09",
+      "companhia": "LATAM",
+      "partida_ida": "2027-03-19T16:55:00",
+      "chegada_ida": "2027-03-19T22:20:00",
+      "conexoes_ida": 1,
+      "duracao_ida": "PT5H25M",
+      "partida_volta": "2027-03-23T21:10:00",
+      "chegada_volta": "2027-03-24T10:40:00",
+      "conexoes_volta": 1,
+      "duracao_volta": "PT13H30M",
+      "preco_total": 1272.0,
+      "moeda": "BRL",
+      "queda_detectada": false
+    }
+  ],
+  "comparacao_periodos": [
+    {
+      "data_ida": "2027-03-19",
+      "data_volta": "2027-03-23",
+      "menor_preco": 1268.0
+    }
+  ],
+  "datas_vencedoras": [
+    {
+      "data_ida": "2027-03-19",
+      "data_volta": "2027-03-23",
+      "menor_preco": 1268.0
+    }
+  ],
+  "historico": [
+    {
+      "consulta_em": "2026-11-25T13:55:14-03:00",
+      "menor_preco": 1268.0,
+      "queda_detectada": false,
+      "quantidade_ofertas": 20
+    }
+  ],
+  "planilha": {
+    "arquivo": "monitoramento_sao_paulo.xlsx",
+    "disponivel": true
+  },
+  "gerado_em": "2026-11-25T16:55:55+00:00"
+}

@@ -7,10 +7,47 @@ import unittest
 
 from monitora_voo.ofertas import OfertaVoo
 from monitora_voo.painel import exportar_dados
-from monitora_voo.planilha import registrar_consulta
+from monitora_voo.planilha import registrar_consulta, registrar_erro
 
 
 class PainelTeste(unittest.TestCase):
+    def test_preserva_preco_da_ultima_consulta_valida_apos_consulta_vazia(self) -> None:
+        with TemporaryDirectory() as pasta:
+            caminho_planilha = Path(pasta) / "monitoramento_voos.xlsx"
+            caminho_json = Path(pasta) / "dados.json"
+            registrar_consulta(
+                caminho_planilha,
+                [_oferta("recorde", "1400")],
+                datetime(2026, 11, 23, 12, tzinfo=timezone.utc),
+            )
+            registrar_consulta(
+                caminho_planilha,
+                [_oferta("recente", "1753")],
+                datetime(2026, 11, 24, 12, tzinfo=timezone.utc),
+            )
+            registrar_consulta(
+                caminho_planilha, [], datetime(2026, 11, 25, 12, tzinfo=timezone.utc)
+            )
+
+            for status in ["sem ofertas", "erro: indisponível"]:
+                with self.subTest(status=status):
+                    if status.startswith("erro:"):
+                        registrar_erro(
+                            caminho_planilha,
+                            "indisponível",
+                            datetime(2026, 11, 25, 18, tzinfo=timezone.utc),
+                        )
+                    exportar_dados(caminho_planilha, caminho_json)
+                    dados = loads(caminho_json.read_text(encoding="utf-8"))
+                    self.assertEqual(dados["resumo"]["ultimo_menor_preco"], 1753.0)
+                    self.assertEqual(dados["resumo"]["menor_preco_historico"], 1400.0)
+                    self.assertEqual(dados["resumo"]["status"], status)
+                    self.assertEqual(
+                        dados["resumo"]["data_ultima_consulta_bem_sucedida"],
+                        "2026-11-24T12:00:00+00:00",
+                    )
+                    self.assertEqual(len(dados["historico"]), 2)
+
     def test_exporta_resumo_ofertas_e_historico(self) -> None:
         with TemporaryDirectory() as pasta:
             caminho_planilha = Path(pasta) / "monitoramento_voos.xlsx"
@@ -96,6 +133,33 @@ class PainelTeste(unittest.TestCase):
                 ("2026-12-30", "2027-01-06"),
             ],
         )
+
+    def test_exporta_sao_paulo_com_periodo_de_marco(self) -> None:
+        with TemporaryDirectory() as pasta:
+            caminho_planilha = Path(pasta) / "monitoramento_sao_paulo.xlsx"
+            caminho_json = Path(pasta) / "dados_sao_paulo.json"
+            registrar_consulta(
+                caminho_planilha,
+                [
+                    _oferta("1", "1200", "2027-03-19", "2027-03-23"),
+                    _oferta("2", "1100", "2027-03-19", "2027-03-23"),
+                ],
+                datetime(2026, 11, 13, 1, tzinfo=timezone.utc),
+            )
+
+            exportar_dados(caminho_planilha, caminho_json, "SAO")
+            dados = loads(caminho_json.read_text(encoding="utf-8"))
+
+        periodo = {"data_ida": "2027-03-19", "data_volta": "2027-03-23"}
+        self.assertEqual(dados["rota"]["destino"], "SAO")
+        self.assertEqual(dados["rota"]["nome_destino"], "São Paulo")
+        self.assertEqual(dados["rota"]["periodos"], [periodo])
+        self.assertEqual(
+            dados["comparacao_periodos"],
+            [{**periodo, "menor_preco": 1100.0}],
+        )
+        self.assertEqual(dados["datas_vencedoras"], dados["comparacao_periodos"])
+        self.assertEqual(dados["resumo"]["ultimo_menor_preco"], 1100.0)
 
     def test_exporta_destino_sem_dados_sem_datas_vencedoras(self) -> None:
         with TemporaryDirectory() as pasta:

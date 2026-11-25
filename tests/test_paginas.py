@@ -18,7 +18,7 @@ class PaginasTeste(unittest.TestCase):
                 self.assertIn(f"{codigo}:", comparacao)
                 self.assertIn(f"{codigo}:", painel)
 
-        self.assertEqual(pagina_inicial.count('class="cartao-destino"'), 6)
+        self.assertEqual(pagina_inicial.count('class="cartao-destino"'), 7)
 
     def test_grafico_agrupa_precos_e_oferece_tooltip(self) -> None:
         pasta_docs = Path(__file__).parents[1] / "docs"

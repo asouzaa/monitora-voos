@@ -1,16 +1,17 @@
 # Monitor de Voos saindo de Belém
 
 Programa em Python para monitorar e comparar preços de ida e volta saindo de
-Belém (`BEL`) para seis destinos:
+Belém (`BEL`) para sete destinos:
 
 - Recife (`REC`);
 - Fortaleza (`FOR`);
 - Maceió (`MCZ`);
 - Natal (`NAT`);
 - Rio de Janeiro (`RIO`);
-- João Pessoa (`JPA`).
+- João Pessoa (`JPA`);
+- São Paulo (`SAO`).
 
-Todos os destinos usam estas combinações:
+Recife, Fortaleza, Maceió, Natal, Rio de Janeiro e João Pessoa usam estas combinações:
 
 - `29/12/2026` a `06/01/2027`;
 - `29/12/2026` a `07/01/2027`;
@@ -18,6 +19,8 @@ Todos os destinos usam estas combinações:
 - `30/12/2026` a `07/01/2027`;
 - `29/12/2026` a `05/01/2027`;
 - `30/12/2026` a `08/01/2027`.
+
+São Paulo usa ida em `19/03/2027` e volta em `23/03/2027`.
 
 O monitor coleta resultados públicos do Google Voos por web scraping e registra
 os preços de cada destino em uma planilha independente. Não exige conta, chave
@@ -49,6 +52,7 @@ python -m monitora_voo executar --destino MCZ
 python -m monitora_voo executar --destino NAT
 python -m monitora_voo executar --destino RIO
 python -m monitora_voo executar --destino JPA
+python -m monitora_voo executar --destino SAO
 ```
 
 Monitorar a cada 6 horas:
@@ -62,7 +66,7 @@ interromper.
 
 ## Painel web
 
-O painel estático fica em `docs/`. A página inicial compara os seis destinos e
+O painel estático fica em `docs/`. A página inicial compara os sete destinos e
 as páginas de análise exibem histórico, métricas e ofertas de cada rota. Para
 visualizá-lo localmente:
 
@@ -71,6 +75,10 @@ python -m http.server 8000 --directory docs
 ```
 
 Depois, acesse `http://localhost:8000`.
+
+Se uma consulta vier vazia ou falhar, o painel preserva o último preço encontrado,
+informa a data da consulta válida e sinaliza a falha ou ausência de novas ofertas.
+A comparação continua disponível entre os destinos que já têm preços.
 
 Para atualizar manualmente os arquivos do painel:
 
@@ -95,7 +103,8 @@ O workflow `.github/workflows/monitorar.yml`:
 
 - executa automaticamente a cada 6 horas, no horário de Belém;
 - também pode ser iniciado manualmente pela aba `Actions`;
-- consulta os seis destinos separadamente;
+- publica alterações no código usando o histórico salvo, sem aguardar nova coleta;
+- consulta os sete destinos separadamente;
 - salva um JSON e uma planilha para cada destino;
 - publica o conteúdo de `docs/` no GitHub Pages.
 
@@ -123,6 +132,7 @@ O histórico original em `docs/monitoramento_voos.xlsx` continua pertencendo a
 Recife. Os demais destinos usam arquivos identificados pelo nome da cidade.
 Para o Rio de Janeiro, a mesma análise combina ofertas do Galeão (`GIG`) e do
 Santos Dumont (`SDU`).
+Para São Paulo, combina ofertas de Guarulhos (`GRU`) e Congonhas (`CGH`).
 
 ## Limitações
 
@@ -137,4 +147,5 @@ O programa não compra passagens.
 
 ```bash
 python -m unittest discover
+node --test tests/test_comparacao.js
 ```

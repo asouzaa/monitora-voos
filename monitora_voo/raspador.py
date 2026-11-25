@@ -25,7 +25,7 @@ from .configuracao import (
     MAX_OFERTAS,
     MOEDA,
     ORIGEM,
-    PERIODOS_MONITORADOS,
+    PERIODOS_POR_DESTINO,
 )
 from .ofertas import OfertaVoo
 
@@ -36,12 +36,13 @@ class RaspadorGoogleVoos:
             raise ValueError(f"Destino não monitorado: {destino}.")
         self.destino = destino
         self.aeroportos_destino = AEROPORTOS_POR_DESTINO[destino]
+        self.periodos = PERIODOS_POR_DESTINO[destino]
 
     def buscar_ofertas(self) -> list[OfertaVoo]:
         ofertas: list[OfertaVoo] = []
         erros: list[str] = []
 
-        for data_ida, data_volta in PERIODOS_MONITORADOS:
+        for data_ida, data_volta in self.periodos:
             ofertas_periodo: list[OfertaVoo] = []
             for aeroporto_destino in self.aeroportos_destino:
                 try:
@@ -61,7 +62,7 @@ class RaspadorGoogleVoos:
         if not ofertas and erros:
             raise RuntimeError("; ".join(erros))
 
-        limite_total = MAX_OFERTAS * len(PERIODOS_MONITORADOS)
+        limite_total = MAX_OFERTAS * len(self.periodos)
         return _ordenar_e_limitar(ofertas, limite_total)
 
     def _buscar_ofertas_periodo(
@@ -92,6 +93,8 @@ class RaspadorGoogleVoos:
         )
         ordenacao = ShoppingOptions(ranking_mode="cheapest", result_sort="price")
         opcoes_ida = get_flights(consulta, shopping=ordenacao)
+        if not opcoes_ida:
+            opcoes_ida = get_flights(consulta)
         if not opcoes_ida:
             return []
 

@@ -8,10 +8,12 @@ DESTINOS_MONITORADOS = {
     "NAT": "Natal",
     "RIO": "Rio de Janeiro",
     "JPA": "João Pessoa",
+    "SAO": "São Paulo",
 }
 AEROPORTOS_POR_DESTINO = {
     **{codigo: (codigo,) for codigo in DESTINOS_MONITORADOS},
     "RIO": ("GIG", "SDU"),
+    "SAO": ("GRU", "CGH"),
 }
 PERIODOS_MONITORADOS = [
     ("2026-12-29", "2027-01-06"),
@@ -21,6 +23,10 @@ PERIODOS_MONITORADOS = [
     ("2026-12-29", "2027-01-05"),
     ("2026-12-30", "2027-01-08"),
 ]
+PERIODOS_POR_DESTINO = {
+    codigo: PERIODOS_MONITORADOS for codigo in DESTINOS_MONITORADOS
+}
+PERIODOS_POR_DESTINO["SAO"] = [("2027-03-19", "2027-03-23")]
 ADULTOS = 1
 CLASSE_VIAGEM = "economy"
 MOEDA = "BRL"
@@ -34,6 +40,7 @@ PLANILHAS_PADRAO = {
     "NAT": "monitoramento_natal.xlsx",
     "RIO": "monitoramento_rio.xlsx",
     "JPA": "monitoramento_joao_pessoa.xlsx",
+    "SAO": "monitoramento_sao_paulo.xlsx",
 }
 SAIDAS_PAINEL_PADRAO = {
     "REC": "docs/dados.json",
@@ -42,4 +49,5 @@ SAIDAS_PAINEL_PADRAO = {
     "NAT": "docs/dados_natal.json",
     "RIO": "docs/dados_rio.json",
     "JPA": "docs/dados_joao_pessoa.json",
+    "SAO": "docs/dados_sao_paulo.json",
 }
