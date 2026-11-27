@@ -35,10 +35,10 @@
   "resumo": {
     "menor_preco_historico": 1009.0,
     "ultimo_menor_preco": 2032.0,
-    "data_ultima_consulta": "2026-11-27T12:54:41+00:00",
+    "data_ultima_consulta": "2026-11-27T23:48:19+00:00",
     "data_ultima_consulta_bem_sucedida": "2026-11-27T00:00:28+00:00",
     "quantidade_ofertas_vistas": 36521,
-    "status": "erro: GIG 2026-12-29/2027-01-06: Extra data: line 1 column 235 (char 234); SDU 2026-12-29/2027-01-06: Extra data: line 1 column 235 (char 234); GIG 2026-12-29/2027-01-07: Extra data: lin"
+    "status": "erro: GIG 2026-12-29/2027-01-06: Google Flights returned HTTP 429. The request may have been blocked or rate-limited.; SDU 2026-12-29/2027-01-06: Google Flights returned HTTP 429. The re"
   },
   "ofertas": [
     {
@@ -2004,5 +2004,5 @@
     "arquivo": "monitoramento_rio.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-11-27T12:59:21+00:00"
+  "gerado_em": "2026-11-27T23:56:36+00:00"
 }

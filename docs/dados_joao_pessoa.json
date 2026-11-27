@@ -35,10 +35,10 @@
   "resumo": {
     "menor_preco_historico": 2034.0,
     "ultimo_menor_preco": 4289.0,
-    "data_ultima_consulta": "2026-11-27T12:56:50+00:00",
+    "data_ultima_consulta": "2026-11-27T23:53:00+00:00",
     "data_ultima_consulta_bem_sucedida": "2026-11-27T12:56:50+00:00",
     "quantidade_ofertas_vistas": 36164,
-    "status": "sem queda"
+    "status": "erro: JPA 2026-12-29/2027-01-06: Google Flights returned HTTP 429. The request may have been blocked or rate-limited.; JPA 2026-12-29/2027-01-07: Google Flights returned HTTP 429. The re"
   },
   "ofertas": [
     {
@@ -2004,5 +2004,5 @@
     "arquivo": "monitoramento_joao_pessoa.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-11-27T12:59:26+00:00"
+  "gerado_em": "2026-11-27T23:56:39+00:00"
 }

@@ -15,10 +15,10 @@
   "resumo": {
     "menor_preco_historico": 1014.0,
     "ultimo_menor_preco": 1238.0,
-    "data_ultima_consulta": "2026-11-27T12:58:15+00:00",
+    "data_ultima_consulta": "2026-11-27T23:55:29+00:00",
     "data_ultima_consulta_bem_sucedida": "2026-11-27T12:58:15+00:00",
     "quantidade_ofertas_vistas": 97,
-    "status": "sem queda"
+    "status": "erro: GRU 2027-03-19/2027-03-23: Google Flights returned HTTP 429. The request may have been blocked or rate-limited.; CGH 2027-03-19/2027-03-23: Google Flights returned HTTP 429. The re"
   },
   "ofertas": [
     {
@@ -147,5 +147,5 @@
     "arquivo": "monitoramento_sao_paulo.xlsx",
     "disponivel": true
   },
-  "gerado_em": "2026-11-27T12:59:26+00:00"
+  "gerado_em": "2026-11-27T23:56:39+00:00"
 }
